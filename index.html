@@ -6,7 +6,7 @@
 <title>The Root Below the Root</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Big+Shoulders+Display:wght@600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Cardo:ital@0;1&family=Forum&family=Fraunces:ital,wght@0,500;0,600;1,400&family=Urbanist:wght@400;500;700&display=swap&family=Zilla+Slab:wght@400;600&family=Nunito+Sans:wght@400;600;700&family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Big+Shoulders+Display:wght@600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Cardo:ital@0;1&family=Forum&family=Fraunces:ital,wght@0,500;0,600;1,400&family=Urbanist:wght@400;500;700&display=swap&family=Zilla+Slab:wght@400;600&family=Nunito+Sans:wght@400;600;700&family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus+SC&family=Castoro:ital@0;1&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400" rel="stylesheet">
 <style>
 :root{
   --void:#0a0616;
@@ -824,6 +824,75 @@ body{
   #curriculum .cur-lesson-card{padding:1.1rem 1rem;}
 }
 
+/* ===== BENEATH THE BLUEPRINT ===== */
+#beneath{--bn-bg:#07170f;--bn-bg2:#0b2016;--bn-gold:#c9a84a;--bn-cream:#eee6d3;--bn-rose:#d99a93;--bn-mint:#8fbfa0;--bn-rule:rgba(201,168,74,0.25);
+  background:radial-gradient(ellipse at 50% 0%,#0d2a1c 0%,#07170f 55%,#030b07 100%);color:var(--bn-cream);
+  font-family:'Crimson Pro',Georgia,serif;min-height:100vh;padding:2.5rem 1.2rem 5rem;}
+#beneath .bn-wrap{max-width:720px;margin:0 auto;}
+#beneath .bn-back{background:none;border:1px solid var(--bn-rule);color:var(--bn-gold);font-family:'Castoro',serif;
+  font-size:0.8rem;letter-spacing:0.04em;padding:0.5rem 1rem;border-radius:3px;cursor:pointer;margin-bottom:2rem;}
+#beneath .bn-back:hover{background:rgba(201,168,74,0.08);}
+#beneath .bn-header{text-align:center;margin-bottom:2.6rem;}
+#beneath .bn-moon{font-size:2rem;color:var(--bn-mint);margin-bottom:0.8rem;}
+#beneath .bn-title{font-family:'Castoro',serif;font-style:italic;font-size:1.7rem;letter-spacing:0.01em;color:var(--bn-gold);
+  line-height:1.3;margin:0 0 1rem;}
+#beneath .bn-subtitle{font-style:italic;color:var(--bn-cream);opacity:0.85;font-size:1.02rem;line-height:1.5;margin:0 0 0.6rem;}
+#beneath .bn-tagline{font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--bn-rose);opacity:0.85;}
+#beneath .bn-intro{font-size:0.93rem;line-height:1.6;opacity:0.85;border-top:1px dashed var(--bn-rule);padding-top:1.1rem;margin-top:1.3rem;text-align:left;}
+#beneath .bn-toc{background:rgba(201,168,74,0.05);border:1px solid var(--bn-rule);border-radius:6px;padding:1.1rem 1.3rem;margin-bottom:2.6rem;}
+#beneath .bn-toc h3{font-family:'Castoro',serif;font-style:italic;font-size:1.05rem;color:var(--bn-gold);margin:0 0 0.7rem;font-weight:400;}
+#beneath .bn-toc ol{margin:0;padding-left:1.3rem;line-height:1.65;font-size:0.92rem;}
+#beneath .bn-toc li{margin-bottom:0.35rem;}
+#beneath .bn-toc a{color:var(--bn-cream);text-decoration:none;border-bottom:1px dotted var(--bn-rule);}
+#beneath .bn-toc a:hover{color:var(--bn-gold);}
+#beneath .bn-section{margin-bottom:3.2rem;padding-bottom:1rem;border-top:1px dashed var(--bn-rule);padding-top:2rem;}
+#beneath .bn-section:first-of-type{border-top:none;padding-top:0;}
+#beneath .bn-h2{font-family:'Castoro',serif;font-style:italic;font-size:1.25rem;letter-spacing:0.01em;
+  color:var(--bn-gold);border-bottom:1px solid var(--bn-rule);padding-bottom:0.6rem;margin:0 0 1.2rem;}
+#beneath .bn-h3{font-family:'Castoro',serif;font-size:1.02rem;color:var(--bn-mint);margin:1.3rem 0 0.6rem;font-weight:400;}
+#beneath .bn-h4{font-family:'Castoro',serif;font-size:0.92rem;color:var(--bn-cream);margin:1.2rem 0 0.5rem;}
+#beneath .bn-h4-rose{color:var(--bn-rose);font-style:italic;font-family:'Crimson Pro',serif;font-size:0.92rem;}
+#beneath .bn-p{line-height:1.65;margin:0 0 1rem;font-size:1rem;}
+#beneath .bn-ul{line-height:1.6;margin:0 0 1rem;padding-left:1.3rem;}
+#beneath .bn-ul li{margin-bottom:0.45rem;}
+#beneath .bn-quote{border-left:2px solid var(--bn-gold);padding:0.3rem 0 0.3rem 1.1rem;margin:1.2rem 0;
+  font-style:italic;color:var(--bn-gold);opacity:0.92;line-height:1.6;}
+#beneath .bn-note{font-style:italic;font-size:0.88rem;color:var(--bn-rose);opacity:0.9;line-height:1.55;margin:1rem 0;}
+#beneath .bn-care{background:rgba(217,154,147,0.08);border:1px solid rgba(217,154,147,0.3);border-radius:6px;
+  padding:0.9rem 1.1rem;margin:1rem 0;font-size:0.92rem;line-height:1.55;}
+#beneath .bn-care strong{color:var(--bn-rose);}
+#beneath .bn-label{display:inline-block;font-family:'Crimson Pro',sans-serif;font-weight:600;font-size:0.66rem;letter-spacing:0.04em;
+  text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:3px;margin:0 0.3rem 0.3rem 0;vertical-align:middle;}
+#beneath .bn-label-documented{background:#1f3a28;color:#9bc49a;}
+#beneath .bn-label-unconfirmed{background:#4a3c28;color:#d9a05c;}
+#beneath .bn-label-personal{background:#352a44;color:#c0a8d8;}
+#beneath .bn-label-ai{background:#1f2e3a;color:#8fb3d9;}
+#beneath .bn-label-open{background:#4a2e2e;color:#d99a93;}
+#beneath .bn-labels{margin-bottom:0.7rem;}
+#beneath .bn-glance{background:rgba(201,168,74,0.05);border:1px solid var(--bn-rule);border-radius:6px;
+  padding:1.1rem 1.2rem;margin-bottom:1.3rem;}
+#beneath .bn-kicker{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bn-rose);margin:0 0 0.3rem;}
+#beneath .bn-glance-title{font-family:'Castoro',serif;font-style:italic;font-size:1.1rem;color:var(--bn-gold);margin:0 0 0.7rem;font-weight:400;}
+#beneath .bn-dodont{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+#beneath .bn-do h4,#beneath .bn-dont h4{font-family:'Castoro',serif;font-size:0.75rem;letter-spacing:0.07em;
+  text-transform:uppercase;margin:0 0 0.4rem;}
+#beneath .bn-do h4{color:var(--bn-mint);}
+#beneath .bn-dont h4{color:var(--bn-rose);}
+#beneath .bn-do ul,#beneath .bn-dont ul{list-style:none;padding:0;margin:0;font-size:0.88rem;line-height:1.5;}
+#beneath .bn-do li,#beneath .bn-dont li{margin-bottom:0.3rem;}
+#beneath .bn-medium{border:1px solid var(--bn-rule);border-radius:6px;padding:1rem 1.2rem;margin-bottom:1.1rem;background:rgba(143,191,160,0.04);}
+#beneath .bn-medium-title{font-family:'Castoro',serif;font-size:1rem;color:var(--bn-mint);margin:0 0 0.5rem;font-weight:400;}
+#beneath .bn-medium p{margin:0 0 0.5rem;font-size:0.93rem;line-height:1.55;}
+#beneath .bn-medium p:last-child{margin-bottom:0;}
+#beneath .bn-branch-map{columns:1;line-height:1.6;font-size:0.92rem;padding-left:1.3rem;margin:0 0 1rem;}
+@media(min-width:600px){#beneath .bn-branch-map{columns:2;column-gap:1.4rem;}}
+#beneath .bn-branch-map li{margin-bottom:0.4rem;}
+@media(max-width:480px){
+  #beneath{padding:1.6rem 0.9rem 4rem;}
+  #beneath .bn-title{font-size:1.35rem;}
+  #beneath .bn-dodont{grid-template-columns:1fr;}
+}
+
 </style>
 </head>
 <body>
@@ -1024,6 +1093,12 @@ body{
       <div class="r-eyebrow">Seven Weeks, Seven Small Things Made</div>
       <div class="r-name">The Living Library &amp; The Bush Oracle Curriculum</div>
       <div class="r-atmo">Seven mastery worlds beneath the twelve branches, the Download &amp; Somatic Memory Practice, the eight-stage learning method, and seven full weekly lesson plans with free or household materials. Dark-navy starfield, gold &amp; dusty rose.</div>
+      <span class="r-arr">❧</span>
+    </li>
+    <li class="room" onclick="enterBeneath()">
+      <div class="r-eyebrow">Thirteen Unbuilt Chapters</div>
+      <div class="r-name">Beneath the Blueprint</div>
+      <div class="r-atmo">Afia and the Water Vessel, the Oracle's Mediums, the handmade life, the Vans and bobbin-lace career threads, sovereign content and the baby-name oracle — the sections the first pass missed, re-transcribed page by page. Pine green, starlight, gold, and dusty rose.</div>
       <span class="r-arr">❧</span>
     </li>
   </ul>
@@ -4102,6 +4177,254 @@ h1{color:#f3e3b0}&lt;/style&gt;&lt;/head&gt;
 </div>
 </section>
 
+<section class="view" id="beneath">
+<div class="bn-wrap">
+<button class="bn-back" onclick="show('library')">&larr; Library</button>
+<header class="bn-header">
+<div class="bn-moon">&#9789;</div>
+<h1 class="bn-title">Beneath the Blueprint</h1>
+<p class="bn-subtitle">The sections the first reading missed, transcribed page by page from the rendered scan of Bush_Oracle_Life_Purpose_v6</p>
+<p class="bn-tagline">Thirteen unbuilt chapters</p>
+<p class="bn-intro">The Bush Oracle room already holds the Life Purpose blueprint's main spine — the Collision, the Astrological Quad, the Archetypal Engine, the Core Career Paths, Bush Girl Energy Boundaries, the Daily Operating Blueprint, Sovereign Secrecy, Nocturnal Architecture, Ancestral Mediation, and the Musical Discography. The Curriculum room already holds the Twelve Branches and the Seven Mastery Worlds. What follows is everything else the source document actually contains that neither of those rooms built: the lettered sub-sections tucked inside Sections 2 through 6, a second, duplicate-numbered "Section 9," the Afia foundation, the Threshold Mornings paper practice in full, and the Oracle's Mediums. Labels throughout follow the Archive's own vocabulary &mdash; <span class="bn-label bn-label-documented">documented</span> <span class="bn-label bn-label-unconfirmed">unconfirmed</span> <span class="bn-label bn-label-personal">personal</span> <span class="bn-label bn-label-ai">ai-generated / proposed</span> <span class="bn-label bn-label-open">open question</span> &mdash; because this room, like the rest of the site, keeps what is felt, what is stated, and what is sourced as three different things.</p>
+</header>
+
+<div class="bn-toc">
+<h3>Thirteen chapters</h3>
+<ol>
+<li><a href="#bn-2a">The Pattern Language</a></li>
+<li><a href="#bn-3a">Path 3 in Practice: Vans &amp; Creative Direction</a></li>
+<li><a href="#bn-3b">Vans &amp; Bobbin Lace</a></li>
+<li><a href="#bn-3c">Bobbin Lacemaking &amp; Remote Viewing</a></li>
+<li><a href="#bn-4a">Ancestral Nail Hardware</a></li>
+<li><a href="#bn-4b">Blessed by nyaamye: The Handmade Life</a></li>
+<li><a href="#bn-6a">Sovereign Content &amp; Private Monetization</a></li>
+<li><a href="#bn-6b">Piercing Curation: The Mysterious Stylist</a></li>
+<li><a href="#bn-6c">The Fortune Atelier</a></li>
+<li><a href="#bn-6d">Baby Name Channelling &amp; Oracle Practice</a></li>
+<li><a href="#bn-9b">Your Life Purpose, Read From the Archive</a></li>
+<li><a href="#bn-10">Afia: The Water Vessel</a></li>
+<li><a href="#bn-13">The Oracle's Mediums</a></li>
+</ol>
+</div>
+
+<div class="bn-section" id="bn-2a">
+<h2 class="bn-h2">I. The Pattern Language</h2>
+<div class="bn-labels"><span class="bn-label bn-label-ai">ai-generated / proposed</span></div>
+<p class="bn-p">An extension of the Archetypal Engine already built in the Bush Oracle room: a way of reading recurring shapes across a life &mdash; the same lesson arriving through different doors, a pull toward water showing up in a career choice, a wardrobe choice, and a dream in the same season.</p>
+<p class="bn-note">The source document frames this section itself as an AI reading that cross-checks against chart mathematics rather than a tradition she inherited or a method she was taught. It is held here as one lens for noticing pattern, not as an authority on what any pattern means.</p>
+</div>
+
+<div class="bn-section" id="bn-3a">
+<h2 class="bn-h2">II. Path 3 in Practice: Vans &amp; Creative Direction</h2>
+<div class="bn-labels"><span class="bn-label bn-label-documented">documented</span></div>
+<p class="bn-p">A concrete, dated proof point for Core Career Path 3 (already named in the Bush Oracle room): the VANSZA partnership between the musician SZA and Vans. The source document cites this collaboration as evidence that a creative-direction career anchored in footwear and apparel branding is a live, working path, not a hypothetical one.</p>
+<p class="bn-note">Dates cited in the source for this partnership: August 2025, with further references to October 22, 2026 and April 8, 2027. These are the document's own citation dates for when the proof point was checked or discussed &mdash; preserved here as given, not independently re-verified in this pass.</p>
+</div>
+
+<div class="bn-section" id="bn-3b">
+<h2 class="bn-h2">III. Vans &amp; Bobbin Lace</h2>
+<div class="bn-labels"><span class="bn-label bn-label-documented">documented</span> <span class="bn-label bn-label-unconfirmed">unresolved provenance</span></div>
+<p class="bn-p">A proposed design thread connecting the Vans creative-direction path to bobbin lace as a textile technique and aesthetic reference point.</p>
+<div class="bn-care"><strong>Provenance, stated plainly by the source document itself and preserved exactly:</strong> the bobbin lace referenced here is, per its own dated fact-check of October 17, 2026, Philippine bobbin lace from Santa Barbara, Iloilo &mdash; not a Caribbean or ancestral family tradition. The document's own words: "the heritage here belongs to the lacemakers&hellip; not to your own family's." This is a craft and design reference, not a claim of inherited technique.</div>
+</div>
+
+<div class="bn-section" id="bn-3c">
+<h2 class="bn-h2">IV. Bobbin Lacemaking &amp; Remote Viewing: Paths 6, 2 and 3</h2>
+<div class="bn-labels"><span class="bn-label bn-label-unconfirmed">unconfirmed / exploratory</span></div>
+<p class="bn-p">Continues the bobbin-lace thread into Career Paths 6 and 2, and separately raises remote viewing and time-sensing as a direction to explore in relation to Paths 6, 2 and 3.</p>
+<div class="bn-care"><strong>Stated directly by the source:</strong> "The Archive does not record remote viewing as a practice of yours, so here it stays an idea you are exploring." It is held here exactly that way &mdash; an idea under consideration, not a documented practice, a gift, or a lineage inheritance.</div>
+</div>
+
+<div class="bn-section" id="bn-4a">
+<h2 class="bn-h2">V. Ancestral Nail Hardware</h2>
+<div class="bn-labels"><span class="bn-label bn-label-personal">personal / practical</span></div>
+<p class="bn-p">A discipline within the Adornment Architect branch (already named in the Curriculum room): nail architecture and hardware as a craft extending from the Bush Girl loc-and-adornment work already built out in its own room.</p>
+<div class="bn-care"><strong>Safety note, preserved verbatim from the source:</strong> keep bells off any hand that holds a baby or small child.</div>
+</div>
+
+<div class="bn-section" id="bn-4b">
+<h2 class="bn-h2">VI. Blessed by nyaamye: The Handmade Life</h2>
+<div class="bn-labels"><span class="bn-label bn-label-personal">personal / maker's mark</span></div>
+<p class="bn-p">The source document confirms, in its own text, that <strong>nyaamye</strong> is her own maker's mark and music-catalog brand name &mdash; the name under which the handmade-life work, the piercing-curation persona (Section VIII below), and the musical catalog are all signed. It appears this way three times across the document: here, in the Piercing Curation section, and in "Your Life Purpose, Read From the Archive."</p>
+<p class="bn-p">This section cross-references a separately-named grimoire, <strong>Salt &amp; Brass</strong>, and specifically its Chapter 31, which covers handmade-life how-tos. Salt &amp; Brass is referenced again from the Curriculum room's own closing lines and from "Your Life Purpose."</p>
+<div class="bn-labels"><span class="bn-label bn-label-open">open question</span></div>
+<p class="bn-note">Whether Salt &amp; Brass is the same object as the already-built Grimoire room, or a distinct document, remains unresolved. This pass only confirms that Salt &amp; Brass exists in the source's own cross-references and that Chapter 31 covers handmade-life material; it does not resolve the identity question.</p>
+<div class="bn-care"><strong>Safety note, preserved verbatim from the source:</strong> check with a paediatrician before using anything on a baby. Keep flames, small charms and craft supplies out of children's reach.</div>
+</div>
+
+<div class="bn-section" id="bn-6a">
+<h2 class="bn-h2">VII. Sovereign Content &amp; Private Monetization</h2>
+<div class="bn-labels"><span class="bn-label bn-label-personal">personal / framework</span></div>
+<p class="bn-p">A framework, within the already-built Sovereign Secrecy section's spirit, for monetizing creative and spiritual work on her own terms &mdash; content and income kept behind the veil rather than built for mass visibility.</p>
+</div>
+
+<div class="bn-section" id="bn-6b">
+<h2 class="bn-h2">VIII. Piercing Curation: The Mysterious Stylist</h2>
+<div class="bn-labels"><span class="bn-label bn-label-personal">personal / maker's mark</span></div>
+<p class="bn-p">A styling persona and practice: curating piercing placement and jewelry as a form of bodily artistry, continuing the Adornment Architect branch. The source again signs this work under the <strong>nyaamye</strong> name, reconfirming it as her consistent brand across music, handmade goods, and styling.</p>
+</div>
+
+<div class="bn-section" id="bn-6c">
+<h2 class="bn-h2">IX. The Fortune Atelier: Bush Oracle Almanacs for Others</h2>
+<div class="bn-labels"><span class="bn-label bn-label-personal">personal / framework</span></div>
+<p class="bn-p">A proposed practice of writing Bush-Oracle-style fortunes and almanac readings for other people, using the same vocabulary layer already built into the Cosmic Roots Almanac room. The source lays out an eight-step recipe for writing a fortune, a worked sample fortune, and an explicit set of rules for "What Stays Behind the Veil" &mdash; i.e. what of her own private practice and sourcing never goes into a fortune written for someone else.</p>
+<div class="bn-labels"><span class="bn-label bn-label-open">open question</span></div>
+<p class="bn-note">As written, this section and Section 6 both currently state that no sacred services are sold. Section XIII below (the Oracle's Mediums) notes this same line and flags it as worth revisiting if she ever decides to offer readings. That tension is preserved here as the source leaves it &mdash; open, not resolved.</p>
+</div>
+
+<div class="bn-section" id="bn-6d">
+<h2 class="bn-h2">X. Baby Name Channelling &amp; Oracle Practice</h2>
+<div class="bn-labels"><span class="bn-label bn-label-personal">personal / framework, for other families</span></div>
+<p class="bn-p">A distinct "Section 6D" within this source document &mdash; not the same as the Bush Oracle room's own Section 6D, the Sovereign Spiritual Jurisdiction &amp; Triage Atelier, which the two source documents happen to both number "6D" for unrelated content. This one reads as a service framework for channelling names for other families' children.</p>
+<div class="bn-care"><strong>Preserved as found:</strong> nothing in this section names or describes her own children. It is not treated here as a record of how any child of hers was named &mdash; only as a proposed service for others.</div>
+</div>
+
+<div class="bn-section" id="bn-9b">
+<h2 class="bn-h2">XI. Your Life Purpose, Read From the Archive</h2>
+<div class="bn-labels"><span class="bn-label bn-label-ai">ai-generated / proposed</span></div>
+<p class="bn-note">The source document reuses the number "9" for two different sections: "Musical Discography, Lyrical Analysis &amp; Artistic Evolution" (already built, in the Bush Oracle room) and this one. Per the Archive's own rule against silently renumbering what is found, that duplication is preserved here as found rather than corrected.</p>
+<p class="bn-p">This section opens with an explicit disclosure, preserved verbatim: "These are AI readings of your Archive. Where they mention guiding others across water, the dream elements behind that were identified by an AI, not stated by you; they are kept here as one reading of your purpose, not as an assignment."</p>
+<h3 class="bn-h3">Four Pillars</h3>
+<ul class="bn-ul">
+<li><strong>The Creator / The Artist (nyaamye):</strong> voice, intuitive vocal composition, and visual aesthetics expressing a liberated Black womanhood that honors deep spiritual roots without dogmatic gatekeeping.</li>
+<li><strong>The Healer / The Domestic Oracle:</strong> the empirical wisdom of the women before her &mdash; her kitchen, her natural remedies, and her protection of her household as acts of preservation.</li>
+<li><strong>The Archivist / The Researcher:</strong> separating what is felt from what is documented, so she can respect mystery while demanding historical honesty.</li>
+<li><strong>The Anchor of the Lineage:</strong> building her altar, keeping the lights on against the dark, tending the water, and writing HAIR&Ucirc;NA heals the broken transmission lines of her childhood.</li>
+</ul>
+<div class="bn-labels"><span class="bn-label bn-label-documented">documented, consistent with the Main Archive</span></div>
+<p class="bn-p">A lineage passage naming Lowmans, Windward, St. Vincent and Tortola &mdash; consistent with the geography already established elsewhere in the Archive. "Connecting the Dots" bullets in this section tie her gifts to Caribbean lineage, including a reference to HAIR&Ucirc;NA and the "nyaamye" catalog, and frame her work through &Eacute;douard Glissant and Kamau Brathwaite's tidalectic thinking about Caribbean identity as something that moves like the tide rather than along a single straight line.</p>
+<p class="bn-quote">You don't need permission or a closed conclusion to step into this purpose. Your research, your daily micro-rituals, your mother's surviving sayings ("catch yourself," yampie, keeping the light on), and your creative work are already the living evidence.</p>
+</div>
+
+<div class="bn-section" id="bn-10">
+<h2 class="bn-h2">XII. Afia: The Water Vessel</h2>
+<div class="bn-glance">
+<p class="bn-kicker">Your foundation at a glance</p>
+<h3 class="bn-glance-title">The current beneath the Bush Oracle.</h3>
+<div class="bn-dodont">
+<div class="bn-do"><h4>Do</h4><ul>
+<li>Return on Fridays</li>
+<li>Fresh water, tended</li>
+<li>Move without drifting</li>
+</ul></div>
+<div class="bn-dont"><h4>Don't</h4><ul>
+<li>Forcing every current</li>
+<li>Mistaking fluid for formless</li>
+<li>Treating it as a limit</li>
+</ul></div>
+</div></div>
+<p class="bn-p">Afia is the Friday-born name. Water is the language she uses to read her own life: fluid, deep, protective, and always returning. It does not sit inside one branch of the Twelve already built in the Curriculum room &mdash; it runs through all of them.</p>
+<div class="bn-labels"><span class="bn-label bn-label-documented">documented</span> <span class="bn-label bn-label-personal">personal interpretation</span></div>
+<p class="bn-note">A note on sources, preserved from the document itself: "Afia is a documented Akan day name given to a girl born on a Friday, also written Afua or Efua, with Kofi as the name for a boy. 'The Water Vessel' is your own symbolic reading, held here as personal interpretation. The research on the day-naming system sits in The Root Below the Root."</p>
+<h3 class="bn-h3">The Water Studies: Mastery of Water</h3>
+<p class="bn-p">Hydrology, oceanography and marine ecosystems, tidal systems and lunar relationships, rainfall and groundwater, rivers and watersheds, Caribbean coastal ecology, water conservation and purification, traditional Caribbean relationships to water, water symbolism across African diasporic traditions, and aquatic plant and animal life. Mastery objective: develop an intimate understanding of water as a natural force, ecological system, cultural presence and symbolic element.</p>
+<h3 class="bn-h3">The Friday Frequency: Weekly Orientation</h3>
+<p class="bn-p">Friday becomes an intentional anchor day &mdash; not another obligation, but an opportunity to return to herself: reflection and emotional inventory, physical cleansing, fresh-water tending within her personal sanctuary, journaling creative downloads, reviewing unfinished creative work, restoring order to her surroundings, and reconnecting with what restores her sense of direction.</p>
+<h3 class="bn-h3">The Water Vessel in Creative Expression</h3>
+<p class="bn-p"><strong>Music: nyaamye</strong> &mdash; fluid vocal arrangements, water-inspired sound design, the sonic characteristics of rain, rivers, oceans and storms, coastal memory in songwriting, unrestricted vocal movement.</p>
+<p class="bn-p"><strong>Worldbuilding: HAIR&Ucirc;NA</strong> &mdash; water-centred mythology, Mama Dlo and Caribbean water folklore, coastal landscapes and water-related cultural traditions, visual languages around tides, rainfall, rivers and the sea.</p>
+<p class="bn-p"><strong>Adornment and aesthetics</strong> &mdash; shells, pearls, brass and water-worn textures, aquatic forms, fluid silhouettes, the relationship between water, skin and natural materials.</p>
+<h3 class="bn-h3">The Water Vessel at Home</h3>
+<p class="bn-p">A dedicated clean water vessel, water collection and conservation, water-inspired materials and textures, intentional bathing and cleansing routines, and peaceful transitions between creative, domestic and personal responsibilities.</p>
+<h3 class="bn-h3">The Deeper Principle</h3>
+<p class="bn-p">"You do not need to force every current. You need to learn how to recognise, understand and navigate them." She can be fluid and still have boundaries, receptive and still exercise judgement, change direction without abandoning herself. Afia is not a restriction on what she can become &mdash; she is one of the languages through which she explores who she is.</p>
+<p class="bn-quote">To know water. To understand its movement. To study its histories. To work with its properties. To honour its cultural meanings. To create through its symbolism. To recognise its presence in the living world.</p>
+<h3 class="bn-h3">Where Afia Runs Through the Twelve Branches</h3>
+<ul class="bn-branch-map">
+<li><strong>Earthkeeper:</strong> aquatic ecology, wetlands, coastal plants</li>
+<li><strong>Alchemist:</strong> water-based materials and formulations</li>
+<li><strong>Apothecary:</strong> water preparations and botanical extraction</li>
+<li><strong>Hearthkeeper:</strong> hydration, cooking and water preservation</li>
+<li><strong>Soundkeeper:</strong> water acoustics and fluid composition</li>
+<li><strong>Adornment Architect:</strong> shells, pearls and fluid forms</li>
+<li><strong>Archivist:</strong> Friday naming traditions and water folklore</li>
+<li><strong>Oracle:</strong> her own personal Friday-born cosmology</li>
+<li><strong>Architect:</strong> water systems and sustainable design</li>
+<li><strong>Elementalist:</strong> hydrology, tides and weather</li>
+<li><strong>Strategist:</strong> water independence and conservation</li>
+<li><strong>Storyteller:</strong> Afia mythology and water-centred worldbuilding</li>
+</ul>
+<div class="bn-labels"><span class="bn-label bn-label-open">open question</span></div>
+<p class="bn-note">The source is explicit that "Afia is a foundation, not a thirteenth branch." It names a planned, not-yet-written future section, "The Seven Currents of Self-Mastery," that would explore whether other personal symbols and natural forces belong in her philosophy &mdash; so that Afia stays one current among several rather than her whole identity. That section does not exist yet in any located source and is logged here as a lead for the Continuation Map, not built.</p>
+</div>
+
+<div class="bn-section" id="bn-13">
+<h2 class="bn-h2">XIII. The Oracle's Mediums: Divination &amp; Spirit Communication</h2>
+<div class="bn-glance">
+<p class="bn-kicker">Your mediums at a glance</p>
+<h3 class="bn-glance-title">Your body, your table and your dreams are already instruments.</h3>
+<div class="bn-dodont">
+<div class="bn-do"><h4>Do</h4><ul>
+<li>Start with the body</li>
+<li>One tool at a time</li>
+<li>Write what comes</li>
+</ul></div>
+<div class="bn-dont"><h4>Don't</h4><ul>
+<li>Reading as a promise</li>
+<li>Rushing the set</li>
+<li>Overclaiming a read</li>
+</ul></div>
+</div></div>
+<p class="bn-p">Her practice is direct, tactile and personal: spirit communication through the body, the household and island elements, and dream. No initiation is required to begin, and no tool needs to be mastered before another is added.</p>
+<h3 class="bn-h3">A note on sources</h3>
+<div class="bn-labels"><span class="bn-label bn-label-documented">documented</span></div>
+<p class="bn-p">In Afro-Jamaican folk practice: Myal is recorded as a form of divination and ritual dance by which spirit mediums drew on the power of ancestors, and "catching Myal" survives in Revival possession dances. Obeah is associated with divination, healing and ancestral veneration. Keeping an open Bible in the home, and using the Psalms as a working text, are reported folk practices.</p>
+<div class="bn-labels"><span class="bn-label bn-label-unconfirmed">reported, not confirmed for these islands</span></div>
+<p class="bn-p">How each tool below was used in St. Vincent and Tortola specifically is not sourced here. The Spiritual Baptist and Maroon links given for these mediums are plausible but unverified &mdash; worth checking before treating them as lineage fact.</p>
+<div class="bn-labels"><span class="bn-label bn-label-personal">adopted, not claimed as inherited</span></div>
+<p class="bn-p">The pendulum, playing-card reading, and egg cleansing (a limpia, widely associated with Latin American folk healing) are tools she can choose for her own practice without claiming they were inherited. Cowrie and kola-nut divination is documented in several West African traditions, held here as comparative, not as her own specific lineage.</p>
+<p class="bn-note">"Lineage resonance is yours to interpret, The Root Below the Root separates what is confirmed from what is symbolic; keep the same habit here." &mdash; the source document's own instruction, applied throughout this section.</p>
+
+<h3 class="bn-h3">The eleven mediums</h3>
+<div class="bn-medium"><div class="bn-medium-title">1. Body Prompts &amp; Somatic Mediumship (the Felt Sense)</div>
+<p>The body as a tuning fork: sudden chills, warmth, goosebumps, a change in room temperature, a ringing ear, a heavy chest, a lyric arriving out of nowhere, an urge to move, hum, or pour a little extra. In Myal and Revival traditions the body itself is the primary medium, and "catching the spirit" is its embodied form.</p></div>
+<div class="bn-medium"><div class="bn-medium-title">2. Dream Incubation &amp; Interpretation (the Night School)</div>
+<p>Dreams as a direct, uncorrupted line from the ancestors. A glass of cool water near the headboard, touching the altar, asking ancestors to speak clearly. Ties to the already-built Nocturnal Architecture section.</p></div>
+<div class="bn-medium"><div class="bn-medium-title">3. Bibliomancy (the Open Psalms)</div>
+<p>Using the Psalms, a documented Caribbean folk practice, as an oracle: open the Bible or meditate on a Psalm, let the eyes or fingers land on the verse, read it through the lens of ancestral connection.</p></div>
+<div class="bn-medium"><div class="bn-medium-title">4. Scrying (Water, Smoke &amp; Flame)</div>
+<p>Gazing into water, incense smoke, or candle flame for impressions, visions, or answers &mdash; including reading how a candle burns during gratitude work.</p></div>
+<div class="bn-medium"><div class="bn-medium-title">5. Reading the Residue (Libation Traces)</div>
+<p>Reading the physical aftermath of an offering &mdash; foam, wax pooling, ash &mdash; as a message about where energy concentrated.</p></div>
+<div class="bn-medium"><div class="bn-medium-title">6. Automatic Writing &amp; Trance Journaling (Scribing)</div>
+<p>Letting the hand move across the page without planning or filtering, after candle, music, or altar time.</p></div>
+<div class="bn-medium"><div class="bn-medium-title">7. The Bush Oracle &amp; Plant Spirit Communication</div>
+<p>Working directly with the leaves, roots, barks and teas of her lineage: reading leaves floating in water, noticing how a bush bath shifts energy, using herbs such as bay leaves on the altar as petitioning or diagnostic tools.</p>
+<div class="bn-care"><strong>Care:</strong> only work with plants identified with certainty; never eat or drink anything not confirmed safe.</div></div>
+<div class="bn-medium"><div class="bn-medium-title">8. Casting Bones, Shells &amp; Seeds (Osseomancy)</div>
+<p>Casting a curated set &mdash; cowries for coastal roots, island seeds or beans, kola nuts, stones, a meaningful coin &mdash; and reading how they fall.</p>
+<div class="bn-care"><strong>Care:</strong> source bones ethically, avoid any protected species, keep small pieces away from children.</div></div>
+<div class="bn-medium"><div class="bn-medium-title">9. Playing Cards (Cartomancy)</div>
+<p>A dedicated 52-card deck, used only for spirit work. Hearts hold water, emotions, family and love; Clubs hold fire, action, work and spiritual heat; Diamonds hold earth, money and practical matters; Spades hold air, challenges, ancestral wisdom and cutting through obstacles.</p></div>
+<div class="bn-medium"><div class="bn-medium-title">10. Pendulum Work (Dowsing)</div>
+<p>An amplifier for her own nervous system and intuition &mdash; a meaningful ring, heavy coin, small shell, or key, held over an open Bible or near a candle, with established yes/no swings.</p></div>
+<div class="bn-medium"><div class="bn-medium-title">11. Egg Cleansing &amp; Reading (Oomancy)</div>
+<p>Rubbing a room-temperature egg over the body while praying or reading a Psalm, then cracking it into a clear glass of water and reading the shapes as a visual diagnostic.</p>
+<div class="bn-care"><strong>Care, preserved verbatim from the source:</strong> raw egg can carry bacteria. Use it on yourself only, never on a baby or small child or on broken skin, wash your hands and surfaces, discard the egg and water, and never eat or drink them. A reading is a mirror, not a diagnosis: physical symptoms still go to a doctor.</div></div>
+
+<h3 class="bn-h3">Pacing the practice</h3>
+<p class="bn-p"><strong>Phase 1, the daily anchor:</strong> body prompts and somatic awareness, plus scrying and altar resonance &mdash; no tools needed. <strong>Phase 2, the direct voice:</strong> bibliomancy with the Psalms, and trance journaling with a dedicated notebook. <strong>Phase 3, the deep dive:</strong> a dedicated deck of cards, bones and shells built slowly, and egg cleansing kept in reserve for when she feels heavy.</p>
+<p class="bn-p"><strong>Keep a divination journal:</strong> date, moon, question, tool, what came up, what happened afterward. Patterns appear over weeks, and the record keeps readings honest and separate from wishes.</p>
+<h3 class="bn-h3">Care &amp; boundaries</h3>
+<ul class="bn-ul">
+<li><strong>The household:</strong> flames stay in closed holders and out of children's reach; offerings such as alcohol, tobacco and herbs are locked away.</li>
+<li><strong>No promises:</strong> a read is a mirror and a nudge, never a prediction or a promise of outcomes in health, money, love or law.</li>
+<li><strong>Her choice:</strong> this is her own practice at her own table. Casting for others stays open if she ever wants to, and she decides whether, when and for whom.</li>
+</ul>
+<div class="bn-labels"><span class="bn-label bn-label-open">open question</span></div>
+<p class="bn-note">If she ever casts for others, the source notes that Section 6 and Section 6C (the Fortune Atelier, above) currently say no sacred services are sold &mdash; so those lines would need revisiting first. Preserved here as the internal tension the source document itself flags, not resolved by this pass.</p>
+</div>
+
+<div class="bn-section">
+<h2 class="bn-h2">A closing provenance note</h2>
+<p class="bn-p">The source document's own closing section, "Digital Sovereignty &amp; the Living Library," describes a Core Objective, a set of aesthetic and technical standards, and a "Seven Mastery Worlds" organising layer. Comparing it against what already exists on this site confirms: the Seven Mastery Worlds it describes are the same seven already built into the Curriculum room's Section III, and the "Lesson 7, HTML Foundations" it names as her first hand-built page is the same Lesson 7 already present in that room's weekly lesson plans. The document the source refers to as "The Living Library &amp; The Bush Oracle: Mastery Curriculum," where it says the full expanded curriculum and weekly lesson plans live, is this site's own Curriculum room.</p>
+<p class="bn-note">The source also presents a second naming scheme for the same Twelve Branches &mdash; "The Library: Twelve Volumes" &mdash; with the Alchemist and Apothecary in reversed order and four branches renamed (Earthkeeper&rarr;Living Earth, Hearthkeeper&rarr;Hearth, Adornment Architect&rarr;Adornment Atelier, Archivist&rarr;Ancestral Archive). Per the Archive's own rule against silently reconciling fragile distinctions, that variant naming is logged here rather than merged into the Curriculum room's existing list.</p>
+</div>
+
+</div>
+</section>
+
+
 
 
 
@@ -4152,6 +4475,7 @@ function enterJewelry(){show('jewelry');}
 function enterMedicine(){show('medicine');}
 function enterPrintables(){show('printables');}
 function enterCurriculum(){show('curriculum');}
+function enterBeneath(){show('beneath');}
 async function toolsChangePass(){
   const oldPw=document.getElementById('t-old').value;
   const newPw=document.getElementById('t-new').value;
@@ -4176,7 +4500,7 @@ function toolsSelectOut(){
   t.focus();t.select();
   try{document.execCommand('copy');}catch(e){}
 }
-const views={gate:document.getElementById('gate'),contents:document.getElementById('contents'),reader:document.getElementById('reader'),library:document.getElementById('library'),grimoire:document.getElementById('grimoire'),almanac:document.getElementById('almanac'),bushoracle:document.getElementById('bushoracle'),tools:document.getElementById('tools'),myths:document.getElementById('myths'),bgw:document.getElementById('bgw'),loc:document.getElementById('loc'),jewelry:document.getElementById('jewelry'),medicine:document.getElementById('medicine'),printables:document.getElementById('printables'),curriculum:document.getElementById('curriculum')};
+const views={gate:document.getElementById('gate'),contents:document.getElementById('contents'),reader:document.getElementById('reader'),library:document.getElementById('library'),grimoire:document.getElementById('grimoire'),almanac:document.getElementById('almanac'),bushoracle:document.getElementById('bushoracle'),tools:document.getElementById('tools'),myths:document.getElementById('myths'),bgw:document.getElementById('bgw'),loc:document.getElementById('loc'),jewelry:document.getElementById('jewelry'),medicine:document.getElementById('medicine'),printables:document.getElementById('printables'),curriculum:document.getElementById('curriculum'),beneath:document.getElementById('beneath')};
 function toLibrary(){show('library');}
 function enterArchive(){show('contents');}
 function enterGrimoire(){show('grimoire');}
