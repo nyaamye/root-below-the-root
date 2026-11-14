@@ -6,7 +6,7 @@
 <title>The Root Below the Root</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Big+Shoulders+Display:wght@600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Cardo:ital@0;1&family=Forum&family=Fraunces:ital,wght@0,500;0,600;1,400&family=Urbanist:wght@400;500;700&display=swap&family=Zilla+Slab:wght@400;600&family=Nunito+Sans:wght@400;600;700&family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Big+Shoulders+Display:wght@600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Cardo:ital@0;1&family=Forum&family=Fraunces:ital,wght@0,500;0,600;1,400&family=Urbanist:wght@400;500;700&display=swap&family=Zilla+Slab:wght@400;600&family=Nunito+Sans:wght@400;600;700&family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus+SC" rel="stylesheet">
 <style>
 :root{
   --void:#0a0616;
@@ -744,6 +744,86 @@ body{
 .pr-note-sec{text-align:center;}
 .pr-note{font-style:italic;color:#6a5a38;font-size:.86rem;}
 
+
+/* ===== Curriculum room: dark-navy starfield / gold-cream / dusty-rose ===== */
+#curriculum{--cur-bg:#0a0f1f;--cur-bg2:#0d1428;--cur-gold:#f3e3b0;--cur-cream:#eef0e8;--cur-rose:#d98a95;--cur-rule:rgba(243,227,176,0.25);
+  background:radial-gradient(ellipse at 50% 0%,#0f1830 0%,#0a0f1f 60%,#060a14 100%);color:var(--cur-cream);
+  font-family:'EB Garamond',Georgia,serif;min-height:100vh;padding:2.5rem 1.2rem 5rem;}
+#curriculum .cur-wrap{max-width:720px;margin:0 auto;}
+#curriculum .cur-back{background:none;border:1px solid var(--cur-rule);color:var(--cur-gold);font-family:'Marcellus SC',serif;
+  font-size:0.8rem;letter-spacing:0.05em;padding:0.5rem 1rem;border-radius:3px;cursor:pointer;margin-bottom:2rem;}
+#curriculum .cur-back:hover{background:rgba(243,227,176,0.08);}
+#curriculum .cur-header{text-align:center;margin-bottom:3rem;}
+#curriculum .cur-moon{font-size:2.2rem;color:#9fd6c8;margin-bottom:0.8rem;}
+#curriculum .cur-title{font-family:'Marcellus SC',serif;font-size:1.6rem;letter-spacing:0.04em;color:var(--cur-gold);
+  text-transform:uppercase;line-height:1.4;margin:0 0 1rem;}
+#curriculum .cur-subtitle{font-style:italic;color:var(--cur-cream);opacity:0.85;font-size:1.05rem;line-height:1.5;margin:0 0 0.6rem;}
+#curriculum .cur-tagline{font-size:0.9rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cur-rose);opacity:0.8;}
+#curriculum .cur-section{margin-bottom:3rem;padding-bottom:1rem;}
+#curriculum .cur-h2{font-family:'Marcellus SC',serif;font-size:1.15rem;letter-spacing:0.04em;text-transform:uppercase;
+  color:var(--cur-gold);border-bottom:1px solid var(--cur-rule);padding-bottom:0.6rem;margin:0 0 1.2rem;}
+#curriculum .cur-h4{font-family:'Marcellus SC',serif;font-size:0.95rem;letter-spacing:0.03em;color:var(--cur-cream);margin:1.4rem 0 0.6rem;}
+#curriculum .cur-h4-gold{color:var(--cur-gold);}
+#curriculum .cur-h4-rose{color:var(--cur-rose);font-style:italic;font-family:'EB Garamond',serif;font-size:0.95rem;}
+#curriculum .cur-p{line-height:1.65;margin:0 0 1rem;font-size:1rem;}
+#curriculum .cur-ul{line-height:1.6;margin:0 0 1rem;padding-left:1.3rem;}
+#curriculum .cur-ul li{margin-bottom:0.45rem;}
+#curriculum .cur-ul-cols{columns:1;}
+@media(min-width:600px){#curriculum .cur-ul-cols{columns:2;column-gap:1.5rem;}}
+#curriculum .cur-quote{border-left:2px solid var(--cur-gold);padding:0.3rem 0 0.3rem 1.1rem;margin:1.2rem 0;
+  font-style:italic;color:var(--cur-gold);opacity:0.92;line-height:1.6;}
+/* at-a-glance block */
+#curriculum .cur-glance{background:rgba(243,227,176,0.05);border:1px solid var(--cur-rule);border-radius:6px;
+  padding:1.2rem 1.3rem;margin-bottom:1.4rem;}
+#curriculum .cur-kicker{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--cur-rose);margin:0 0 0.3rem;}
+#curriculum .cur-glance-title{font-family:'Marcellus SC',serif;font-size:1.2rem;color:var(--cur-gold);margin:0 0 0.8rem;font-weight:400;}
+#curriculum .cur-dodont{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+#curriculum .cur-do h4,#curriculum .cur-dont h4{font-family:'Marcellus SC',serif;font-size:0.78rem;letter-spacing:0.08em;
+  text-transform:uppercase;margin:0 0 0.4rem;}
+#curriculum .cur-do h4{color:#9fd6c8;}
+#curriculum .cur-dont h4{color:var(--cur-rose);}
+#curriculum .cur-do ul,#curriculum .cur-dont ul{list-style:none;padding:0;margin:0;font-size:0.9rem;line-height:1.5;}
+#curriculum .cur-do li,#curriculum .cur-dont li{margin-bottom:0.3rem;}
+/* mastery worlds */
+#curriculum .cur-world{border-top:1px dashed var(--cur-rule);padding-top:1.3rem;margin-top:1.3rem;}
+#curriculum .cur-world:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+#curriculum .cur-world-title{font-family:'Marcellus SC',serif;font-size:1.05rem;color:var(--cur-gold);margin:0 0 0.6rem;font-weight:400;}
+#curriculum .cur-world-num{display:inline-block;width:1.6em;height:1.6em;line-height:1.6em;text-align:center;
+  border:1px solid var(--cur-gold);border-radius:50%;font-size:0.8rem;margin-right:0.4rem;}
+#curriculum .cur-world-sub{font-style:italic;color:var(--cur-cream);opacity:0.85;font-family:'EB Garamond',serif;font-weight:400;}
+#curriculum .cur-world-closing{font-style:italic;opacity:0.85;}
+#curriculum .cur-digital-sanctuary{border-top:1px dashed var(--cur-rule);padding-top:1.3rem;margin-top:1.5rem;}
+/* learning stages, lesson structure */
+#curriculum .cur-stages{line-height:1.65;padding-left:1.4rem;margin:0 0 1rem;}
+#curriculum .cur-stages li{margin-bottom:0.7rem;}
+#curriculum .cur-structure-list li,#curriculum .cur-priorities li{margin-bottom:0.65rem;}
+/* cycles */
+#curriculum .cur-cycle{border-left:2px solid var(--cur-rule);padding-left:1rem;margin-bottom:1.3rem;}
+/* lesson cards */
+#curriculum .cur-lesson-card{background:rgba(159,214,200,0.04);border:1px solid var(--cur-rule);border-radius:8px;
+  padding:1.4rem 1.5rem;margin-bottom:1.8rem;}
+#curriculum .cur-lesson-title{font-family:'Marcellus SC',serif;font-size:1.1rem;color:#9fd6c8;margin:0 0 1rem;font-weight:400;}
+#curriculum .cur-lesson-fields{padding-left:1.3rem;line-height:1.6;margin:0;}
+#curriculum .cur-lesson-fields li{margin-bottom:0.75rem;}
+#curriculum .cur-lesson-fields strong{color:var(--cur-gold);}
+#curriculum .cur-lesson-free,#curriculum .cur-lesson-safety{font-size:0.92rem;line-height:1.55;margin:0.9rem 0 0;padding-top:0.7rem;
+  border-top:1px dashed var(--cur-rule);}
+#curriculum .cur-lesson-free strong,#curriculum .cur-lesson-safety strong{color:var(--cur-rose);}
+#curriculum .cur-code{background:#060a14;border:1px solid var(--cur-rule);border-radius:4px;padding:0.9rem 1rem;
+  font-family:'Space Mono',monospace;font-size:0.72rem;line-height:1.5;overflow-x:auto;color:#b9d8c9;margin:0.6rem 0 0.9rem;white-space:pre;}
+/* tracker */
+#curriculum .cur-tracker-list{list-style:none;padding:0;margin:0 0 1.3rem;}
+#curriculum .cur-tracker-item{padding:0.55rem 0;border-bottom:1px dashed var(--cur-rule);font-size:0.95rem;line-height:1.5;}
+#curriculum .cur-tracker-circle{color:var(--cur-gold);margin-right:0.4rem;}
+#curriculum .cur-tracker-item strong{color:var(--cur-cream);}
+
+@media(max-width:480px){
+  #curriculum{padding:1.6rem 0.9rem 4rem;}
+  #curriculum .cur-title{font-size:1.3rem;}
+  #curriculum .cur-dodont{grid-template-columns:1fr;}
+  #curriculum .cur-lesson-card{padding:1.1rem 1rem;}
+}
+
 </style>
 </head>
 <body>
@@ -938,6 +1018,12 @@ body{
       <div class="r-eyebrow">Two Designed, Print-Ready Pieces</div>
       <div class="r-name">Finished Printables</div>
       <div class="r-atmo">The scrapbook &amp; newspaper-aging guide, and the Threshold Mornings practice cards — view or download. Newsprint parchment, Playfair Display, a small home for finished work.</div>
+      <span class="r-arr">❧</span>
+    </li>
+    <li class="room" onclick="enterCurriculum()">
+      <div class="r-eyebrow">Seven Weeks, Seven Small Things Made</div>
+      <div class="r-name">The Living Library &amp; The Bush Oracle Curriculum</div>
+      <div class="r-atmo">Seven mastery worlds beneath the twelve branches, the Download &amp; Somatic Memory Practice, the eight-stage learning method, and seven full weekly lesson plans with free or household materials. Dark-navy starfield, gold &amp; dusty rose.</div>
       <span class="r-arr">❧</span>
     </li>
   </ul>
@@ -3036,6 +3122,987 @@ body{
   </div>
 </section>
 
+<section class="view" id="curriculum">
+<div class="cur-wrap">
+<button class="cur-back" onclick="show('library')">&larr; Library</button>
+<header class="cur-header">
+<div class="cur-moon">&#9789;</div>
+<h1 class="cur-title">The Living Library &amp; The Bush Oracle</h1>
+<p class="cur-subtitle">An Expanded Curriculum for Interdisciplinary Mastery, Ancestral Knowledge, Creative Sovereignty &amp; Practical Skill</p>
+<p class="cur-tagline">With weekly lesson plans</p>
+</header>
+<div class="cur-section" id="cur-purpose">
+<h2 class="cur-h2">I. The Purpose of This Curriculum</h2>
+<p class="cur-p">The purpose of this curriculum is to develop a person who can study deeply, understand systems, recognise relationships between disciplines, preserve knowledge, create tangible things, and apply what they learn.</p>
+<p class="cur-p">The goal is not to collect hobbies or become superficially familiar with many subjects. The goal is to develop interconnected forms of knowledge until they become usable skills, creative abilities, and bodies of work.</p>
+<p class="cur-p">The Living Library is an evolving personal institution: a place where knowledge is studied, experienced, questioned, documented, practised, preserved, and eventually transformed into something that can be shared or built upon.</p>
+<p class="cur-p">The Bush Oracle is the living relationship between observation, intuition, ancestry, land, sound, memory, creativity, and interpretation. It is not limited to one academic discipline. It develops through the study of the natural world, cultural traditions, the body, historical knowledge, artistic expression, and the ability to recognise connections.</p>
+<h4 class="cur-h4">The curriculum should cultivate</h4>
+<ul class="cur-ul">
+<li><strong>Intellectual mastery:</strong> understanding how systems work, how knowledge is produced, and how different disciplines connect.</li>
+<li><strong>Practical mastery:</strong> developing the ability to make, repair, grow, formulate, design, build, and experiment.</li>
+<li><strong>Cultural and ancestral literacy:</strong> researching Caribbean histories, traditions, technologies, ecological knowledge, language, and artistic practices with attention to their specific communities.</li>
+<li><strong>Creative mastery:</strong> turning knowledge into music, writing, visual art, physical objects, digital experiences, and original systems.</li>
+<li><strong>Spiritual and reflective development:</strong> preserving dreams, downloads, personal interpretations, embodied experiences, and spiritual understandings as part of the evolving archive.</li>
+<li><strong>Digital sovereignty:</strong> learning to build, maintain, and control the digital environments through which knowledge is organised and shared.</li>
+<li><strong>Self-sufficiency:</strong> developing the ability to solve problems, learn independently, and create with accessible resources.</li>
+</ul>
+<p class="cur-p">The ultimate objective is not to know everything. It is to become increasingly capable of learning almost anything, understanding how it relates to other things, and applying that understanding.</p>
+</div>
+<div class="cur-section" id="cur-branches">
+<h2 class="cur-h2">II. The Original Twelve Branches Remain the Foundation</h2>
+<p class="cur-p">The twelve branches already established in the original Life Purpose blueprint remain the primary structure of the curriculum: the Earthkeeper, the Alchemist, the Apothecary, the Hearthkeeper, the Soundkeeper, the Adornment Architect, the Archivist, the Oracle, the Architect, the Elementalist, the Strategist and the Storyteller.</p>
+<p class="cur-p">This expansion is not a replacement taxonomy. New disciplines, crafts, sciences, technologies, and research methods should be incorporated into the existing branches wherever they naturally belong.</p>
+<p class="cur-p">A subject may serve more than one branch. For example, sound can be studied through physics, music, cultural history, spirituality, mathematics, and material construction. Botany can connect to ecology, medicine history, chemistry, agriculture, dyeing, foodways, and ancestral knowledge.</p>
+<p class="cur-p">The branches should therefore function as interconnected fields rather than isolated boxes.</p>
+<blockquote class="cur-quote">Curriculum rule: preserve the original branch names, descriptions, purposes, and existing content. Add new disciplines beneath or alongside them without removing their original meaning.</blockquote>
+</div>
+<div class="cur-section" id="cur-worlds">
+<h2 class="cur-h2">III. Seven Interconnected Mastery Worlds</h2>
+<p class="cur-p">The following seven worlds are an additional organising layer for the new disciplines. They are not replacements for the twelve original branches. They are a way of grouping the subjects that will help develop them.</p>
+<div class="cur-world">
+<h3 class="cur-world-title"><span class="cur-world-num">1</span> The Earthkeeper: <span class="cur-world-sub">Land, Ecology &amp; Living Systems</span></h3>
+<p class="cur-p">The study of the Earth as a living system, including its materials, cycles, organisms, landscapes, and relationships with human communities.</p>
+<h4 class="cur-h4-rose">Disciplines to explore</h4>
+<ul class="cur-ul">
+<li>Botany and plant taxonomy</li>
+<li>Ethnobotany and traditional ecological knowledge</li>
+<li>Soil science and pedology</li>
+<li>Agroecology and permaculture</li>
+<li>Agroforestry and food forests</li>
+<li>Hydrology and watershed systems</li>
+<li>Geology and mineralogy</li>
+<li>Mycology and fungi</li>
+<li>Ecology and biodiversity</li>
+<li>Environmental science</li>
+<li>Seed saving and plant propagation</li>
+<li>Composting and soil regeneration</li>
+<li>Ethnoastronomy and relationships between land, sky, and seasonal cycles</li>
+</ul>
+<h4 class="cur-h4-rose">Caribbean and place-based directions</h4>
+<ul class="cur-ul">
+<li>Caribbean flora and plant identification</li>
+<li>St. Vincent and the Grenadines&#x27; ecosystems</li>
+<li>Tortola and the wider Virgin Islands&#x27; ecology</li>
+<li>Traditional food crops and agricultural practices</li>
+<li>Bush knowledge and community-specific plant traditions</li>
+<li>Rainfall, drought, watersheds, coastal environments, and island geology</li>
+<li>Traditional ecological knowledge and the relationship between people and land</li>
+</ul>
+<h4 class="cur-h4-rose">Practical abilities to develop</h4>
+<p class="cur-p">Identify plants, understand soil, observe ecosystems, grow food, propagate plants, recognise environmental changes, document local biodiversity, and understand how land supports human life.</p>
+</div>
+<div class="cur-world">
+<h3 class="cur-world-title"><span class="cur-world-num">2</span> The Alchemist: <span class="cur-world-sub">Chemistry, Transformation &amp; Formulation</span></h3>
+<p class="cur-p">The study of how materials change, how substances interact, and how natural and manufactured materials can be transformed into useful products.</p>
+<h4 class="cur-h4-rose">Disciplines to explore</h4>
+<ul class="cur-ul">
+<li>General chemistry</li>
+<li>Organic chemistry</li>
+<li>Biochemistry</li>
+<li>Phytochemistry</li>
+<li>Acid–base chemistry</li>
+<li>Material chemistry</li>
+<li>Natural pigments and dyes</li>
+<li>Extraction and separation techniques</li>
+<li>Fermentation science</li>
+<li>Food chemistry</li>
+<li>Cosmetic chemistry and formulation</li>
+<li>Soapmaking and surfactant chemistry</li>
+<li>Textile chemistry</li>
+<li>Mordants and dye fixation</li>
+<li>Ethnobotanical extraction and historical preparation methods</li>
+</ul>
+<h4 class="cur-h4-rose">Specific craft and science directions</h4>
+<ul class="cur-ul">
+<li>Indigo vat dyeing and the chemistry of indigo reduction and oxidation</li>
+<li>Plant-based dyes and mordants</li>
+<li>Anthocyanin pigment extraction</li>
+<li>Natural ink and pigment preparation</li>
+<li>Tincture and infusion theory, with careful separation of historical practice from medical claims</li>
+<li>Food preservation and fermentation</li>
+<li>Material testing and colourfastness</li>
+</ul>
+<h4 class="cur-h4-rose">Practical abilities to develop</h4>
+<p class="cur-p">Understand solutions, mixtures, pH, solubility, extraction, concentration, pigments, emulsions, and material reactions. Learn how to document experiments, control variables, compare results, and formulate simple products safely.</p>
+<p class="cur-p cur-world-closing">The Alchemist should develop an understanding of both the scientific principles and the cultural histories of transformation.</p>
+</div>
+<div class="cur-world">
+<h3 class="cur-world-title"><span class="cur-world-num">3</span> The Architect: <span class="cur-world-sub">Structures, Materials &amp; Mechanical Systems</span></h3>
+<p class="cur-p">The study of how things are designed, constructed, joined, shaped, and made to function.</p>
+<h4 class="cur-h4-rose">Disciplines to explore</h4>
+<ul class="cur-ul">
+<li>Mechanical engineering</li>
+<li>Structural engineering fundamentals</li>
+<li>Materials science</li>
+<li>Woodworking and joinery</li>
+<li>Wood bending and steam-bending principles</li>
+<li>Hollow-body construction</li>
+<li>Acoustic instrument construction</li>
+<li>Masonry and stonework</li>
+<li>Dry-stone construction</li>
+<li>Earth building and natural wall systems</li>
+<li>Ceramics and clay engineering</li>
+<li>Metallurgy</li>
+<li>Blacksmithing</li>
+<li>Leatherworking</li>
+<li>Basketry and cordage</li>
+<li>Fibre engineering</li>
+<li>Furniture design</li>
+<li>Product design</li>
+<li>Technical drawing</li>
+<li>Geometry and measurement</li>
+</ul>
+<h4 class="cur-h4-rose">Specific craft directions</h4>
+<ul class="cur-ul">
+<li>Wood-bending and the behaviour of wood under heat and moisture</li>
+<li>Hollow-body construction and resonant cavities</li>
+<li>Soundboard and instrument-body construction</li>
+<li>Traditional joinery and furniture-making</li>
+<li>Dry-stone wall principles</li>
+<li>Earth-wall construction and material selection</li>
+<li>Calabash craft and natural-object construction</li>
+<li>Basketry, weaving, and traditional cordage</li>
+</ul>
+<h4 class="cur-h4-rose">Practical abilities to develop</h4>
+<p class="cur-p">Understand forces, load, balance, tension, compression, material properties, joints, structural forms, tolerances, and construction sequences.</p>
+<p class="cur-p cur-world-closing">Advanced construction should follow appropriate instruction, supervision, tools, and safety requirements. The beginner stage should focus on understanding, drawings, small models, and safe material experiments.</p>
+</div>
+<div class="cur-world">
+<h3 class="cur-world-title"><span class="cur-world-num">4</span> The Soundkeeper: <span class="cur-world-sub">Sound, Music &amp; Vibration</span></h3>
+<p class="cur-p">The study of sound as a physical phenomenon, an artistic medium, a cultural technology, and a form of communication.</p>
+<h4 class="cur-h4-rose">Disciplines to explore</h4>
+<ul class="cur-ul">
+<li>Acoustics</li>
+<li>Psychoacoustics</li>
+<li>Vibration physics</li>
+<li>Sound engineering</li>
+<li>Audio production</li>
+<li>Music theory</li>
+<li>Ethnomusicology</li>
+<li>Instrument design</li>
+<li>Resonance and harmonic systems</li>
+<li>Sound recording</li>
+<li>Signal processing</li>
+<li>Electronics for audio</li>
+<li>Room acoustics</li>
+<li>Rhythm and polyrhythm</li>
+<li>Vocal production</li>
+<li>Historical sound technologies</li>
+<li>Caribbean musical traditions</li>
+</ul>
+<h4 class="cur-h4-rose">Specific directions</h4>
+<ul class="cur-ul">
+<li>Acoustic resonator craft</li>
+<li>Soundboard construction and material behaviour</li>
+<li>Resonance chambers and hollow-body instruments</li>
+<li>Building simple acoustic experiments</li>
+<li>Understanding the relationship between shape, material, and tone</li>
+<li>Studying Caribbean percussion, rhythm, call-and-response, and musical transmission</li>
+<li>Developing audio engineering and production skills</li>
+<li>Connecting sound research to original music-making</li>
+</ul>
+<h4 class="cur-h4-rose">Practical abilities to develop</h4>
+<p class="cur-p">Understand frequency, amplitude, resonance, timbre, harmonics, waveforms, reverberation, phase, rhythm, and the interaction between materials and sound.</p>
+<p class="cur-p cur-world-closing">This world should connect physical acoustics with cultural research and personal musical practice without assuming that all Caribbean sound traditions share the same origins or meanings.</p>
+</div>
+<div class="cur-world">
+<h3 class="cur-world-title"><span class="cur-world-num">5</span> The Oracle: <span class="cur-world-sub">Observation, Interpretation &amp; Systems of Meaning</span></h3>
+<p class="cur-p">The study of perception, symbolic systems, philosophy, the natural world, the sky, memory, and the ways people interpret experience.</p>
+<h4 class="cur-h4-rose">Disciplines to explore</h4>
+<ul class="cur-ul">
+<li>Astronomy</li>
+<li>Observational astronomy</li>
+<li>Celestial navigation</li>
+<li>Astrology as a historical and interpretive tradition</li>
+<li>Ethnoastronomy</li>
+<li>Philosophy</li>
+<li>Epistemology: the study of knowledge and how we know what we know</li>
+<li>Psychology and cognitive science</li>
+<li>Somatic awareness and embodied memory</li>
+<li>Dream journaling and dream studies</li>
+<li>Symbolism and comparative mythology</li>
+<li>Mathematics and pattern recognition</li>
+<li>Systems thinking</li>
+<li>Logic and critical reasoning</li>
+</ul>
+<h4 class="cur-h4-rose">Practical abilities to develop</h4>
+<p class="cur-p">Observe carefully, identify patterns, distinguish observations from interpretations, understand symbolic frameworks, compare different explanations, and develop a personal record of recurring ideas and experiences.</p>
+<p class="cur-p cur-world-closing">The Oracle&#x27;s work should preserve spiritual and intuitive interpretations as their own category of knowledge. They should not be erased simply because they are not academic claims. At the same time, historical, scientific, cultural, and personal interpretations should remain distinguishable so the archive can retain its integrity.</p>
+</div>
+<div class="cur-world">
+<h3 class="cur-world-title"><span class="cur-world-num">6</span> The Archivist: <span class="cur-world-sub">History, Language &amp; Knowledge Preservation</span></h3>
+<p class="cur-p">The study of how knowledge is created, transmitted, recorded, interpreted, protected, and passed between generations.</p>
+<h4 class="cur-h4-rose">Disciplines to explore</h4>
+<ul class="cur-ul">
+<li>Historiography</li>
+<li>Archival science</li>
+<li>Oral history</li>
+<li>Ethnography</li>
+<li>Historical linguistics</li>
+<li>Phonetics and phonology</li>
+<li>Caribbean linguistics and creole studies</li>
+<li>Etymology</li>
+<li>Paleography and historical documents</li>
+<li>Anthropology</li>
+<li>Ethnomusicology</li>
+<li>Maritime history</li>
+<li>Caribbean history</li>
+<li>Cultural history</li>
+<li>Information science</li>
+<li>Knowledge management</li>
+<li>Research methodology</li>
+<li>Digital preservation</li>
+<li>Library science</li>
+<li>Provenance and source criticism</li>
+</ul>
+<h4 class="cur-h4-rose">Caribbean and place-based directions</h4>
+<ul class="cur-ul">
+<li>Island-specific histories and traditions</li>
+<li>The history of Obeah, Shakers, and other community-specific spiritual and cultural practices</li>
+<li>Caribbean language development</li>
+<li>Maritime movement and inter-island exchange</li>
+<li>Traditional technologies and foodways</li>
+<li>Music, oral transmission, and historical memory</li>
+<li>The relationship between colonial archives and community knowledge</li>
+</ul>
+<h4 class="cur-h4-rose">Practical abilities to develop</h4>
+<p class="cur-p">Locate and evaluate sources, record oral histories, organise research, trace terminology, compare historical accounts, preserve documents, build bibliographies, and maintain a clear record of where information came from.</p>
+<p class="cur-p cur-world-closing">Research should preserve distinctions between documented historical evidence, community testimony, family memory, personal experience, and spiritual interpretation.</p>
+</div>
+<div class="cur-world">
+<h3 class="cur-world-title"><span class="cur-world-num">7</span> The Sovereign Maker: <span class="cur-world-sub">Design, Technology &amp; Independent Creation</span></h3>
+<p class="cur-p">The study of how to turn knowledge into original products, tools, digital environments, systems, and sustainable creative work.</p>
+<h4 class="cur-h4-rose">Disciplines to explore</h4>
+<ul class="cur-ul">
+<li>Web development</li>
+<li>HTML, CSS, and JavaScript</li>
+<li>Application development</li>
+<li>Software engineering fundamentals</li>
+<li>UI and UX design</li>
+<li>Information architecture</li>
+<li>Digital artefact curation</li>
+<li>Knowledge engineering</li>
+<li>Database design</li>
+<li>Digital archiving</li>
+<li>Generative art</li>
+<li>Creative coding</li>
+<li>Data visualisation</li>
+<li>CAD and 3D modelling</li>
+<li>Digital fabrication</li>
+<li>Electronics</li>
+<li>Embedded systems</li>
+<li>Robotics</li>
+<li>Product design</li>
+<li>Industrial design</li>
+<li>Entrepreneurship and independent creative production</li>
+</ul>
+</div>
+<div class="cur-digital-sanctuary">
+<h4 class="cur-h4-gold">The digital sanctuary</h4>
+<p class="cur-p">The website for the research project should become a practical learning environment and an evolving digital home for the Living Library. The long-term goal is to develop the ability to:</p>
+<ul class="cur-ul">
+<li>Build and maintain original websites and applications.</li>
+<li>Understand the code behind the interfaces rather than depending entirely on AI-generated prototypes.</li>
+<li>Create interactive research archives.</li>
+<li>Design astrology and almanac interfaces.</li>
+<li>Build interactive cards, calendars, transit calculators, and tabbed reference systems.</li>
+<li>Organise documents, images, research notes, and multimedia.</li>
+<li>Develop a distinctive visual language using dark celestial, aged star-chart, botanical, and archival aesthetics.</li>
+<li>Preserve digital artefacts and maintain control over the project&#x27;s structure and presentation.</li>
+<li>Eventually create independent digital products and tools.</li>
+</ul>
+<p class="cur-p">The website is not separate from the curriculum. It is where the knowledge can be organised, tested, presented, and made useful.</p>
+<h4 class="cur-h4-rose">Integration module: web development &amp; digital artefact curation</h4>
+<ul class="cur-ul">
+<li><strong>Core objective:</strong> use self-taught front-end coding (HTML, CSS, JavaScript) to independently build, style, and deploy web applications and digital interfaces, moving from AI-assisted prototyping to hands-on code ownership.</li>
+<li><strong>The digital medium as sanctuary:</strong> translating sovereign spiritual systems, customised astrology and almanac interfaces (such as the Co–Star hybrid daily oracle), and personal archives into functional, highly curated web experiences.</li>
+<li><strong>Aesthetic and technical standards:</strong> dark, atmospheric, celestial and high-craft UI design; strict typography, custom layouts, and interactive components (for example dynamic &quot;Do and Don&#x27;t&quot; card draws, personalised transit calculators, and tabbed almanacs); tools that feel hand-crafted rather than mass-market or sterile.</li>
+<li><strong>Long-term market and sovereignty vision:</strong> packaging and marketing custom, value-driven web applications and digital products as premium, independent assets, keeping complete creative control and the technical infrastructure self-sustained behind the veil.</li>
+</ul>
+</div>
+</div>
+<div class="cur-section" id="cur-additional">
+<h2 class="cur-h2">IV. Additional Interdisciplinary Disciplines</h2>
+<p class="cur-p">The following subjects expand the mastery worlds and should be incorporated wherever they fit the existing twelve branches.</p>
+<h4 class="cur-h4-gold">Natural sciences and environmental knowledge</h4>
+<ul class="cur-ul cur-ul-cols">
+<li>Biology</li>
+<li>Botany</li>
+<li>Mycology</li>
+<li>Ecology</li>
+<li>Soil science</li>
+<li>Hydrology</li>
+<li>Geology</li>
+<li>Mineralogy</li>
+<li>Astronomy</li>
+<li>Environmental science</li>
+<li>Agroecology</li>
+</ul>
+<h4 class="cur-h4-gold">Chemistry and material transformation</h4>
+<ul class="cur-ul cur-ul-cols">
+<li>General chemistry</li>
+<li>Organic chemistry</li>
+<li>Biochemistry</li>
+<li>Phytochemistry</li>
+<li>Textile chemistry</li>
+<li>Food science</li>
+<li>Cosmetic chemistry</li>
+<li>Fermentation</li>
+<li>Natural dye chemistry</li>
+<li>Material science</li>
+</ul>
+<h4 class="cur-h4-gold">Engineering and physical construction</h4>
+<ul class="cur-ul cur-ul-cols">
+<li>Mechanical engineering</li>
+<li>Structural engineering fundamentals</li>
+<li>Acoustics</li>
+<li>Vibration physics</li>
+<li>Metallurgy</li>
+<li>Woodworking</li>
+<li>Joinery</li>
+<li>Ceramics</li>
+<li>Masonry</li>
+<li>Earth building</li>
+<li>Fibre engineering</li>
+<li>Basketry</li>
+<li>Leatherworking</li>
+<li>Cordage</li>
+</ul>
+<h4 class="cur-h4-gold">History, culture, and knowledge systems</h4>
+<ul class="cur-ul cur-ul-cols">
+<li>Caribbean history</li>
+<li>Maritime history</li>
+<li>Historical linguistics</li>
+<li>Phonetics</li>
+<li>Oral history</li>
+<li>Ethnography</li>
+<li>Historiography</li>
+<li>Archival science</li>
+<li>Ethnomusicology</li>
+<li>Anthropology</li>
+<li>Philosophy</li>
+<li>Epistemology</li>
+<li>Comparative mythology</li>
+<li>Traditional ecological knowledge</li>
+</ul>
+<h4 class="cur-h4-gold">Creative and practical sciences</h4>
+<ul class="cur-ul cur-ul-cols">
+<li>Mathematics</li>
+<li>Geometry</li>
+<li>Patternmaking</li>
+<li>Textile design</li>
+<li>Food preservation</li>
+<li>Product design</li>
+<li>Furniture design</li>
+<li>Repair and restoration</li>
+<li>Formulation</li>
+<li>Technical drawing</li>
+<li>Visual communication</li>
+</ul>
+<h4 class="cur-h4-gold">Digital and technological systems</h4>
+<ul class="cur-ul cur-ul-cols">
+<li>Programming</li>
+<li>Web development</li>
+<li>Software engineering</li>
+<li>Information architecture</li>
+<li>Database systems</li>
+<li>Digital preservation</li>
+<li>Creative coding</li>
+<li>Generative art</li>
+<li>Electronics</li>
+<li>Robotics</li>
+<li>CAD</li>
+<li>3D modelling</li>
+<li>Digital fabrication</li>
+</ul>
+<p class="cur-p">These are not separate obligations to master simultaneously. They are a long-term field of study from which lessons and projects can be selected progressively.</p>
+</div>
+<div class="cur-section" id="cur-caribbean">
+<h2 class="cur-h2">V. Caribbean-Centred Craft and Knowledge Pathways</h2>
+<p class="cur-p">The curriculum should give particular attention to Caribbean environments, histories, and technologies. The Caribbean is not a single undifferentiated culture. Research should identify the island, community, historical period, and source whenever possible. Potential pathways include:</p>
+<ul class="cur-ul">
+<li>Boatbuilding and maritime construction</li>
+<li>Calabash craft</li>
+<li>Bush carpentry</li>
+<li>Traditional fishing technologies</li>
+<li>Cordage and rope-making</li>
+<li>Basketry and weaving</li>
+<li>Traditional foodways</li>
+<li>Fermentation and preservation</li>
+<li>Textile arts and natural dyeing</li>
+<li>Caribbean musical instruments and sound traditions</li>
+<li>Island agriculture and food forests</li>
+<li>Traditional ecological knowledge</li>
+<li>Local plant identification</li>
+<li>Ethnoastronomy and seasonal observation</li>
+<li>Historical navigation and inter-island exchange</li>
+<li>Community-specific oral traditions and spiritual practices</li>
+</ul>
+<p class="cur-p">A practice documented in one island or community should not automatically be attributed to another. Similarities can be investigated, but they should not be treated as proof of shared origin.</p>
+<p class="cur-p">The research should remain open to archival records, archaeological evidence, oral histories, family accounts, community knowledge, and your own experiences, with each source identified clearly.</p>
+</div>
+<div class="cur-section" id="cur-download">
+<h2 class="cur-h2">VI. The Download &amp;amp; Somatic Memory Practice</h2>
+<div class="cur-glance">
+<p class="cur-kicker">Your downloads at a glance</p>
+<h3 class="cur-glance-title">Write the wave back to the baseline.</h3>
+<div class="cur-dodont">
+<div class="cur-do"><h4>Do</h4><ul>
+<li>Catch it fast</li>
+<li>Return when you can</li>
+<li>Keep the original words</li>
+</ul></div>
+<div class="cur-dont"><h4>Don't</h4><ul>
+<li>Make handwriting a rule</li>
+<li>Let AI decide what it means</li>
+<li>Feel guilty</li>
+</ul></div>
+</div></div>
+<p class="cur-p">Catch it first, return to it when you can, and write it back by hand. Nothing here is homework.</p>
+<h4 class="cur-h4-gold">The wave and the baseline</h4>
+<p class="cur-p">A central part of the Living Library is the preservation of thoughts, downloads, realisations, dreams, memories, and observations as they arise. The following preserves a personal insight received during a conversation with ancestors:</p>
+<blockquote class="cur-quote">Downloads and thoughts are like a sea of waves. The waves crash and eventually return to the baseline. When I type them out, I am reaching the baseline. When I write, I am writing the wave back to the baseline.</blockquote>
+<p class="cur-p">This describes a personal understanding of the relationship between receiving, capturing, remembering, and developing an idea. Typing can capture a thought quickly while it is arriving. Handwriting can provide another encounter with that thought through movement, sensation, pace, and attention. The process may help an idea become more developed and easier to revisit.</p>
+<p class="cur-p">This practice should be explored through both your spiritual framework and practical study of memory, attention, motor activity, and learning.</p>
+<h4 class="cur-h4-gold">The three-stage recording system</h4>
+<ul class="cur-ul">
+<li><strong>Stage 1, Catch the wave:</strong> do not require handwriting at the moment a thought arrives. Type a quick note, record a voice memo, write a few words on paper, save a phrase, image or question, or ask AI to help organise or reflect on a thought when that is useful. The purpose is to preserve the thought without interrupting its arrival.</li>
+<li><strong>Stage 2, Return to the wave:</strong> when time becomes available, revisit the captured thought. There is no requirement to do this immediately. It can happen during a quiet moment, while the children are occupied, or during a small break.</li>
+<li><strong>Stage 3, Write the wave back:</strong> use handwriting to revisit and develop selected thoughts. This does not need to become a long journal session. A few sentences, a paragraph, a diagram, or a page of observations is enough. The purpose is not to copy a typed note word for word. It is to encounter the idea again and allow it to develop.</li>
+</ul>
+<h4 class="cur-h4-rose">Stage 2 questions</h4>
+<ul class="cur-ul">
+<li>What was I thinking when I captured this?</li>
+<li>What was the original feeling or image?</li>
+<li>What connections are becoming visible now?</li>
+<li>What did I leave unfinished?</li>
+<li>Is there something I want to research or develop?</li>
+</ul>
+<h4 class="cur-h4-gold">A flexible journal structure</h4>
+<ul class="cur-ul">
+<li><strong>The Download:</strong> what arrived? Preserve the original wording as closely as possible.</li>
+<li><strong>The Body:</strong> what did I notice physically while thinking or receiving it?</li>
+<li><strong>The Associations:</strong> what memories, images, symbols, dreams, or other thoughts did it connect to?</li>
+<li><strong>The Development:</strong> what do I understand now that I did not understand at first?</li>
+<li><strong>The Research:</strong> is there a historical, cultural, scientific, or philosophical question worth investigating?</li>
+<li><strong>The Interpretation:</strong> what does this mean within my own spiritual or personal framework?</li>
+<li><strong>The Return:</strong> what do I want to revisit later?</li>
+</ul>
+<p class="cur-p">These headings are optional prompts, not mandatory fields.</p>
+<h4 class="cur-h4-gold">Making the practice accessible</h4>
+<p class="cur-p">The journal should not become another responsibility that creates guilt.</p>
+<ul class="cur-ul">
+<li>Keep a journal somewhere visible and easy to reach, and leave it open to the current page when possible.</li>
+<li>Use loose paper if a bound journal feels too formal.</li>
+<li>Write one sentence rather than waiting for a full entry.</li>
+<li>Use diagrams, arrows, symbols, and sketches.</li>
+<li>Allow typed notes and voice recordings to remain part of the system.</li>
+<li>Revisit older notes when there is time instead of requiring a daily writing schedule.</li>
+<li>Do not make handwriting a prerequisite for capturing a thought.</li>
+</ul>
+<p class="cur-p">The aim is to build a bridge between spontaneous thought and deliberate development, not to force a particular writing identity.</p>
+<p class="cur-p">AI may be used as a temporary thinking partner to help clarify, question, organise, or reflect on an idea. It should not replace the original download or become the authority on what the experience means. Preserve the original words first; add interpretations and outside feedback separately.</p>
+</div>
+<div class="cur-section" id="cur-method">
+<h2 class="cur-h2">VII. The Learning Method: From Beginner to Mastery</h2>
+<div class="cur-glance">
+<p class="cur-kicker">Your method at a glance</p>
+<h3 class="cur-glance-title">Mastery is making, explaining and returning.</h3>
+<div class="cur-dodont">
+<div class="cur-do"><h4>Do</h4><ul>
+<li>Small safe experiments</li>
+<li>Record what happened</li>
+<li>Connect two fields</li>
+</ul></div>
+<div class="cur-dont"><h4>Don't</h4><ul>
+<li>Jump to advanced work</li>
+<li>Skip foundations</li>
+<li>Count lessons instead of skills</li>
+</ul></div>
+</div></div>
+<p class="cur-p">Every discipline moves through eight stages. You do not finish a lesson. You make something from it.</p>
+<p class="cur-p">Every discipline should be approached through progressive stages.</p>
+<ol class="cur-stages">
+<li><strong>Stage 1, Orientation:</strong> learn what the discipline studies, its vocabulary, its history, and its basic questions.</li>
+<li><strong>Stage 2, Foundations:</strong> understand the underlying principles. Learn the basic concepts, materials, tools, methods, and safety considerations.</li>
+<li><strong>Stage 3, Observation:</strong> study real examples. Observe natural systems, objects, processes, historical sources, and demonstrations.</li>
+<li><strong>Stage 4, Experimentation:</strong> conduct small, safe, inexpensive experiments. Record observations, compare outcomes, and learn from mistakes.</li>
+<li><strong>Stage 5, Practical application:</strong> use the knowledge to make something, solve a problem, conduct research, or complete a project.</li>
+<li><strong>Stage 6, Interdisciplinary connection:</strong> connect the subject to at least two other fields. Identify shared principles, different methods, and useful relationships.</li>
+<li><strong>Stage 7, Independent development:</strong> design original projects, ask more advanced questions, and develop the ability to teach or explain what has been learned.</li>
+<li><strong>Stage 8, Contribution:</strong> create something that adds to the Living Library: an archive, tool, object, study, demonstration, written work, recording, or original system.</li>
+</ol>
+<p class="cur-p">Mastery is demonstrated through understanding, repeated practice, independent application, and the ability to explain and create, not merely through completing lessons.</p>
+</div>
+<div class="cur-section" id="cur-budget">
+<h2 class="cur-h2">VIII. Beginner and Low-Budget Learning Policy</h2>
+<div class="cur-glance">
+<p class="cur-kicker">Your budget at a glance</p>
+<h3 class="cur-glance-title">Free first. Never buy to feel ready.</h3>
+<div class="cur-dodont">
+<div class="cur-do"><h4>Do</h4><ul>
+<li>Library and free courses</li>
+<li>Household materials</li>
+<li>Note what needs a professional</li>
+</ul></div>
+<div class="cur-dont"><h4>Don't</h4><ul>
+<li>Assume you can spend</li>
+<li>Buy equipment first</li>
+<li>Skip the safety line</li>
+</ul></div>
+</div></div>
+<p class="cur-p">Every lesson works with what you already have. Anything extra is optional.</p>
+<p class="cur-p">The curriculum must be accessible to someone beginning with limited funds, limited equipment, and fragmented free time. The default assumption is that you are a beginner and may be balancing childcare, household responsibilities, personal projects, and other commitments.</p>
+<h4 class="cur-h4-gold">Free resources come first</h4>
+<ul class="cur-ul">
+<li>Free educational materials and open textbooks</li>
+<li>Public library books and digital library resources</li>
+<li>Free university and museum materials</li>
+<li>Open-source software</li>
+<li>Free coding environments and documentation</li>
+<li>Household materials for safe experiments</li>
+<li>Observation and field notes</li>
+<li>Free lectures, demonstrations, and educational videos</li>
+</ul>
+<h4 class="cur-h4-gold">Low-cost materials are optional</h4>
+<p class="cur-p">When an activity requires additional supplies, aim for approximately $0 to $15 where practical. This is a target, not a requirement. No lesson should assume that you can spend money.</p>
+<h4 class="cur-h4-gold">Advanced equipment comes later</h4>
+<p class="cur-p">Workshops, laboratories, specialised tools, instruments, paid courses, expensive software, and professional equipment should be treated as future opportunities rather than prerequisites.</p>
+<h4 class="cur-h4-gold">Every lesson identifies</h4>
+<ul class="cur-ul">
+<li>What can be learned without purchasing anything.</li>
+<li>What household materials may be used.</li>
+<li>What optional supplies could improve the activity.</li>
+<li>What requires professional equipment, supervision, or a regulated setting.</li>
+</ul>
+<p class="cur-p">You should never be encouraged to purchase equipment merely to feel prepared to learn.</p>
+</div>
+<div class="cur-section" id="cur-structure">
+<h2 class="cur-h2">IX. The Weekly Mastery Lesson Structure</h2>
+<p class="cur-p">Each weekly lesson should be a substantial but accessible learning experience. Every lesson includes:</p>
+<ul class="cur-ul cur-structure-list">
+<li><strong>1. Mastery world and original branch connection:</strong> where the lesson belongs within the existing twelve-branch blueprint and which additional mastery world it develops.</li>
+<li><strong>2. Discipline:</strong> the primary field of study.</li>
+<li><strong>3. Why it matters:</strong> how the subject contributes to the broader Life Purpose curriculum.</li>
+<li><strong>4. Beginner foundations:</strong> concepts and vocabulary, without assuming prior knowledge.</li>
+<li><strong>5. Deeper explanation:</strong> the underlying mechanisms, principles, history, or systems.</li>
+<li><strong>6. Caribbean connection:</strong> relevant island-specific examples and traditions when evidence or appropriate research material exists.</li>
+<li><strong>7. Practical project:</strong> a safe, accessible activity using free or household resources wherever possible.</li>
+<li><strong>8. Interdisciplinary connections:</strong> connect the lesson to at least two other disciplines.</li>
+<li><strong>9. Research and documentation:</strong> questions, source suggestions, and a way to preserve findings.</li>
+<li><strong>10. Reflection:</strong> questions that help you evaluate what you understand and what you want to explore next.</li>
+<li><strong>11. Progression:</strong> how the topic can advance from beginner to intermediate and advanced study.</li>
+<li><strong>12. Living Library contribution:</strong> the artefact, record, skill, or piece of knowledge to add to the archive.</li>
+</ul>
+<p class="cur-p">Lessons should build on one another when useful, revisit prerequisites, and progressively increase in depth. They should not jump into advanced techniques before foundational understanding is established.</p>
+</div>
+<div class="cur-section" id="cur-sequence">
+<h2 class="cur-h2">X. Suggested Curriculum Sequence</h2>
+<p class="cur-p">A flexible starting pathway, not a rigid schedule. Lessons can be rearranged to fit your projects, materials and interests.</p>
+<div class="cur-cycle">
+<h4 class="cur-h4-gold">Foundation cycle: learning how to learn and observe</h4>
+<ul class="cur-ul">
+<li>Research methods and knowledge classification</li>
+<li>Observation and field-note techniques</li>
+<li>Introduction to scientific thinking</li>
+<li>Basic mathematics and measurement</li>
+<li>Introduction to memory, attention, and embodied learning</li>
+<li>The Download &amp; Somatic Memory Practice</li>
+<li>Organising the Living Library</li>
+</ul>
+</div>
+<div class="cur-cycle">
+<h4 class="cur-h4-gold">Earth and plant cycle</h4>
+<ul class="cur-ul">
+<li>Plant identification and botanical terminology</li>
+<li>Plant anatomy and physiology</li>
+<li>Soil composition and soil science</li>
+<li>Ecology and island environments</li>
+<li>Plant pigments and extraction</li>
+<li>Food crops, propagation, and agroecology</li>
+<li>Ethnobotany and community-specific plant knowledge</li>
+</ul>
+</div>
+<div class="cur-cycle">
+<h4 class="cur-h4-gold">Chemistry and material cycle</h4>
+<ul class="cur-ul">
+<li>Matter, mixtures, and solutions</li>
+<li>Atoms, molecules, and chemical reactions</li>
+<li>Acids, bases, and pH</li>
+<li>Natural pigments and dye chemistry</li>
+<li>Indigo and vat dyeing</li>
+<li>Fibre properties and mordants</li>
+<li>Food chemistry and preservation</li>
+<li>Formulation fundamentals</li>
+</ul>
+</div>
+<div class="cur-cycle">
+<h4 class="cur-h4-gold">Sound and structure cycle</h4>
+<ul class="cur-ul">
+<li>Sound waves and frequency</li>
+<li>Resonance and vibration</li>
+<li>Materials and acoustic behaviour</li>
+<li>Geometry and measurement</li>
+<li>Wood properties and joinery</li>
+<li>Hollow-body construction</li>
+<li>Instrument design and acoustic resonators</li>
+<li>Caribbean sound traditions and ethnomusicology</li>
+</ul>
+</div>
+<div class="cur-cycle">
+<h4 class="cur-h4-gold">History, language, and archive cycle</h4>
+<ul class="cur-ul">
+<li>Caribbean historical research</li>
+<li>Oral history and archival methods</li>
+<li>Historical linguistics</li>
+<li>Phonetics and phonology</li>
+<li>Maritime history and island exchange</li>
+<li>Cultural transmission and traditional technologies</li>
+<li>Digital preservation and information architecture</li>
+</ul>
+</div>
+<div class="cur-cycle">
+<h4 class="cur-h4-gold">Technology and creation cycle</h4>
+<ul class="cur-ul">
+<li>HTML and CSS foundations</li>
+<li>JavaScript fundamentals</li>
+<li>Responsive web design</li>
+<li>Databases and information architecture</li>
+<li>Interactive research interfaces</li>
+<li>Digital artefact curation</li>
+<li>Creative coding and data visualisation</li>
+<li>CAD and 3D modelling</li>
+<li>Independent digital product development</li>
+</ul>
+</div>
+<p class="cur-p">These cycles can overlap. You may study sound while developing a website, or chemistry while documenting plants. The curriculum should encourage meaningful connections rather than enforce artificial separation.</p>
+</div>
+<div class="cur-section" id="cur-artefacts">
+<h2 class="cur-h2">XI. The Living Library&#x27;s Growing Collection of Artefacts</h2>
+<p class="cur-p">Learning should produce a growing collection of work. Possible artefacts include:</p>
+<ul class="cur-ul cur-ul-cols">
+<li>Botanical field guides</li>
+<li>Plant pigment ledgers</li>
+<li>Soil and geology notebooks</li>
+<li>Ecological observation records</li>
+<li>Material experiment logs</li>
+<li>Dye and fibre samples</li>
+<li>Acoustic experiment records</li>
+<li>Instrument diagrams</li>
+<li>Technical drawings</li>
+<li>Historical research dossiers</li>
+<li>Oral-history records</li>
+<li>Linguistic notes and glossaries</li>
+<li>Download and dream journals</li>
+<li>Digital research archives</li>
+<li>Interactive almanacs</li>
+<li>Educational tools and calculators</li>
+<li>Original music and sound studies</li>
+<li>Handmade objects and prototypes</li>
+<li>Documentation of practical skills</li>
+</ul>
+<p class="cur-p">An artefact does not need to be polished or commercially useful. Its value is that it preserves what was learned and makes future development possible.</p>
+</div>
+<div class="cur-section" id="cur-integrity">
+<h2 class="cur-h2">XII. Research Integrity and Knowledge Preservation</h2>
+<div class="cur-glance">
+<p class="cur-kicker">Your sources at a glance</p>
+<h3 class="cur-glance-title">Keep the kinds of knowing apart.</h3>
+<div class="cur-dodont">
+<div class="cur-do"><h4>Do</h4><ul>
+<li>Name the source</li>
+<li>Label the category</li>
+<li>Keep your original words</li>
+</ul></div>
+<div class="cur-dont"><h4>Don't</h4><ul>
+<li>Present interpretation as history</li>
+<li>Dismiss personal knowledge</li>
+<li>Blend island to island</li>
+</ul></div>
+</div></div>
+<p class="cur-p">Seven categories let history, science, family memory and spirit sit in the same archive without collapsing into each other.</p>
+<p class="cur-p">The Living Library should maintain distinct categories for different forms of knowledge.</p>
+<ul class="cur-ul">
+<li><strong>Documented historical evidence:</strong> information supported by identifiable historical records, scholarly research, or other traceable sources.</li>
+<li><strong>Scientific knowledge:</strong> findings supported by scientific methods and relevant research.</li>
+<li><strong>Community knowledge:</strong> knowledge transmitted through particular communities, practices, and oral traditions.</li>
+<li><strong>Family memory:</strong> stories and recollections passed through family relationships, identified as such.</li>
+<li><strong>Personal experience:</strong> events, observations, memories, and experiences directly reported by you.</li>
+<li><strong>Spiritual or intuitive interpretation:</strong> your own spiritual framework, downloads, symbolic readings, and interpretations.</li>
+<li><strong>Research hypothesis:</strong> a question or possible connection that remains under investigation.</li>
+</ul>
+<p class="cur-p">These categories allow different kinds of knowledge to coexist without collapsing them into one another. The curriculum should not dismiss personal or spiritual knowledge simply because it belongs to a different category from academic research. It should also avoid presenting a personal interpretation as independently verified history.</p>
+<p class="cur-p">For Caribbean research, preserve the specific community, island, period, source, and terminology wherever possible.</p>
+</div>
+<div class="cur-section" id="cur-mastery-produce">
+<h2 class="cur-h2">XIII. What Mastery Should Ultimately Produce</h2>
+<p class="cur-p">The long-term goal is an interconnected body of knowledge and capability. You should progressively become able to:</p>
+<ul class="cur-ul">
+<li>Understand natural systems and the materials of the Earth.</li>
+<li>Identify plants and investigate their properties.</li>
+<li>Understand basic and advanced chemical principles.</li>
+<li>Work with natural fibres, pigments, wood, clay, and other materials.</li>
+<li>Understand sound and its physical behaviour.</li>
+<li>Study musical traditions and develop original sound work.</li>
+<li>Understand structural and mechanical principles.</li>
+<li>Research history, language, and cultural transmission.</li>
+<li>Preserve oral, written, visual, and digital knowledge.</li>
+<li>Build websites, applications, archives, and interactive tools.</li>
+<li>Design and create useful objects and original systems.</li>
+<li>Recognise relationships between disciplines.</li>
+<li>Record and develop personal insights and experiences.</li>
+<li>Learn independently and teach what has been understood.</li>
+</ul>
+<p class="cur-p">The Living Library should remain open-ended. New disciplines can be added as you discover new questions, interests, and connections. The objective is not to finish learning. It is to build the capacity to keep learning, creating, preserving, and developing throughout life.</p>
+</div>
+<div class="cur-section" id="cur-principle">
+<h2 class="cur-h2">XIV. Guiding Principle</h2>
+<blockquote class="cur-quote">Study deeply. Observe carefully. Preserve faithfully. Experiment safely. Create independently. Connect disciplines. Return to what works.</blockquote>
+<p class="cur-p">The Living Library is not only a collection of things known. It is the ongoing development of the ability to know, make, interpret, remember, and contribute.</p>
+<p class="cur-p">The Bush Oracle is not confined to one role or one kind of knowledge. The work is to develop many forms of understanding while maintaining a relationship with land, ancestry, memory, sound, creativity, and the world around us.</p>
+</div>
+<div class="cur-section" id="cur-priorities">
+<h2 class="cur-h2">XV. Starting Priorities</h2>
+<div class="cur-glance">
+<p class="cur-kicker">Your first seven at a glance</p>
+<h3 class="cur-glance-title">Foundations that transfer into dozens of other fields.</h3>
+<div class="cur-dodont">
+<div class="cur-do"><h4>Do</h4><ul>
+<li>Start with what feeds your active branches</li>
+<li>Pick one thread at a time</li>
+</ul></div>
+<div class="cur-dont"><h4>Don't</h4><ul>
+<li>Treat the list as a ladder</li>
+<li>Add all seven at once</li>
+</ul></div>
+</div></div>
+<p class="cur-p">If you want a place to begin, these seven disciplines open the most doors at once. They are suggestions, not a rule, and your four active branches in Life Purpose Section 11 (the Alchemist, the Soundkeeper, the Adornment Architect and the Apothecary) come first.</p>
+<ul class="cur-ul">
+<li><strong>1. Chemistry:</strong> unlocks dyes, medicines, materials and cosmetics.</li>
+<li><strong>2. Botany:</strong> unlocks herbalism, agriculture and ecology.</li>
+<li><strong>3. Acoustics:</strong> unlocks music, instruments and sound engineering.</li>
+<li><strong>4. Mechanical engineering:</strong> unlocks construction, tools and invention.</li>
+<li><strong>5. Linguistics:</strong> unlocks Caribbean language and oral history.</li>
+<li><strong>6. Metallurgy:</strong> unlocks tools, fabrication and material independence.</li>
+<li><strong>7. Information science:</strong> unlocks the Living Library and digital sovereignty.</li>
+</ul>
+<p class="cur-p">Every major discipline has three layers: theory (the underlying principles), practice (doing the skill yourself) and creation (producing something original that shows your mastery). Some disciplines can become deep specialties, others supporting literacies, and others lifelong research.</p>
+</div>
+<div class="cur-section" id="cur-template">
+<h2 class="cur-h2">XVI. The Lesson Template</h2>
+<div class="cur-glance">
+<p class="cur-kicker">Your lesson at a glance</p>
+<h3 class="cur-glance-title">Copy this page. Fill it in. Add the artefact.</h3>
+<div class="cur-dodont">
+<div class="cur-do"><h4>Do</h4><ul>
+<li>Fill every line, even briefly</li>
+<li>Date it</li>
+</ul></div>
+<div class="cur-dont"><h4>Don't</h4><ul>
+<li>Skip the safety line</li>
+<li>Leave the artefact blank</li>
+</ul></div>
+</div></div>
+<p class="cur-p">Use this page for any lesson, from this document or one you design yourself. Every lesson is built from the same twelve fields — mastery world and branch, discipline, why it matters, beginner foundations, deeper explanation, Caribbean connection, practical project, interdisciplinary connections, research and documentation, reflection, progression, and Living Library contribution — plus a free version, a note on household materials, optional extras, what needs a professional, a safety line, and the date and time spent. The seven lessons that follow in Section XVII all use this template; copy its shape for any lesson you design yourself.</p>
+</div>
+<div class="cur-section" id="cur-lessons">
+<h2 class="cur-h2">XVII. Weekly Lesson Plans</h2>
+<div class="cur-glance">
+<p class="cur-kicker">Your lesson plans at a glance</p>
+<h3 class="cur-glance-title">Seven weeks. Seven small things made.</h3>
+<div class="cur-dodont">
+<div class="cur-do"><h4>Do</h4><ul>
+<li>One lesson a week</li>
+<li>Work at your own pace</li>
+</ul></div>
+<div class="cur-dont"><h4>Don't</h4><ul>
+<li>Do them all in one weekend</li>
+<li>Skip the safety notes</li>
+</ul></div>
+</div></div>
+<p class="cur-p">These lessons follow your Foundation, Earth, Chemistry, Sound and Technology cycles, and each uses free or household materials. They are written for a beginner. Where something could be unsafe, the lesson says so.</p>
+<ul class="cur-ul">
+<li><strong>Lesson 1:</strong> Research Methods and Knowledge Classification (Archivist)</li>
+<li><strong>Lesson 2:</strong> Observation and Field Notes (Earthkeeper)</li>
+<li><strong>Lesson 3:</strong> The Download &amp; Somatic Memory Practice (Oracle)</li>
+<li><strong>Lesson 4:</strong> Plant Identification and Botanical Terminology (Earthkeeper)</li>
+<li><strong>Lesson 5:</strong> Matter, Mixtures and pH (Alchemist)</li>
+<li><strong>Lesson 6:</strong> Sound Waves and Frequency (Soundkeeper)</li>
+<li><strong>Lesson 7:</strong> HTML Foundations (Sovereign Maker)</li>
+</ul>
+<div class="cur-lesson-card" id="cur-lesson1">
+<h3 class="cur-lesson-title">Lesson 1: Research Methods and Knowledge Classification</h3>
+<ol class="cur-lesson-fields" start="1">
+<li><strong>1. Mastery world and branch:</strong> the Archivist (History, Language &amp; Knowledge Preservation), with the Oracle. Original branch: The Archivist, and The Strategist (research methodology).</li>
+<li><strong>2. Discipline:</strong> research methodology and source criticism.</li>
+<li><strong>3. Why it matters:</strong> every other lesson depends on knowing what kind of claim you are looking at. It protects the Living Library from mixing history, family memory and interpretation.</li>
+<li><strong>4. Beginner foundations:</strong> a primary source comes from the time or the person (a record, a letter, your own note). A secondary source describes a primary one (a book, an article). A claim is a statement. Evidence is what supports it. Provenance is where a source came from. A hypothesis is a question you are testing.</li>
+<li><strong>5. Deeper explanation:</strong> the seven categories in Section XII keep different kinds of knowing apart. A family story can be true and still not be documented. A spiritual reading can be meaningful and still not be history. Naming the category does not weaken a claim. It makes it usable.</li>
+<li><strong>6. Caribbean connection:</strong> your Root Below the Root already does this with labels such as DOCUMENTED, NEEDS DIGGING and SYMBOLIC RESONANCE. Note the island, community, period and source for every Caribbean claim, and do not carry a practice from one island to another without evidence.</li>
+<li><strong>7. Practical project:</strong> take five entries from your notes. Write each on its own line and label it with one of the seven categories. For each, add one line: &quot;What would make this stronger?&quot; Then make a one-page source log with the columns title, author, date, type, where found, how reliable.</li>
+<li><strong>8. Interdisciplinary connections:</strong> philosophy and epistemology (how we know), information science (organising sources), and the Oracle&#x27;s habit of separating observation from interpretation.</li>
+<li><strong>9. Research and documentation:</strong> ask your library for a research guide on evaluating sources, and look at how a Wikipedia article lists its references. Keep the log in your notebook or a folder.</li>
+<li><strong>10. Reflection:</strong> which of your five entries was hardest to label? What kind of source do you trust most, and why?</li>
+<li><strong>11. Progression:</strong> beginner, label your own notes. Intermediate, trace one claim to its original source. Advanced, write a short dossier that compares three sources on one question.</li>
+<li><strong>12. Living Library contribution:</strong> your source log and the five labelled entries.</li>
+</ol>
+<p class="cur-lesson-free"><strong>Free version:</strong> notebook and pen. Library research guides.</p>
+<p class="cur-lesson-safety"><strong>Safety:</strong> none. Do not share private family details beyond the people they belong to.</p>
+</div>
+<div class="cur-lesson-card" id="cur-lesson2">
+<h3 class="cur-lesson-title">Lesson 2: Observation and Field Notes</h3>
+<ol class="cur-lesson-fields" start="1">
+<li><strong>1. Mastery world and branch:</strong> the Earthkeeper. Original branch: The Earthkeeper, and The Oracle.</li>
+<li><strong>2. Discipline:</strong> observation, field-note technique and scientific thinking.</li>
+<li><strong>3. Why it matters:</strong> careful noticing is the first skill of botany, ecology, chemistry and sound work. It is also how you tell what you saw from what you think it means.</li>
+<li><strong>4. Beginner foundations:</strong> an observation is what you can sense or measure. An inference is what you conclude from it. A field note records date, time, place, weather and what you saw. A sketch counts as a note.</li>
+<li><strong>5. Deeper explanation:</strong> scientists separate &quot;I saw a monarch on the aster&quot; from &quot;monarchs like asters&quot;. The first is an observation, the second is a claim that needs many observations. Repeating the same observation at the same place over weeks shows change, which is how seasons and migrations are recorded.</li>
+<li><strong>6. Caribbean connection:</strong> traditional ecological knowledge is built on long, repeated observation of weather, plants, animals, tides and seasons. Your own record of the monarchs in your backyard is the same method on a small scale.</li>
+<li><strong>7. Practical project:</strong> sit for 20 minutes on your balcony or by your yard. Write the date, time, weather and temperature. List three things you observe (colours, sounds, movements). Sketch one. Write one question. Repeat once a week for four weeks.</li>
+<li><strong>8. Interdisciplinary connections:</strong> ecology (what lives together), meteorology (weather), and the Storyteller (turning notes into description).</li>
+<li><strong>9. Research and documentation:</strong> keep the notes in one place and number the entries. If you want an identification, the free iNaturalist and Seek apps can help, and they use your phone&#x27;s camera.</li>
+<li><strong>10. Reflection:</strong> what did you notice in week four that you missed in week one?</li>
+<li><strong>11. Progression:</strong> beginner, one location. Intermediate, add measurements such as temperature or rainfall. Advanced, keep a seasonal record for a year and graph it.</li>
+<li><strong>12. Living Library contribution:</strong> four weeks of field notes with one sketch.</li>
+</ol>
+<p class="cur-lesson-free"><strong>Free version:</strong> notebook and pen.</p>
+<p class="cur-lesson-safety"><strong>Safety:</strong> stay on your own property or in places you may be. Keep an adult with the children, and do not touch or eat anything you cannot identify.</p>
+</div>
+<div class="cur-lesson-card" id="cur-lesson3">
+<h3 class="cur-lesson-title">Lesson 3: The Download &amp;amp; Somatic Memory Practice</h3>
+<ol class="cur-lesson-fields" start="1">
+<li><strong>1. Mastery world and branch:</strong> the Oracle. Original branch: The Oracle, and The Storyteller.</li>
+<li><strong>2. Discipline:</strong> memory, attention and embodied learning, together with your own spiritual framework.</li>
+<li><strong>3. Why it matters:</strong> it turns arriving thoughts into developed ideas, and keeps your original wording separate from outside interpretation.</li>
+<li><strong>4. Beginner foundations:</strong> encoding is how a memory is formed, and recall is how you retrieve it. Writing by hand slows you down and involves movement, which can help some people remember.</li>
+<li><strong>5. Deeper explanation:</strong> Section VI describes the wave and the baseline. The three stages (catch, return, write back) let you keep a thought without interrupting it, then develop it later when you have a quiet moment.</li>
+<li><strong>6. Caribbean connection:</strong> oral transmission, sayings and songs preserved knowledge in many communities. Your own household sayings (“catch yourself”, “tears is a language that God understands”) are part of that record.</li>
+<li><strong>7. Practical project:</strong> for one week, catch two downloads by whatever method is quickest. When you have time, return to them using the Stage 2 questions. Write one of them back by hand, using any of the journal prompts you like. A week later, see how much of each you can recall without looking.</li>
+<li><strong>8. Interdisciplinary connections:</strong> psychology and cognitive science (memory), the Storyteller (writing), and the Archivist (preserving the original wording).</li>
+<li><strong>9. Research and documentation:</strong> keep the original words first and the interpretation separately. Note which method you used for each.</li>
+<li><strong>10. Reflection:</strong> which method gave you the best recall? How did your body feel when it arrived?</li>
+<li><strong>11. Progression:</strong> beginner, one a day. Intermediate, track patterns across a month. Advanced, compare your records with what researchers say about memory and handwriting.</li>
+<li><strong>12. Living Library contribution:</strong> two downloads, with the original words, the body notes and the interpretation kept separate.</li>
+</ol>
+<p class="cur-lesson-free"><strong>Free version:</strong> a phone note or a scrap of paper.</p>
+<p class="cur-lesson-safety"><strong>Safety:</strong> none. If a download brings up strong feelings, pause and ground yourself first.</p>
+</div>
+<div class="cur-lesson-card" id="cur-lesson4">
+<h3 class="cur-lesson-title">Lesson 4: Plant Identification and Botanical Terminology</h3>
+<ol class="cur-lesson-fields" start="1">
+<li><strong>1. Mastery world and branch:</strong> the Earthkeeper. Original branch: The Earthkeeper, with the Apothecary.</li>
+<li><strong>2. Discipline:</strong> botany and plant taxonomy.</li>
+<li><strong>3. Why it matters:</strong> you cannot work safely with a plant, as food, dye or medicine, until you can identify it with certainty.</li>
+<li><strong>4. Beginner foundations:</strong> leaves are simple (one blade) or compound (several leaflets). Arrangement is alternate, opposite or whorled. Margins can be smooth, toothed or lobed. Venation is how the veins run. A scientific name has two parts, genus and species.</li>
+<li><strong>5. Deeper explanation:</strong> taxonomy groups plants by shared features. Identification follows a key: you answer a series of questions about the plant until only one possibility is left.</li>
+<li><strong>6. Caribbean connection:</strong> plant names and uses differ by island and community. A book such as Lennox Honychurch&#x27;s Caribbean Wild Plants and Their Uses is a starting point for the Eastern Caribbean, and your library can help you find it. The method is the same wherever you are, so practise on local plants first.</li>
+<li><strong>7. Practical project:</strong> take the leaves you pressed on November 10. Describe each in the terms above: simple or compound, lobed or toothed, how the veins run, how the stem attaches. Sketch each. Then use a free field guide or Seek to suggest a name, and check it against the description.</li>
+<li><strong>8. Interdisciplinary connections:</strong> chemistry (the pigments in autumn leaves), history (how plants were named and moved), and the Storyteller (describing precisely).</li>
+<li><strong>9. Research and documentation:</strong> make a page per plant with date, place, description, sketch, name, and how certain you are.</li>
+<li><strong>10. Reflection:</strong> how sure are you of each name? What would make you surer?</li>
+<li><strong>11. Progression:</strong> beginner, ten local plants. Intermediate, use a dichotomous key. Advanced, begin the illustrated Caribbean botanical encyclopedia from the Earthkeeper&#x27;s mastery project.</li>
+<li><strong>12. Living Library contribution:</strong> your first plant pages, with the pressed leaves attached once dry.</li>
+</ol>
+<p class="cur-lesson-free"><strong>Free version:</strong> notebook, library guide, the free Seek app.</p>
+<p class="cur-lesson-safety"><strong>Safety:</strong> never eat, brew or apply a plant you have not identified with certainty, and never rely on an app alone for anything you will ingest. Some common plants are toxic. Keep the children away from unknown plants and berries.</p>
+</div>
+<div class="cur-lesson-card" id="cur-lesson5">
+<h3 class="cur-lesson-title">Lesson 5: Matter, Mixtures and pH</h3>
+<ol class="cur-lesson-fields" start="1">
+<li><strong>1. Mastery world and branch:</strong> the Alchemist. Original branch: The Alchemist, with the Apothecary.</li>
+<li><strong>2. Discipline:</strong> general chemistry and natural-pigment chemistry.</li>
+<li><strong>3. Why it matters:</strong> dyeing, soap, cosmetics and preservation all depend on pH, solutions and mixtures.</li>
+<li><strong>4. Beginner foundations:</strong> matter is anything with mass. A mixture combines substances without changing them. A solution dissolves one substance in another. An acid has a low pH, a base has a high pH, and 7 is neutral.</li>
+<li><strong>5. Deeper explanation:</strong> red cabbage and hibiscus both contain anthocyanins, pigments that change colour with pH. In general they look pink or red in acid, purple near neutral and blue or green in a base.</li>
+<li><strong>6. Caribbean connection:</strong> sorrel, the hibiscus drink many Caribbean households make, gets its deep red from the same kind of pigment. A cup of unsweetened sorrel can act as a second indicator.</li>
+<li><strong>7. Practical project:</strong> chop a few leaves of red cabbage, steep them in hot water, then strain once cool. Pour a little into four clear cups. Add a splash of lemon juice to one, a pinch of baking soda stirred into a little water to another, plain tap water to the third, and clear soda to the fourth. Photograph or draw the colours. Repeat with unsweetened sorrel if you have it.</li>
+<li><strong>8. Interdisciplinary connections:</strong> botany (where pigments come from), textiles (mordants and dye fixing), and the Hearthkeeper (food chemistry).</li>
+<li><strong>9. Research and documentation:</strong> record each liquid, the colour, and your pH guess. Change one thing at a time and note it.</li>
+<li><strong>10. Reflection:</strong> which colours surprised you? What would you test next?</li>
+<li><strong>11. Progression:</strong> beginner, this indicator. Intermediate, make a colour chart of pH. Advanced, test natural dyes on cloth with and without a mordant.</li>
+<li><strong>12. Living Library contribution:</strong> a colour chart or photo page of your indicator results.</li>
+</ol>
+<p class="cur-lesson-free"><strong>Free version:</strong> a red cabbage costs a few dollars, and hibiscus tea or sorrel works too.</p>
+<p class="cur-lesson-safety"><strong>Safety:</strong> do not taste your test liquids. Never mix household cleaners. In particular, never combine bleach with acids or ammonia. Label every cup, work with adults supervising the children, and wash your hands and surfaces after.</p>
+</div>
+<div class="cur-lesson-card" id="cur-lesson6">
+<h3 class="cur-lesson-title">Lesson 6: Sound Waves and Frequency</h3>
+<ol class="cur-lesson-fields" start="1">
+<li><strong>1. Mastery world and branch:</strong> the Soundkeeper. Original branch: The Soundkeeper, with the Elementalist.</li>
+<li><strong>2. Discipline:</strong> acoustics and vibration physics.</li>
+<li><strong>3. Why it matters:</strong> it is the physical foundation under your mixing, your instruments and your music.</li>
+<li><strong>4. Beginner foundations:</strong> sound is a vibration travelling through air. Frequency is how many vibrations per second, measured in hertz, and it sets pitch. Amplitude is the size of the vibration and sets loudness. Timbre is the tone colour of a sound.</li>
+<li><strong>5. Deeper explanation:</strong> most notes contain a main frequency plus higher overtones. Resonance happens when an object vibrates strongly at its own natural frequency, which is why shape and material change tone.</li>
+<li><strong>6. Caribbean connection:</strong> Trinidad&#x27;s steelpan is a well-documented example of tuned metal, where hammered shapes set each pitch. Drumming and call-and-response traditions vary by island and community, so research each one by name.</li>
+<li><strong>7. Practical project:</strong> put your hand lightly on your throat and hum a low note, then a high one, and feel the difference. Use a free audio-analyser app such as phyphox on your phone to see the main frequency of your humming. Tap a glass, a metal pot and a wooden spoon, and compare their pitches and how long they ring.</li>
+<li><strong>8. Interdisciplinary connections:</strong> mathematics (waves and ratios), materials science (why metal rings and wood thuds), and music production (EQ and filtering in FL Studio).</li>
+<li><strong>9. Research and documentation:</strong> record the object, how you struck it, the approximate frequency and how long it rang.</li>
+<li><strong>10. Reflection:</strong> what did the app show that your ears did not?</li>
+<li><strong>11. Progression:</strong> beginner, these experiments. Intermediate, relate overtones to what you do in FL Studio. Advanced, design a simple resonant chamber and test it.</li>
+<li><strong>12. Living Library contribution:</strong> an acoustic experiment record with your measurements.</li>
+</ol>
+<p class="cur-lesson-free"><strong>Free version:</strong> your voice and kitchen objects. The app is free.</p>
+<p class="cur-lesson-safety"><strong>Safety:</strong> keep volume low near the baby. Do not strike glass hard, and use a plastic cup if you worry about breakage.</p>
+</div>
+<div class="cur-lesson-card" id="cur-lesson7">
+<h3 class="cur-lesson-title">Lesson 7: HTML Foundations</h3>
+<ol class="cur-lesson-fields" start="1">
+<li><strong>1. Mastery world and branch:</strong> the Sovereign Maker. Original branch: The Storyteller (digital publishing), with the Strategist.</li>
+<li><strong>2. Discipline:</strong> web development: HTML and CSS.</li>
+<li><strong>3. Why it matters:</strong> it moves you from prompting code to owning it, so the Living Library website and your almanac belong fully to you.</li>
+<li><strong>4. Beginner foundations:</strong> HTML is the structure of a page: headings, paragraphs, lists. CSS is its style: colours, fonts, spacing. A browser reads both.</li>
+<li><strong>5. Deeper explanation:</strong> every page is a tree of elements. A tag opens and closes (&lt;h1&gt; and &lt;/h1&gt;). CSS rules choose elements and set properties, which is how you build your dark celestial look by hand.</li>
+<li><strong>6. Caribbean connection:</strong> the Threshold Times masthead and your Today&#x27;s Lines are a natural first page. You are putting oral and written practice into a digital form.</li>
+<li><strong>7. Practical project:</strong> in a plain text editor (Notepad or TextEdit in plain-text mode), type the starter page below and save it as lines.html. Open it in your browser. Change the colours, then add a second line and a list.</li>
+<pre class="cur-code">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Today&#x27;s Lines&lt;/title&gt;
+&lt;style&gt;body{background:#0a100d;color:#fff;font-family:Georgia,serif;max-width:40rem;margin:3rem auto}
+h1{color:#f3e3b0}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Today&#x27;s Lines&lt;/h1&gt;
+&lt;p&gt;Sound is how I come home.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+<li><strong>8. Interdisciplinary connections:</strong> graphic design (type and colour), information architecture (how to organise pages), and the Storyteller.</li>
+<li><strong>9. Research and documentation:</strong> the free MDN Web Docs and freeCodeCamp are good references. Keep a note of each tag you learn.</li>
+<li><strong>10. Reflection:</strong> what changed when you edited a line? What do you want the page to do next?</li>
+<li><strong>11. Progression:</strong> beginner, a static page. Intermediate, add CSS layout and a tabbed section, then JavaScript for a &quot;Do and Don&#x27;t&quot; card draw. Advanced, a small almanac with your own data.</li>
+<li><strong>12. Living Library contribution:</strong> lines.html saved in your Living Library folder.</li>
+</ol>
+<p class="cur-lesson-free"><strong>Free version:</strong> a text editor and a browser, both already on your device.</p>
+<p class="cur-lesson-safety"><strong>Safety:</strong> keep private notes and personal details off public websites. Free hosting is usually public by default, so keep this page on your own device until you decide what to publish.</p>
+</div>
+</div>
+<div class="cur-section" id="cur-tracker">
+<h2 class="cur-h2">XVIII. Your Lesson Tracker</h2>
+<div class="cur-glance">
+<p class="cur-kicker">Your progress at a glance</p>
+<h3 class="cur-glance-title">Tick the circle. Skip nothing you love.</h3>
+<div class="cur-dodont">
+<div class="cur-do"><h4>Do</h4><ul>
+<li>Tick when you have made the artefact</li>
+<li>Repeat what you love</li>
+</ul></div>
+<div class="cur-dont"><h4>Don't</h4><ul>
+<li>Count pages read</li>
+<li>Catch up</li>
+</ul></div>
+</div></div>
+<p class="cur-p">Mark a lesson when you have made its artefact, not when you have read it.</p>
+<ul class="cur-tracker-list">
+<li class="cur-tracker-item"><span class="cur-tracker-circle">&#9675;</span> <strong>Lesson 1, Research Methods and Knowledge Classification.</strong> Artefact: source log</li>
+<li class="cur-tracker-item"><span class="cur-tracker-circle">&#9675;</span> <strong>Lesson 2, Observation and Field Notes.</strong> Artefact: four weeks of notes</li>
+<li class="cur-tracker-item"><span class="cur-tracker-circle">&#9675;</span> <strong>Lesson 3, The Download &amp; Somatic Memory Practice.</strong> Artefact: two downloads</li>
+<li class="cur-tracker-item"><span class="cur-tracker-circle">&#9675;</span> <strong>Lesson 4, Plant Identification.</strong> Artefact: first plant pages</li>
+<li class="cur-tracker-item"><span class="cur-tracker-circle">&#9675;</span> <strong>Lesson 5, Matter, Mixtures and pH.</strong> Artefact: colour chart</li>
+<li class="cur-tracker-item"><span class="cur-tracker-circle">&#9675;</span> <strong>Lesson 6, Sound Waves and Frequency.</strong> Artefact: acoustic record</li>
+<li class="cur-tracker-item"><span class="cur-tracker-circle">&#9675;</span> <strong>Lesson 7, HTML Foundations.</strong> Artefact: lines.html</li>
+</ul>
+<blockquote class="cur-quote">Next lessons to design with the same structure: soil composition, ecology and island environments, plant pigments and extraction, resonance and hollow bodies, historical linguistics, oral-history methods, JavaScript fundamentals.</blockquote>
+</div>
+</div>
+</section>
+
+
 
 
 
@@ -3084,6 +4151,7 @@ function enterLoc(){show('loc');}
 function enterJewelry(){show('jewelry');}
 function enterMedicine(){show('medicine');}
 function enterPrintables(){show('printables');}
+function enterCurriculum(){show('curriculum');}
 async function toolsChangePass(){
   const oldPw=document.getElementById('t-old').value;
   const newPw=document.getElementById('t-new').value;
@@ -3108,7 +4176,7 @@ function toolsSelectOut(){
   t.focus();t.select();
   try{document.execCommand('copy');}catch(e){}
 }
-const views={gate:document.getElementById('gate'),contents:document.getElementById('contents'),reader:document.getElementById('reader'),library:document.getElementById('library'),grimoire:document.getElementById('grimoire'),almanac:document.getElementById('almanac'),bushoracle:document.getElementById('bushoracle'),tools:document.getElementById('tools'),myths:document.getElementById('myths'),bgw:document.getElementById('bgw'),loc:document.getElementById('loc'),jewelry:document.getElementById('jewelry'),medicine:document.getElementById('medicine'),printables:document.getElementById('printables')};
+const views={gate:document.getElementById('gate'),contents:document.getElementById('contents'),reader:document.getElementById('reader'),library:document.getElementById('library'),grimoire:document.getElementById('grimoire'),almanac:document.getElementById('almanac'),bushoracle:document.getElementById('bushoracle'),tools:document.getElementById('tools'),myths:document.getElementById('myths'),bgw:document.getElementById('bgw'),loc:document.getElementById('loc'),jewelry:document.getElementById('jewelry'),medicine:document.getElementById('medicine'),printables:document.getElementById('printables'),curriculum:document.getElementById('curriculum')};
 function toLibrary(){show('library');}
 function enterArchive(){show('contents');}
 function enterGrimoire(){show('grimoire');}
