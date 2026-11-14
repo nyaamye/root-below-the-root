@@ -6,7 +6,7 @@
 <title>The Root Below the Root</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Big+Shoulders+Display:wght@600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Cardo:ital@0;1&family=Forum&family=Fraunces:ital,wght@0,500;0,600;1,400&family=Urbanist:wght@400;500;700&display=swap&family=Zilla+Slab:wght@400;600&family=Nunito+Sans:wght@400;600;700&family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Big+Shoulders+Display:wght@600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Cardo:ital@0;1&family=Forum&family=Fraunces:ital,wght@0,500;0,600;1,400&family=Urbanist:wght@400;500;700&display=swap&family=Zilla+Slab:wght@400;600&family=Nunito+Sans:wght@400;600;700&family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600" rel="stylesheet">
 <style>
 :root{
   --void:#0a0616;
@@ -719,6 +719,31 @@ body{
 .med-dl dd{margin:.15rem 0 0;color:#d6d0bc;font-size:.9rem;line-height:1.5;}
 .med-closing-glyphs{text-align:center;font-size:1.3rem;letter-spacing:.3rem;opacity:.85;margin-top:1.2rem;}
 
+
+/* ===== Finished Printables room ===== */
+#printables{background:#ece6d8;color:#2a2620;font-family:'Libre Franklin',sans-serif;min-height:100vh;}
+.pr-wrap{max-width:780px;margin:0 auto;padding:2.2rem 1.3rem 5rem;}
+.pr-back{background:none;border:1px solid #8a7d5e;color:#6a5a38;font-family:'Libre Franklin',sans-serif;font-size:.85rem;padding:.5rem 1rem;border-radius:3px;cursor:pointer;margin-bottom:1.6rem;}
+.pr-back:hover{background:#ddd4bc;}
+.pr-head{text-align:center;margin-bottom:2.2rem;border-bottom:2px solid #2a2620;padding-bottom:1.6rem;}
+.pr-glyphs{font-size:1.4rem;letter-spacing:.3rem;margin-bottom:.6rem;opacity:.85;}
+.pr-title{font-family:'Playfair Display',serif;font-weight:800;font-size:2rem;color:#2a2620;margin:0 0 .5rem;letter-spacing:.02rem;}
+.pr-sub{font-size:.92rem;color:#5a5240;max-width:500px;margin:0 auto;line-height:1.5;font-style:italic;}
+.pr-sec{margin-bottom:1.6rem;}
+.pr-card{display:flex;gap:1rem;background:#f5f0e4;border:1px solid #c8bc9c;border-radius:4px;padding:1.2rem;margin-bottom:1.1rem;box-shadow:0 2px 0 #c8bc9c;}
+.pr-card-icon{font-size:2rem;flex-shrink:0;line-height:1;}
+.pr-card-body{flex:1;}
+.pr-h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;color:#2a2620;margin:0 0 .3rem;}
+.pr-meta{font-size:.78rem;text-transform:uppercase;letter-spacing:.05rem;color:#8a7d5e;margin:0 0 .6rem;}
+.pr-p{font-size:.92rem;line-height:1.6;color:#4a4232;margin:0 0 .8rem;}
+.pr-actions{display:flex;gap:.6rem;flex-wrap:wrap;}
+.pr-btn{display:inline-block;background:#2a2620;color:#ece6d8;font-family:'Libre Franklin',sans-serif;font-weight:600;font-size:.85rem;text-decoration:none;padding:.5rem 1.1rem;border-radius:3px;}
+.pr-btn:hover{background:#4a4232;}
+.pr-btn-ghost{background:none;border:1px solid #2a2620;color:#2a2620;}
+.pr-btn-ghost:hover{background:#ddd4bc;}
+.pr-note-sec{text-align:center;}
+.pr-note{font-style:italic;color:#6a5a38;font-size:.86rem;}
+
 </style>
 </head>
 <body>
@@ -907,6 +932,12 @@ body{
       <div class="r-eyebrow">A Future Roadmap — Not an Active Task List</div>
       <div class="r-name">Bush Girl Medicine School</div>
       <div class="r-atmo">The 16 branches, the Akan Hypothesis held as open hypothesis, Bush Girl Ethics, the discernment chain, and the practitioner research library. Forest green, bone, and rust — a field journal, not a checklist.</div>
+      <span class="r-arr">❧</span>
+    </li>
+    <li class="room" onclick="enterPrintables()">
+      <div class="r-eyebrow">Two Designed, Print-Ready Pieces</div>
+      <div class="r-name">Finished Printables</div>
+      <div class="r-atmo">The scrapbook &amp; newspaper-aging guide, and the Threshold Mornings practice cards — view or download. Newsprint parchment, Playfair Display, a small home for finished work.</div>
       <span class="r-arr">❧</span>
     </li>
   </ul>
@@ -2962,6 +2993,50 @@ body{
   </div>
 </section>
 
+<section class="view" id="printables">
+  <div class="pr-wrap">
+    <button class="pr-back" onclick="toLibrary()">← Library</button>
+    <header class="pr-head">
+      <div class="pr-glyphs">✦ 🗞️ ✦</div>
+      <h1 class="pr-title">Finished Printables</h1>
+      <p class="pr-sub">Two designed, print-ready pieces — open to view, or download to print at home</p>
+    </header>
+
+    <section class="pr-sec">
+      <div class="pr-card">
+        <div class="pr-card-icon">🗞️</div>
+        <div class="pr-card-body">
+          <h2 class="pr-h2">Scrapbook &amp; Newspaper Guide</h2>
+          <p class="pr-meta">6 pages &middot; designed PDF &middot; 116 KB</p>
+          <p class="pr-p">A finished, print-ready how-to for aging paper and building a newspaper-style scrapbook page — tea-staining, distressing edges, layering clippings, and composing a page that reads as found rather than made.</p>
+          <div class="pr-actions">
+            <a class="pr-btn" href="assets/printables/scrapbook-newspaper-guide.pdf" target="_blank" rel="noopener">View PDF</a>
+            <a class="pr-btn pr-btn-ghost" href="assets/printables/scrapbook-newspaper-guide.pdf" download="scrapbook-newspaper-guide.pdf">Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-card-icon">🌅</div>
+        <div class="pr-card-body">
+          <h2 class="pr-h2">Threshold Mornings</h2>
+          <p class="pr-meta">4 pages &middot; designed PDF &middot; 109 KB</p>
+          <p class="pr-p">A set of finished morning-practice cards for easing into the day — a small private ritual, not for outside sharing.</p>
+          <div class="pr-actions">
+            <a class="pr-btn" href="assets/printables/threshold-mornings-printable.pdf" target="_blank" rel="noopener">View PDF</a>
+            <a class="pr-btn pr-btn-ghost" href="assets/printables/threshold-mornings-printable.pdf" download="threshold-mornings-printable.pdf">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pr-sec pr-note-sec">
+      <p class="pr-p pr-note">Both pieces are finished and designed already — this room just gives them a home inside the Library instead of living only as loose files. Nothing here was redesigned or altered; the PDFs are exactly as they were made.</p>
+    </section>
+  </div>
+</section>
+
+
 
 
 
@@ -3008,6 +3083,7 @@ function enterBGW(){show('bgw');}
 function enterLoc(){show('loc');}
 function enterJewelry(){show('jewelry');}
 function enterMedicine(){show('medicine');}
+function enterPrintables(){show('printables');}
 async function toolsChangePass(){
   const oldPw=document.getElementById('t-old').value;
   const newPw=document.getElementById('t-new').value;
@@ -3032,7 +3108,7 @@ function toolsSelectOut(){
   t.focus();t.select();
   try{document.execCommand('copy');}catch(e){}
 }
-const views={gate:document.getElementById('gate'),contents:document.getElementById('contents'),reader:document.getElementById('reader'),library:document.getElementById('library'),grimoire:document.getElementById('grimoire'),almanac:document.getElementById('almanac'),bushoracle:document.getElementById('bushoracle'),tools:document.getElementById('tools'),myths:document.getElementById('myths'),bgw:document.getElementById('bgw'),loc:document.getElementById('loc'),jewelry:document.getElementById('jewelry'),medicine:document.getElementById('medicine')};
+const views={gate:document.getElementById('gate'),contents:document.getElementById('contents'),reader:document.getElementById('reader'),library:document.getElementById('library'),grimoire:document.getElementById('grimoire'),almanac:document.getElementById('almanac'),bushoracle:document.getElementById('bushoracle'),tools:document.getElementById('tools'),myths:document.getElementById('myths'),bgw:document.getElementById('bgw'),loc:document.getElementById('loc'),jewelry:document.getElementById('jewelry'),medicine:document.getElementById('medicine'),printables:document.getElementById('printables')};
 function toLibrary(){show('library');}
 function enterArchive(){show('contents');}
 function enterGrimoire(){show('grimoire');}
