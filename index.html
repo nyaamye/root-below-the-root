@@ -893,9 +893,27 @@ body{
   #beneath .bn-dodont{grid-template-columns:1fr;}
 }
 
+
+/* ✦ In-Site Editor (Site Tools extension) ✦ */
+#rbtr-edit-fab{position:fixed;right:1rem;bottom:1rem;z-index:500;display:none;flex-direction:column;align-items:flex-end;gap:0.5rem;font-family:'Cormorant Garamond',serif;}
+body.rbtr-can-edit #rbtr-edit-fab{display:flex;}
+#rbtr-edit-fab button{font-family:inherit;font-size:0.95rem;letter-spacing:0.03em;padding:0.55rem 1rem;border-radius:999px;border:1px solid var(--gold-dim);background:rgba(10,6,22,0.88);color:var(--gold);cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,0.45);backdrop-filter:blur(6px);transition:background 0.2s,border-color 0.2s;}
+#rbtr-edit-fab button:hover{background:rgba(232,195,90,0.14);border-color:var(--gold);}
+#rbtr-edit-fab .rbtr-save{color:var(--jam-green);border-color:rgba(47,161,90,0.5);}
+#rbtr-edit-fab .rbtr-save:hover{background:rgba(47,161,90,0.16);}
+#rbtr-edit-fab .rbtr-cancel{color:var(--red);border-color:rgba(197,58,65,0.5);}
+#rbtr-edit-fab .rbtr-cancel:hover{background:rgba(197,58,65,0.16);}
+#rbtr-edit-status{font-size:0.8rem;color:var(--ink-dim);max-width:220px;text-align:right;}
+.rbtr-editing-active{outline:2px dashed var(--gold-dim);outline-offset:6px;border-radius:4px;}
+.rbtr-editing-active:focus{outline-color:var(--gold);}
+@media(max-width:480px){
+  #rbtr-edit-fab{right:0.6rem;bottom:0.6rem;}
+  #rbtr-edit-status{max-width:160px;}
+}
 </style>
 </head>
 <body>
+<div id="rbtr-edit-fab"></div>
 
 <div class="bg">
   <div class="wash"></div>
@@ -4562,7 +4580,8 @@ function enterGrimoire(){show('grimoire');}
 function enterAlmanac(){show('almanac');}
 function enterBushOracle(){show('bushoracle');}
 document.getElementById('gbless').textContent=BLESSINGS[0];
-function show(v){for(const k in views)views[k].classList.toggle('active',k===v);window.scrollTo(0,0);}
+let curView='gate';
+function show(v){for(const k in views)views[k].classList.toggle('active',k===v);window.scrollTo(0,0);curView=v;if(typeof rbtrUpdateFab==='function')rbtrUpdateFab();}
 
 function roman(n){const m=[['M',1000],['CM',900],['D',500],['CD',400],['C',100],['XC',90],['L',50],['XL',40],['X',10],['IX',9],['V',5],['IV',4],['I',1]];let r='';for(const[s,v]of m){while(n>=v){r+=s;n-=v;}}return r;}
 
@@ -4666,6 +4685,118 @@ document.getElementById('pw').addEventListener('keydown',e=>{if(e.key==='Enter')
   }
   addEventListener('resize',()=>{rs();init();});init();requestAnimationFrame(draw);
 })();
+
+
+/* ✦ In-Site Editor — edit the open rooms and save straight to GitHub ✦ */
+const RBTR_GH_OWNER='nyaamye',RBTR_GH_REPO='root-below-the-root',RBTR_GH_BRANCH='main',RBTR_GH_PATH='index.html';
+const RBTR_EDITABLE=['grimoire','almanac','bushoracle','myths','bgw','loc','jewelry','medicine','printables','curriculum','beneath'];
+let rbtrEditing=false;
+function rbtrUpdateFab(){
+  const fab=document.getElementById('rbtr-edit-fab');
+  const can=RBTR_EDITABLE.includes(curView);
+  document.body.classList.toggle('rbtr-can-edit',can && !rbtrEditing || (can && rbtrEditing));
+  if(!can && rbtrEditing)rbtrExitEdit(false);
+  if(!fab)return;
+  fab.innerHTML=rbtrEditing
+    ? '<div id="rbtr-edit-status">Editing this room — changes save straight to the live site.</div><button class="rbtr-save" onclick="rbtrSaveEdit()">&#128190; Save to site</button><button class="rbtr-cancel" onclick="rbtrExitEdit(true)">&#10005; Discard</button>'
+    : '<button onclick="rbtrEnterEdit()">&#9999; Edit this room</button>';
+}
+function rbtrEnterEdit(){
+  if(!RBTR_EDITABLE.includes(curView))return;
+  const el=views[curView];
+  el.setAttribute('contenteditable','true');
+  el.classList.add('rbtr-editing-active');
+  el.addEventListener('click',rbtrGuardClicks,true);
+  rbtrEditing=true;
+  rbtrUpdateFab();
+}
+function rbtrGuardClicks(e){
+  if(e.target.closest('button'))  { e.preventDefault(); e.stopPropagation(); }
+}
+function rbtrExitEdit(discard){
+  const el=views[curView];
+  if(discard){
+    if(!confirm('Discard your changes to this room? This reloads the page and anything unsaved is lost.'))return;
+    location.reload();
+    return;
+  }
+  el.removeAttribute('contenteditable');
+  el.classList.remove('rbtr-editing-active');
+  el.removeEventListener('click',rbtrGuardClicks,true);
+  rbtrEditing=false;
+  rbtrUpdateFab();
+}
+function rbtrGetToken(){
+  let t=localStorage.getItem('rbtr_gh_pat');
+  if(!t){
+    t=prompt('Paste a GitHub personal access token (fine-grained, scoped to the root-below-the-root repo, with Contents: Read and write permission). This is stored only in this browser and sent only to api.github.com.');
+    if(t)localStorage.setItem('rbtr_gh_pat',t.trim());
+  }
+  return t?t.trim():null;
+}
+function rbtrForgetToken(){localStorage.removeItem('rbtr_gh_pat');}
+function rbtrB64ToUtf8(b64){
+  const bin=atob(b64.replace(/\n/g,''));
+  const bytes=new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+  return new TextDecoder('utf-8').decode(bytes);
+}
+function rbtrUtf8ToB64(str){
+  const bytes=new TextEncoder().encode(str);
+  let bin='';
+  for(let i=0;i<bytes.length;i++)bin+=String.fromCharCode(bytes[i]);
+  return btoa(bin);
+}
+async function rbtrSaveEdit(){
+  const statusEl=()=>document.getElementById('rbtr-edit-status');
+  const setStatus=(msg)=>{const s=statusEl();if(s)s.textContent=msg;};
+  const token=rbtrGetToken();
+  if(!token){setStatus('No token given — cannot save.');return;}
+  const room=curView;
+  const editedInner=views[room].innerHTML;
+  setStatus('Fetching the live file…');
+  try{
+    const apiBase=`https://api.github.com/repos/${RBTR_GH_OWNER}/${RBTR_GH_REPO}/contents/${RBTR_GH_PATH}`;
+    const getRes=await fetch(apiBase+`?ref=${RBTR_GH_BRANCH}`,{headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'}});
+    if(!getRes.ok){setStatus('Could not read the live file (HTTP '+getRes.status+'). Check your token has access to this repo.');return;}
+    const getJson=await getRes.json();
+    const sha=getJson.sha;
+    const rawText=rbtrB64ToUtf8(getJson.content);
+    const openMarker=`<section class="view" id="${room}">`;
+    const openIdx=rawText.indexOf(openMarker);
+    if(openIdx<0){setStatus('Could not locate this room in the live file — nothing was saved.');return;}
+    const contentStart=openIdx+openMarker.length;
+    const closeIdx=rawText.indexOf('</section>',contentStart);
+    if(closeIdx<0){setStatus('Could not find the end of this room in the live file — nothing was saved.');return;}
+    const newRaw=rawText.slice(0,contentStart)+editedInner+rawText.slice(closeIdx);
+    setStatus('Saving…');
+    const putRes=await fetch(apiBase,{
+      method:'PUT',
+      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+      body:JSON.stringify({
+        message:'Edit "'+room+'" room via the in-site editor',
+        content:rbtrUtf8ToB64(newRaw),
+        sha:sha,
+        branch:RBTR_GH_BRANCH
+      })
+    });
+    if(!putRes.ok){
+      const errJson=await putRes.json().catch(()=>({}));
+      setStatus('Save failed (HTTP '+putRes.status+'): '+(errJson.message||'unknown error')+'. Your edits are still on the page — try again.');
+      return;
+    }
+    setStatus('Saved! The live site will update in about a minute.');
+    views[room].removeAttribute('contenteditable');
+    views[room].classList.remove('rbtr-editing-active');
+    views[room].removeEventListener('click',rbtrGuardClicks,true);
+    rbtrEditing=false;
+    setTimeout(rbtrUpdateFab,2500);
+  }catch(err){
+    setStatus('Network error reaching GitHub — your edits are still on the page. Try again.');
+  }
+}
+
+if(document.readyState!=='loading')rbtrUpdateFab();else document.addEventListener('DOMContentLoaded',rbtrUpdateFab);
 </script>
 </body>
 </html>
