@@ -2782,6 +2782,23 @@ body.rbtr-can-edit #rbtr-edit-fab{display:flex;}
         <button class="t-btn t-btn-sm" onclick="toolsSelectOut()">Select all (then copy)</button>
       </div>
     </div>
+
+    <div class="t-card">
+      <h2 class="t-h2">Build the Full-Site Encrypted Archive</h2>
+      <p class="t-p">Right now, only the Root Below the Root door is actually encrypted. Bush Oracle, Bush Girl World, the Loc Adornment Compendium, Jewelry &amp; Belts, Bush Girl Medicine School, Finished Printables, the Living Library Curriculum, Myths of Your Chart, the Grimoire, the Cosmic Roots Almanac, Beneath the Blueprint, and Therapy Notes are only hidden by the page's own styling &mdash; the content sits in the page exactly as written, in plain view of anyone who looks at the page source, with no passphrase needed at all.</p>
+      <p class="t-p t-note">This button reads each of those rooms exactly as they stand in this page right now, encrypts all of them together with your gate passphrase, and gives you one block below to copy. Send that block back so it can be committed in place of the plain room content &mdash; once that happens, none of it exists anywhere in the page until the passphrase unlocks it. This runs entirely in your browser; nothing here is sent anywhere.</p>
+      <div class="t-field">
+        <label for="t-full-pw">Gate passphrase</label>
+        <input type="password" id="t-full-pw" autocomplete="off">
+      </div>
+      <button class="t-btn" onclick="toolsBuildFullArchive()">Build full-site encrypted archive</button>
+      <p id="t-full-status" class="t-status"></p>
+      <div id="t-full-outwrap" class="t-outwrap" style="display:none;">
+        <label for="t-full-out">Encrypted rooms block &mdash; copy this</label>
+        <textarea id="t-full-out" class="t-out" readonly rows="6"></textarea>
+        <button class="t-btn t-btn-sm" onclick="toolsSelectFullOut()">Select all (then copy)</button>
+      </div>
+    </div>
   </div>
 </section>
 <section class="view" id="myths">
@@ -5465,6 +5482,34 @@ async function toolsChangePass(){
 }
 function toolsSelectOut(){
   const t=document.getElementById('t-out');
+  t.focus();t.select();
+  try{document.execCommand('copy');}catch(e){}
+}
+async function toolsBuildFullArchive(){
+  const pw=document.getElementById('t-full-pw').value;
+  const status=document.getElementById('t-full-status');
+  const outwrap=document.getElementById('t-full-outwrap');
+  status.className='t-status';status.textContent='';outwrap.style.display='none';
+  if(!pw){status.textContent='Enter the gate passphrase.';status.className='t-status err';return;}
+  const roomIds=['grimoire','almanac','bushoracle','myths','bgw','loc','jewelry','medicine','printables','curriculum','beneath','therapy'];
+  const rooms={};
+  for(const id of roomIds){
+    const el=document.getElementById(id);
+    rooms[id]=el?el.innerHTML:'';
+  }
+  try{
+    const block=await encryptDoc(pw,rooms);
+    document.getElementById('t-full-out').value=block;
+    outwrap.style.display='block';
+    status.textContent='Done. Copy the block below and send it back. Once it is committed, these rooms stop being readable without the passphrase.';
+    status.className='t-status ok';
+  }catch(e){
+    status.textContent='Something went wrong building the archive \u2014 nothing was changed.';
+    status.className='t-status err';
+  }
+}
+function toolsSelectFullOut(){
+  const t=document.getElementById('t-full-out');
   t.focus();t.select();
   try{document.execCommand('copy');}catch(e){}
 }
