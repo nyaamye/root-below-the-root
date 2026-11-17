@@ -1471,10 +1471,15 @@ document.getElementById('pw').addEventListener('keydown',e=>{if(e.key==='Enter')
 })();
 
 
-/* ✦ In-Site Editor — edit the open rooms and save straight to GitHub ✦ */
-const RBTR_GH_OWNER='nyaamye',RBTR_GH_REPO='root-below-the-root',RBTR_GH_BRANCH='main',RBTR_GH_PATH='index.html';
+/* ✦ In-Site Editor — edit an open room, then build an encrypted archive block to send back for committing ✦
+   (This used to push your edit straight to the public GitHub file as plain text. Now that every
+   room's content lives encrypted in ROOMS_ENC, that old path would have undone the encryption the
+   moment you saved an edit — so saving now re-encrypts ALL twelve rooms with your gate passphrase,
+   right here in your browser, and gives you a block to copy and send back. Nothing is ever sent to
+   GitHub directly from this page.) */
 const RBTR_EDITABLE=['grimoire','almanac','bushoracle','myths','bgw','loc','jewelry','medicine','printables','curriculum','beneath','therapy'];
 let rbtrEditing=false;
+try{localStorage.removeItem('rbtr_gh_pat');}catch(e){} // old editor stored a GitHub token here; no longer used, and nothing should keep it around
 function rbtrUpdateFab(){
   const fab=document.getElementById('rbtr-edit-fab');
   const can=RBTR_EDITABLE.includes(curView);
@@ -1482,8 +1487,15 @@ function rbtrUpdateFab(){
   if(!can && rbtrEditing)rbtrExitEdit(false);
   if(!fab)return;
   fab.innerHTML=rbtrEditing
-    ? '<div id="rbtr-edit-status">Editing this room — changes save straight to the live site.</div><button class="rbtr-save" onclick="rbtrSaveEdit()">&#128190; Save to site</button><button class="rbtr-cancel" onclick="rbtrExitEdit(true)">&#10005; Discard</button>'
+    ? '<div id="rbtr-edit-status">Editing this room — nothing leaves your browser until you build the archive block below.</div><button class="rbtr-save" onclick="rbtrSaveEdit()">&#128190; Build encrypted archive</button><button class="rbtr-cancel" onclick="rbtrExitEdit(true)">&#10005; Discard</button><textarea id="rbtr-edit-out" readonly style="display:none;width:100%;min-height:90px;margin-top:8px;font-family:monospace;font-size:11px;"></textarea><button id="rbtr-edit-copy" style="display:none;" onclick="rbtrSelectOut()">&#128203; Copy block</button>'
     : '<button onclick="rbtrEnterEdit()">&#9999; Edit this room</button>';
+}
+function rbtrSelectOut(){
+  const t=document.getElementById('rbtr-edit-out');
+  if(!t)return;
+  t.style.display='block';
+  t.focus();t.select();
+  try{document.execCommand('copy');}catch(e){}
 }
 function rbtrEnterEdit(){
   if(!RBTR_EDITABLE.includes(curView))return;
@@ -1510,73 +1522,28 @@ function rbtrExitEdit(discard){
   rbtrEditing=false;
   rbtrUpdateFab();
 }
-function rbtrGetToken(){
-  let t=localStorage.getItem('rbtr_gh_pat');
-  if(!t){
-    t=prompt('Paste a GitHub personal access token (fine-grained, scoped to the root-below-the-root repo, with Contents: Read and write permission). This is stored only in this browser and sent only to api.github.com.');
-    if(t)localStorage.setItem('rbtr_gh_pat',t.trim());
-  }
-  return t?t.trim():null;
-}
-function rbtrForgetToken(){localStorage.removeItem('rbtr_gh_pat');}
-function rbtrB64ToUtf8(b64){
-  const bin=atob(b64.replace(/\n/g,''));
-  const bytes=new Uint8Array(bin.length);
-  for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
-  return new TextDecoder('utf-8').decode(bytes);
-}
-function rbtrUtf8ToB64(str){
-  const bytes=new TextEncoder().encode(str);
-  let bin='';
-  for(let i=0;i<bytes.length;i++)bin+=String.fromCharCode(bytes[i]);
-  return btoa(bin);
-}
 async function rbtrSaveEdit(){
   const statusEl=()=>document.getElementById('rbtr-edit-status');
   const setStatus=(msg)=>{const s=statusEl();if(s)s.textContent=msg;};
-  const token=rbtrGetToken();
-  if(!token){setStatus('No token given — cannot save.');return;}
-  const room=curView;
-  const editedInner=views[room].innerHTML;
-  setStatus('Fetching the live file…');
+  let pw=null;
+  try{pw=sessionStorage.getItem('rbtr_pw');}catch(e){}
+  if(!pw)pw=prompt('Re-enter the gate passphrase to build the encrypted archive:');
+  if(!pw){setStatus('No passphrase given — nothing was built.');return;}
+  setStatus('Building the encrypted archive from all twelve rooms (your edits included)…');
   try{
-    const apiBase=`https://api.github.com/repos/${RBTR_GH_OWNER}/${RBTR_GH_REPO}/contents/${RBTR_GH_PATH}`;
-    const getRes=await fetch(apiBase+`?ref=${RBTR_GH_BRANCH}`,{headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'}});
-    if(!getRes.ok){setStatus('Could not read the live file (HTTP '+getRes.status+'). Check your token has access to this repo.');return;}
-    const getJson=await getRes.json();
-    const sha=getJson.sha;
-    const rawText=rbtrB64ToUtf8(getJson.content);
-    const openMarker=`<section class="view" id="${room}">`;
-    const openIdx=rawText.indexOf(openMarker);
-    if(openIdx<0){setStatus('Could not locate this room in the live file — nothing was saved.');return;}
-    const contentStart=openIdx+openMarker.length;
-    const closeIdx=rawText.indexOf('</section>',contentStart);
-    if(closeIdx<0){setStatus('Could not find the end of this room in the live file — nothing was saved.');return;}
-    const newRaw=rawText.slice(0,contentStart)+editedInner+rawText.slice(closeIdx);
-    setStatus('Saving…');
-    const putRes=await fetch(apiBase,{
-      method:'PUT',
-      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
-      body:JSON.stringify({
-        message:'Edit "'+room+'" room via the in-site editor',
-        content:rbtrUtf8ToB64(newRaw),
-        sha:sha,
-        branch:RBTR_GH_BRANCH
-      })
-    });
-    if(!putRes.ok){
-      const errJson=await putRes.json().catch(()=>({}));
-      setStatus('Save failed (HTTP '+putRes.status+'): '+(errJson.message||'unknown error')+'. Your edits are still on the page — try again.');
-      return;
+    const rooms={};
+    for(const id of RBTR_EDITABLE){
+      const el=views[id];
+      rooms[id]=el?el.innerHTML:'';
     }
-    setStatus('Saved! The live site will update in about a minute.');
-    views[room].removeAttribute('contenteditable');
-    views[room].classList.remove('rbtr-editing-active');
-    views[room].removeEventListener('click',rbtrGuardClicks,true);
-    rbtrEditing=false;
-    setTimeout(rbtrUpdateFab,2500);
+    const block=await encryptDoc(pw,rooms);
+    const out=document.getElementById('rbtr-edit-out');
+    const copyBtn=document.getElementById('rbtr-edit-copy');
+    if(out){out.value=block;out.style.display='block';}
+    if(copyBtn)copyBtn.style.display='inline-block';
+    setStatus('Done. Copy the block below and send it back to be committed — nothing was sent anywhere automatically.');
   }catch(err){
-    setStatus('Network error reaching GitHub — your edits are still on the page. Try again.');
+    setStatus('Could not build the archive (wrong passphrase, or something went wrong) — nothing was changed.');
   }
 }
 
