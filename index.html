@@ -1411,18 +1411,29 @@ async function unlock(){
   msg.textContent='…';
   try{
     CH=await decryptDoc(v);
+  }catch(e){
+    msg.textContent='The dark did not stir. Say it again — mind the letters, mind the spaces.';
+    return;
+  }
+  try{sessionStorage.setItem('rbtr_pw',v);}catch(e){}
+  try{
     const rooms=await decryptRooms(v);
     for(const id in rooms){
       const el=document.getElementById(id);
       if(el)el.innerHTML=rooms[id];
     }
-    buildTOC();
-    try{sessionStorage.setItem('rbtr_pw',v);}catch(e){}
-    msg.textContent='';
-    show('library');
   }catch(e){
-    msg.textContent='The dark did not stir. Say it again — mind the letters, mind the spaces.';
+    // The twelve-room archive block doesn't match this passphrase (likely a bad block
+    // from a prior save). Don't block the whole site over it — just flag the affected
+    // rooms instead of leaving them blank with no explanation.
+    for(const id of RBTR_EDITABLE){
+      const el=document.getElementById(id);
+      if(el)el.innerHTML='<p style="padding:60px 24px;text-align:center;opacity:.75;max-width:520px;margin:0 auto;">This room\'s encrypted block didn\'t match — it needs to be rebuilt. Open <strong>Site Tools</strong> and run "Build the Full-Site Encrypted Archive" again, then send the new block back to be committed.</p>';
+    }
   }
+  buildTOC();
+  msg.textContent='';
+  show('library');
 }
 document.getElementById('pw').addEventListener('keydown',e=>{if(e.key==='Enter')unlock();});
 
