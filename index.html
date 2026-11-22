@@ -66,12 +66,18 @@ body{
 .fl-bl{bottom:0;left:0;transform:scaleY(-1)}.fl-br{bottom:0;right:0;transform:scale(-1,-1)}
 @media(max-width:600px){.filigree{width:84px;height:84px;}}
 
+/* ─── scrapbook ephemera: botanical/ocean motifs scattered in the margins of every
+   room, same gold ink as the filigree corners — the "character" layer ─── */
+.deco{position:fixed;z-index:1;pointer-events:none;opacity:0.4;filter:drop-shadow(0 0 6px rgba(232,195,90,0.15));}
+.deco svg{display:block;}
+@media(max-width:980px){.deco{display:none;}}
+
 .moon{position:fixed;top:1.4rem;right:1.6rem;font-size:1.4rem;opacity:0.5;z-index:45;filter:drop-shadow(0 0 10px var(--gold-dim));}
 
-/* ─── shared celestial/reliquary atmosphere belongs only to the threshold (gate)
-   and the hall (library) — every individual room keeps its own background only ─── */
-.bg,.moon,.filigree{display:none;}
-body.rbtr-threshold .bg,body.rbtr-threshold .moon,body.rbtr-threshold .filigree{display:block;}
+/* ─── shared celestial/reliquary atmosphere (cosmos, filigree corners, moon) now
+   belongs everywhere, not just the gate/hall — every room keeps this same atmosphere
+   underneath its own content, so the whole house reads as one continuous grimoire ─── */
+.bg,.moon,.filigree{display:block;}
 
 /* ─── views ─── */
 .view{position:relative;z-index:2;display:none;}
@@ -352,7 +358,9 @@ body.rbtr-threshold .bg,body.rbtr-threshold .moon,body.rbtr-threshold .filigree{
   --bo-bone:#d9cfc0;
   --bo-silver:#b8bcc2;
   --bo-rust:#8a4a2e;
-  background:var(--bo-char);
+  background:radial-gradient(ellipse at 50% 0%, rgba(60,74,53,0.22),transparent 55%),
+    radial-gradient(ellipse at 85% 100%, rgba(138,74,46,0.14),transparent 55%),
+    rgba(20,18,16,0.72);
   color:var(--bo-bone);
   font-family:'Spectral',serif;
 }
@@ -434,7 +442,7 @@ body.rbtr-threshold .bg,body.rbtr-threshold .moon,body.rbtr-threshold .filigree{
 
 
 /* ===== Site Tools ===== */
-#tools{background:var(--void);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh}
+#tools{background:transparent;color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh}
 #tools .t-wrap{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:60px 28px 120px}
 #tools .t-back{background:none;border:1px solid var(--gold-dim);color:var(--gold);font-family:'Cinzel',serif;letter-spacing:.08em;text-transform:uppercase;font-size:13px;padding:8px 16px;border-radius:2px;cursor:pointer;margin-bottom:40px}
 #tools .t-back:hover{background:var(--gold-dim)}
@@ -474,7 +482,9 @@ body.rbtr-threshold .bg,body.rbtr-threshold .moon,body.rbtr-threshold .filigree{
   --my-verdigris:#6f8f7a;
   --my-parchment:#eee3cf;
   --my-star:#e8c87a;
-  background:var(--my-deep);
+  background:radial-gradient(ellipse at 50% 0%, rgba(26,46,74,0.28),transparent 55%),
+    radial-gradient(ellipse at 80% 100%, rgba(168,124,79,0.12),transparent 55%),
+    rgba(15,28,48,0.72);
   color:var(--my-parchment);
   font-family:'Cardo',serif;
 }
@@ -640,7 +650,7 @@ body.rbtr-threshold .bg,body.rbtr-threshold .moon,body.rbtr-threshold .filigree{
 }
 
 /* ===== Loc Adornment Compendium room ===== */
-#loc{background:#2b2520;color:#ece4d8;font-family:'Nunito Sans',sans-serif;min-height:100vh;}
+#loc{background:radial-gradient(ellipse at 50% 0%, rgba(43,37,32,0.78),transparent 60%),rgba(43,37,32,0.55);color:#ece4d8;font-family:'Nunito Sans',sans-serif;min-height:100vh;}
 .loc-wrap{max-width:860px;margin:0 auto;padding:2.2rem 1.3rem 5rem;}
 .loc-back{background:none;border:1px solid #6b5d4f;color:#c9a876;font-family:'Nunito Sans',sans-serif;font-size:.85rem;padding:.5rem 1rem;border-radius:3px;cursor:pointer;margin-bottom:1.6rem;}
 .loc-back:hover{background:#3a3228;}
@@ -708,7 +718,7 @@ body.rbtr-threshold .bg,body.rbtr-threshold .moon,body.rbtr-threshold .filigree{
 
 
 /* ===== DIY Jewelry & Belts room ===== */
-#jewelry{background:#1f1a14;color:#ece0ce;font-family:'Work Sans',sans-serif;min-height:100vh;}
+#jewelry{background:radial-gradient(ellipse at 50% 0%, rgba(31,26,20,0.78),transparent 60%),rgba(31,26,20,0.55);color:#ece0ce;font-family:'Work Sans',sans-serif;min-height:100vh;}
 .jw-wrap{max-width:860px;margin:0 auto;padding:2.2rem 1.3rem 5rem;}
 .jw-back{background:none;border:1px solid #6e5a3e;color:#c98a4b;font-family:'Work Sans',sans-serif;font-size:.85rem;padding:.5rem 1rem;border-radius:3px;cursor:pointer;margin-bottom:1.6rem;}
 .jw-back:hover{background:#2c2419;}
@@ -754,7 +764,7 @@ body.rbtr-threshold .bg,body.rbtr-threshold .moon,body.rbtr-threshold .filigree{
 
 
 /* ===== Bush Girl Medicine School room ===== */
-#medicine{background:#14201a;color:#e8e4d8;font-family:'Karla',sans-serif;min-height:100vh;}
+#medicine{background:radial-gradient(ellipse at 50% 0%, rgba(20,32,26,0.78),transparent 60%),rgba(20,32,26,0.55);color:#e8e4d8;font-family:'Karla',sans-serif;min-height:100vh;}
 .med-wrap{max-width:860px;margin:0 auto;padding:2.2rem 1.3rem 5rem;}
 .med-back{background:none;border:1px solid #4a6652;color:#9bc49a;font-family:'Karla',sans-serif;font-size:.85rem;padding:.5rem 1rem;border-radius:3px;cursor:pointer;margin-bottom:1.6rem;}
 .med-back:hover{background:#1c2c23;}
@@ -820,7 +830,7 @@ body.rbtr-threshold .bg,body.rbtr-threshold .moon,body.rbtr-threshold .filigree{
 
 /* ===== Curriculum room: dark-navy starfield / gold-cream / dusty-rose ===== */
 #curriculum{--cur-bg:#0a0f1f;--cur-bg2:#0d1428;--cur-gold:#f3e3b0;--cur-cream:#eef0e8;--cur-rose:#d98a95;--cur-rule:rgba(243,227,176,0.25);
-  background:radial-gradient(ellipse at 50% 0%,#0f1830 0%,#0a0f1f 60%,#060a14 100%);color:var(--cur-cream);
+  background:radial-gradient(ellipse at 50% 0%,rgba(15,24,48,0.85) 0%,rgba(10,15,31,0.72) 60%,rgba(6,10,20,0.55) 100%);color:var(--cur-cream);
   font-family:'EB Garamond',Georgia,serif;min-height:100vh;padding:2.5rem 1.2rem 5rem;}
 #curriculum .cur-wrap{max-width:720px;margin:0 auto;}
 #curriculum .cur-back{background:none;border:1px solid var(--cur-rule);color:var(--cur-gold);font-family:'Marcellus SC',serif;
@@ -899,7 +909,7 @@ body.rbtr-threshold .bg,body.rbtr-threshold .moon,body.rbtr-threshold .filigree{
 
 /* ===== BENEATH THE BLUEPRINT ===== */
 #beneath{--bn-bg:#07170f;--bn-bg2:#0b2016;--bn-gold:#c9a84a;--bn-cream:#eee6d3;--bn-rose:#d99a93;--bn-mint:#8fbfa0;--bn-rule:rgba(201,168,74,0.25);
-  background:radial-gradient(ellipse at 50% 0%,#0d2a1c 0%,#07170f 55%,#030b07 100%);color:var(--bn-cream);
+  background:radial-gradient(ellipse at 50% 0%,rgba(13,42,28,0.85) 0%,rgba(7,23,15,0.72) 55%,rgba(3,11,7,0.55) 100%);color:var(--bn-cream);
   font-family:'Crimson Pro',Georgia,serif;min-height:100vh;padding:2.5rem 1.2rem 5rem;}
 #beneath .bn-wrap{max-width:720px;margin:0 auto;}
 #beneath .bn-back{background:none;border:1px solid var(--bn-rule);color:var(--bn-gold);font-family:'Castoro',serif;
@@ -1050,6 +1060,14 @@ body.rbtr-can-edit #rbtr-edit-fab{display:flex;}
 <div class="filigree fl-tr"><svg viewBox="0 0 100 100" fill="none"><path d="M2 40 Q2 2 40 2" stroke="var(--gold)" stroke-width="1"/><path d="M2 60 Q2 20 20 10 Q40 0 48 14" stroke="var(--gold)" stroke-width="0.6" opacity="0.6"/><circle cx="12" cy="12" r="2.5" fill="var(--gold)"/></svg></div>
 <div class="filigree fl-bl"><svg viewBox="0 0 100 100" fill="none"><path d="M2 40 Q2 2 40 2" stroke="var(--gold)" stroke-width="1"/><path d="M2 60 Q2 20 20 10 Q40 0 48 14" stroke="var(--gold)" stroke-width="0.6" opacity="0.6"/><circle cx="12" cy="12" r="2.5" fill="var(--gold)"/></svg></div>
 <div class="filigree fl-br"><svg viewBox="0 0 100 100" fill="none"><path d="M2 40 Q2 2 40 2" stroke="var(--gold)" stroke-width="1"/><path d="M2 60 Q2 20 20 10 Q40 0 48 14" stroke="var(--gold)" stroke-width="0.6" opacity="0.6"/><circle cx="12" cy="12" r="2.5" fill="var(--gold)"/></svg></div>
+
+<!-- scrapbook ephemera: original line-art, scattered in the margins of every room -->
+<div class="deco" style="top:14%;left:2.2%;width:92px;transform:rotate(-6deg);"><svg viewBox="0 0 110 170" fill="none"><g stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round"><path d="M55 165 C53 110 53 55 55 6"/><path d="M55 24 C42 18 30 14 18 18"/><path d="M55 24 C68 18 80 14 92 18"/><path d="M55 42 C42 37 28 33 16 38"/><path d="M55 42 C68 37 82 33 94 38"/><path d="M55 60 C43 55 30 52 18 57"/><path d="M55 60 C67 55 80 52 92 57"/><path d="M55 78 C44 75 33 73 22 78"/><path d="M55 78 C66 75 77 73 88 78"/><path d="M55 96 C46 94 37 93 28 97"/><path d="M55 96 C64 94 73 93 82 97"/></g></svg></div>
+<div class="deco" style="top:30%;right:2.6%;width:84px;transform:rotate(10deg);"><svg viewBox="0 0 110 82" fill="none"><g stroke="var(--gold)" stroke-width="1.8" fill="var(--gold)" fill-opacity="0.08"><path d="M14 60 C10 28 34 8 57 10 C82 13 98 34 93 59 C90 70 78 75 66 73 C53 70 48 61 51 53"/><path d="M19 56 C24 34 37 21 54 19"/><path d="M27 53 C32 36 43 25 56 23"/><path d="M36 51 C39 38 47 30 58 28"/></g></svg></div>
+<div class="deco" style="top:48%;left:1.6%;width:62px;transform:rotate(-14deg);"><svg viewBox="0 0 90 90" fill="none"><g stroke="var(--gold)" stroke-width="1.8" fill="var(--gold)" fill-opacity="0.08"><path d="M52 12 C26 12 14 30 14 45 C14 60 26 78 52 78 C36 68 30 58 30 45 C30 32 36 22 52 12 Z"/><path d="M64 16 l2.6 6.4 l6.4 2.6 l-6.4 2.6 l-2.6 6.4 l-2.6 -6.4 l-6.4 -2.6 l6.4 -2.6 Z" fill="var(--gold)" stroke="none"/></g></svg></div>
+<div class="deco" style="top:62%;right:2%;width:78px;transform:rotate(-8deg);"><svg viewBox="0 0 86 86" fill="none"><g stroke="var(--gold)" stroke-width="1.8" fill="var(--gold)" fill-opacity="0.1"><ellipse cx="43" cy="22" rx="12" ry="17"/><ellipse cx="64" cy="43" rx="12" ry="17" transform="rotate(90 64 43)"/><ellipse cx="43" cy="64" rx="12" ry="17"/><ellipse cx="22" cy="43" rx="12" ry="17" transform="rotate(90 22 43)"/><circle cx="43" cy="43" r="8" fill-opacity="0.25"/></g></svg></div>
+<div class="deco" style="top:78%;left:2.4%;width:100px;transform:rotate(8deg);"><svg viewBox="0 0 130 92" fill="none"><g stroke="var(--gold)" stroke-width="1.8"><line x1="65" y1="14" x2="65" y2="72"/><path d="M65 22 C38 6 10 10 5 34 C2 50 18 60 36 55 C50 51 60 36 65 26"/><path d="M65 22 C92 6 120 10 125 34 C128 50 112 60 94 55 C80 51 70 36 65 26"/><path d="M65 40 C46 35 24 40 19 55 C16 65 27 72 40 67 C53 62 61 50 65 42"/><path d="M65 40 C84 35 106 40 111 55 C114 65 103 72 90 67 C77 62 69 50 65 42"/></g></svg></div>
+<div class="deco" style="top:88%;right:3%;width:68px;transform:rotate(12deg);"><svg viewBox="0 0 74 54" fill="none"><g stroke="var(--gold)" stroke-width="1.6" fill="var(--gold)" fill-opacity="0.08"><path d="M8 38 C5 18 20 5 35 6 C52 8 62 21 58 37 C56 45 48 48 40 46 C32 44 29 37 31 32"/><path d="M12 35 C15 22 24 13 34 12"/></g></svg></div>
 
 <div class="moon">🌙</div>
 
