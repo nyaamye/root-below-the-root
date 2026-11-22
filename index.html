@@ -6,7 +6,7 @@
 <title>The Root Below the Root</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Big+Shoulders+Display:wght@600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Cardo:ital@0;1&family=Forum&family=Fraunces:ital,wght@0,500;0,600;1,400&family=Urbanist:wght@400;500;700&display=swap&family=Zilla+Slab:wght@400;600&family=Nunito+Sans:wght@400;600;700&family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus+SC&family=Castoro:ital@0;1&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&family=La+Belle+Aurore&family=Special+Elite&family=MedievalSharp" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Big+Shoulders+Display:wght@600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Cardo:ital@0;1&family=Forum&family=Fraunces:ital,wght@0,500;0,600;1,400&family=Urbanist:wght@400;500;700&display=swap&family=Zilla+Slab:wght@400;600&family=Nunito+Sans:wght@400;600;700&family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus+SC&family=Castoro:ital@0;1&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&family=La+Belle+Aurore&family=Special+Elite&family=Pirata+One" rel="stylesheet">
 <style>
 :root{
   --void:#0a0616;
@@ -49,7 +49,13 @@ body{
   radial-gradient(48% 36% at 48% 88%, rgba(168,124,96,0.08),transparent 70%);
   animation:drift 48s ease-in-out infinite alternate;}
 .bg canvas{position:absolute;inset:0;width:100%;height:100%;}
+.bg #cosmos{z-index:0}.bg #twinkle{z-index:1}
 .bg .vignette{position:absolute;inset:0;box-shadow:inset 0 0 240px 90px rgba(5,3,12,0.92);}
+/* ─── Grimoire shooting-star streak (2026-11-21), ported verbatim from the Grimoire artifact ─── */
+.shoot{position:fixed;z-index:3;width:130px;height:2px;pointer-events:none;border-radius:2px;
+  background:linear-gradient(90deg,#fff,rgba(255,255,255,0));opacity:0;box-shadow:0 0 8px 1px rgba(255,255,255,.5);
+  animation:shoot 1.2s ease-out forwards}
+@keyframes shoot{0%{opacity:0;transform:translate(0,0) rotate(-22deg)}12%{opacity:1}100%{opacity:0;transform:translate(-340px,138px) rotate(-22deg)}}
 @keyframes drift{from{transform:translate3d(-2%,-1%,0) scale(1)}to{transform:translate3d(3%,2%,0) scale(1.09)}}
 @keyframes breath{from{transform:scale(1)}to{transform:scale(1.05)}}
 
@@ -126,8 +132,8 @@ body.rbtr-threshold .bg,body.rbtr-threshold .moon,body.rbtr-threshold .filigree{
 .gate-inner .rays{position:absolute;left:50%;top:38%;width:min(150%,900px);height:auto;transform:translate(-50%,-50%);z-index:0;
   opacity:0.3;filter:invert(1) brightness(.85) contrast(2);mix-blend-mode:screen;pointer-events:none;
   -webkit-mask-image:radial-gradient(ellipse 48% 48% at 50% 50%,#000 12%,transparent 100%);mask-image:radial-gradient(ellipse 48% 48% at 50% 50%,#000 12%,transparent 100%)}
-#gate h1.title{position:relative;z-index:1;font-family:'MedievalSharp',serif;font-style:normal;font-weight:400;line-height:1.02;letter-spacing:0.01em;margin-bottom:0.5rem;
-  font-size:clamp(2.5rem,9.5vw,4.9rem);
+#gate h1.title{position:relative;z-index:1;font-family:'Pirata One',serif;font-style:normal;font-weight:400;line-height:1.05;letter-spacing:0.015em;margin-bottom:0.5rem;
+  font-size:clamp(2.6rem,9.5vw,5rem);
   animation:none;color:#b08a3e;
   background:none;-webkit-background-clip:unset;background-clip:unset;-webkit-text-fill-color:#b08a3e;
   filter:drop-shadow(0 2px 0 rgba(0,0,0,.65)) drop-shadow(0 0 18px rgba(176,138,62,0.35));}
@@ -1037,7 +1043,7 @@ body.rbtr-can-edit #rbtr-edit-fab{display:flex;}
   <div class="plaid"></div>
   <div class="grain"></div>
   <div class="mist"></div>
-  <canvas id="stars"></canvas>
+  <canvas id="cosmos" aria-hidden="true"></canvas><canvas id="twinkle" aria-hidden="true"></canvas>
   <div class="vignette"></div>
 </div>
 
@@ -1584,42 +1590,92 @@ document.getElementById('pw').addEventListener('keydown',e=>{if(e.key==='Enter')
   if(pw){try{CH=await decryptDoc(pw);buildTOC();show('library');}catch(e){}}
 })();
 
-// starfield + shooting stars
+// cosmos background + shooting stars — ported verbatim from the Grimoire artifact
+// (https://claude.ai/artifact/1UBfoAutLLgfnXK41q33mE): nebula clouds, milky-way band,
+// dust lanes, a seeded starfield, twinkle layer, and real DOM .shoot streaks.
 (function(){
-  const c=document.getElementById('stars'),x=c.getContext('2d');let w,h,st=[],mo=[],sh=[];const N=200,M=46;
-  function rs(){w=c.width=innerWidth;h=c.height=innerHeight;}
-  function init(){rs();st=[];mo=[];
-    for(let i=0;i<N;i++)st.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.2+0.2,a:Math.random()*0.6+0.1,s:Math.random()*0.0006+0.0002,p:Math.random()*6.28});
-    for(let i=0;i<M;i++)mo.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+0.6,vy:-(Math.random()*0.18+0.05),drift:Math.random()*6.28,ds:Math.random()*0.004+0.001,a:Math.random()*0.35+0.1});}
-  function spawn(){
-    const sx=Math.random()*w*0.9, sy=Math.random()*h*0.4;
-    const ang=Math.PI*0.17+Math.random()*0.26, sp=7+Math.random()*5;
-    sh.push({x:sx,y:sy,vx:Math.cos(ang)*sp,vy:Math.sin(ang)*sp,len:90+Math.random()*120,life:0,max:70+Math.random()*40});
-  }
-  function draw(t){
-    x.clearRect(0,0,w,h);
-    // stars
-    for(const s of st){const f=0.5+0.5*Math.sin(t*s.s*1000+s.p);x.beginPath();x.arc(s.x,s.y,s.r,0,6.283);x.fillStyle='rgba(237,228,211,'+(s.a*(0.4+0.6*f))+')';x.fill();}
-    // golden motes
-    for(const m of mo){m.y+=m.vy;m.drift+=m.ds;m.x+=Math.sin(m.drift)*0.25;if(m.y<-6){m.y=h+6;m.x=Math.random()*w;}const fl=0.6+0.4*Math.sin(t*0.0007+m.drift);x.beginPath();x.arc(m.x,m.y,m.r,0,6.283);x.fillStyle='rgba(246,221,134,'+(m.a*fl)+')';x.shadowBlur=8;x.shadowColor='rgba(232,195,90,0.5)';x.fill();x.shadowBlur=0;}
-    // shooting stars — travelling streaks
-    if(Math.random()<0.018 && sh.length<3) spawn();
-    for(let i=sh.length-1;i>=0;i--){
-      const s=sh[i];s.x+=s.vx;s.y+=s.vy;s.life++;
-      const fade=s.life<10?s.life/10:(s.life>s.max-18?Math.max(0,(s.max-s.life)/18):1);
-      const ux=s.vx/Math.hypot(s.vx,s.vy),uy=s.vy/Math.hypot(s.vx,s.vy);
-      const tx=s.x-ux*s.len,ty=s.y-uy*s.len;
-      const g=x.createLinearGradient(s.x,s.y,tx,ty);
-      g.addColorStop(0,'rgba(255,246,216,'+(0.9*fade)+')');
-      g.addColorStop(0.4,'rgba(246,221,134,'+(0.5*fade)+')');
-      g.addColorStop(1,'rgba(246,221,134,0)');
-      x.beginPath();x.moveTo(s.x,s.y);x.lineTo(tx,ty);x.strokeStyle=g;x.lineWidth=1.6;x.stroke();
-      x.beginPath();x.arc(s.x,s.y,1.5,0,6.283);x.fillStyle='rgba(255,246,216,'+(0.95*fade)+')';x.shadowBlur=12;x.shadowColor='rgba(246,221,134,0.9)';x.fill();x.shadowBlur=0;
-      if(s.life>s.max||s.x>w+s.len||s.y>h+s.len)sh.splice(i,1);
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bg=document.getElementById('cosmos'), tw=document.getElementById('twinkle');
+  if(!bg||!tw||!bg.getContext) return;
+  var dpr=Math.min(window.devicePixelRatio||1,2), W=0,H=0,lastW=0, twStars=[], seed=1337;
+  function rnd(){ seed=(seed*16807)%2147483647; return (seed-1)/2147483646; }
+  function gauss(){ return (rnd()+rnd()+rnd()+rnd()-2)/2; }
+  var palette=['255,255,255','255,244,220','210,222,255','255,226,190','190,205,255'];
+  function build(){
+    W=window.innerWidth; H=window.innerHeight; lastW=W; seed=1337; twStars=[];
+    [bg,tw].forEach(function(c){c.width=Math.round(W*dpr);c.height=Math.round(H*dpr);c.style.width=W+'px';c.style.height=H+'px';});
+    var g=bg.getContext('2d'); g.setTransform(dpr,0,0,dpr,0,0);
+    var base=g.createLinearGradient(0,0,0,H); base.addColorStop(0,'#03020c'); base.addColorStop(.55,'#070517'); base.addColorStop(1,'#03070d');
+    g.fillStyle=base; g.fillRect(0,0,W,H);
+    var M=Math.max(W,H);
+    function blob(x,y,r,rgb,a,mode){
+      g.globalCompositeOperation=mode||'lighter';
+      var gr=g.createRadialGradient(x,y,0,x,y,r);
+      gr.addColorStop(0,'rgba('+rgb+','+a+')'); gr.addColorStop(1,'rgba('+rgb+',0)');
+      g.fillStyle=gr; g.fillRect(x-r,y-r,r*2,r*2);
     }
-    requestAnimationFrame(draw);
+    // nebula clouds
+    [[.12,.10,.62,'92,62,178',.24],[.88,.26,.55,'186,62,116',.17],[.28,.88,.66,'40,118,128',.22],[.92,.92,.5,'204,134,52',.10],[.55,.48,.5,'62,74,170',.14],[.05,.55,.4,'120,60,150',.14]]
+      .forEach(function(n){ blob(n[0]*W,n[1]*H,n[2]*M,n[3],n[4]); });
+    // milky way band
+    var x0=-.1*W,y0=.82*H,x1=1.1*W,y1=.12*H, dx=x1-x0, dy=y1-y0, len=Math.sqrt(dx*dx+dy*dy), nx=-dy/len, ny=dx/len;
+    var cols=['206,196,255','160,150,230','255,226,190','130,150,230','230,190,230'];
+    for(var i=0;i<130;i++){
+      var t=rnd(), off=gauss()*.1*M, r=(70+rnd()*190)*(M/1000+.35);
+      blob(x0+dx*t+nx*off, y0+dy*t+ny*off, r, cols[i%cols.length], .018+rnd()*.02);
+    }
+    // dust lanes
+    for(var d=0;d<26;d++){
+      var t2=rnd(), off2=gauss()*.05*M;
+      blob(x0+dx*t2+nx*off2, y0+dy*t2+ny*off2, (40+rnd()*110)*(M/1000+.35), '2,2,8', .22, 'source-over');
+    }
+    g.globalCompositeOperation='source-over';
+    // stars: field + dense along band
+    var count=Math.round(Math.min(1500, W*H/520));
+    for(var k=0;k<count;k++){
+      var x,y;
+      if(rnd()<.45){ var tt=rnd(), of=gauss()*.1*M; x=x0+dx*tt+nx*of; y=y0+dy*tt+ny*of; }
+      else { x=rnd()*W; y=rnd()*H; }
+      if(x<0||x>W||y<0||y>H) continue;
+      var rr=.25+Math.pow(rnd(),3)*1.1, al=.25+rnd()*.7, c=palette[Math.floor(rnd()*palette.length)];
+      g.fillStyle='rgba('+c+','+al+')'; g.beginPath(); g.arc(x,y,rr,0,6.2832); g.fill();
+      if(rnd()<.05){ twStars.push({x:x,y:y,r:rr+.5,c:c,p:rnd()*6.28,s:.6+rnd()*1.6}); }
+    }
+    // a few bright stars with glow and cross
+    for(var b=0;b<Math.round(W*H/90000)+5;b++){
+      var bx=rnd()*W, by=rnd()*H, c2=palette[Math.floor(rnd()*palette.length)], R=6+rnd()*12;
+      blob(bx,by,R,c2,.5,'lighter'); g.globalCompositeOperation='source-over';
+      g.strokeStyle='rgba('+c2+',.55)'; g.lineWidth=.6; g.beginPath(); g.moveTo(bx-R*1.4,by); g.lineTo(bx+R*1.4,by); g.moveTo(bx,by-R*1.4); g.lineTo(bx,by+R*1.4); g.stroke();
+      g.fillStyle='rgba(255,255,255,.95)'; g.beginPath(); g.arc(bx,by,1.3,0,6.2832); g.fill();
+      twStars.push({x:bx,y:by,r:1.6,c:c2,p:rnd()*6.28,s:.5+rnd()});
+    }
   }
-  addEventListener('resize',()=>{rs();init();});init();requestAnimationFrame(draw);
+  var tctx=tw.getContext('2d'), last=0;
+  function draw(ts){
+    if(ts-last>45){
+      last=ts; tctx.setTransform(dpr,0,0,dpr,0,0); tctx.clearRect(0,0,W,H);
+      for(var i=0;i<twStars.length;i++){
+        var s=twStars[i], a=reduce?.8:(.3+.7*Math.pow((Math.sin(ts/1000*s.s+s.p)+1)/2,2));
+        tctx.fillStyle='rgba('+s.c+','+a+')'; tctx.beginPath(); tctx.arc(s.x,s.y,s.r,0,6.2832); tctx.fill();
+      }
+    }
+    if(!reduce && !document.hidden) requestAnimationFrame(draw);
+  }
+  build(); requestAnimationFrame(draw);
+  var rt; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(function(){ if(window.innerWidth!==lastW){ build(); } },200); });
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden && !reduce) requestAnimationFrame(draw); });
+  if(!reduce){
+    (function shoot(){
+      setTimeout(function(){
+        if(!document.hidden){
+          var e=document.createElement('i'); e.className='shoot';
+          e.style.top=(4+Math.random()*40)+'vh'; e.style.left=(45+Math.random()*55)+'vw';
+          document.body.appendChild(e); setTimeout(function(){ e.remove(); },1400);
+        }
+        shoot();
+      }, 7000+Math.random()*9000);
+    })();
+  }
 })();
 
 
