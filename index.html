@@ -1252,6 +1252,22 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;op
 .r-body p.gx-slip{color:var(--gx-wine)!important}
 .r-body p.gx-slip.gx-long{color:var(--gx-ink)!important}
 .r-body p.gx-doc,.r-body li.gx-doc{color:var(--gx-ink)!important}
+/* ✦ no boxes: pages float transparent on the night, like the Grimoire (2026-11-28) ✦ */
+.gx-folio,.r-body.gx-reflect .gx-folio,.gx-opener,.gate-inner.cover,#library .lib-head,#library .rooms,#contents .contents-head,#contents .toc{
+  background:none!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;transform:none!important}
+.gx-folio::before,.gx-folio::after,.gx-opener::before,.gate-inner.cover::before,#library .lib-head::before,#library .rooms::before,#contents .contents-head::before,#contents .toc::before{content:none!important;display:none!important}
+.gx-folio,.gx-opener{padding-left:.4rem!important;padding-right:.4rem!important}
+.gx-folio{padding-top:1.2rem!important;padding-bottom:.6rem!important;margin-bottom:1.6rem!important}
+.gx-folio + .gx-folio::before{content:"✦  ❂  ✦"!important;display:block!important;position:static!important;border:0!important;inset:auto!important;
+  text-align:center;color:var(--gx-gold);opacity:.5;letter-spacing:.6em;font-size:.78rem;margin:0 0 1.8rem}
+.gx-opener{padding-top:1.6rem!important;padding-bottom:1rem!important;margin-bottom:1rem!important}
+.gate-inner.cover{overflow:visible!important}
+#library .room::after{box-shadow:0 0 10px var(--room-c,#7c5ab8)}
+#library .rooms,#contents .toc{padding-left:.4rem!important;padding-right:.4rem!important}
+.r-body .tag{border:0!important;padding:0!important;margin-right:.35rem!important}
+.r-body .tag::before{content:"✦ ";opacity:.7}
+.r-body li.gx-k-open .tag{border:0!important}
+.r-back,.contents-exit,.r-nav button{border:0!important;background:none!important;box-shadow:none!important}
 img,svg,video{max-width:100%}
 html{overflow-x:hidden}
 .r-body,.gx-folio,.gx-opener{overflow-wrap:anywhere;word-break:normal}
