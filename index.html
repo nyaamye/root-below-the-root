@@ -1014,6 +1014,248 @@ body.rbtr-can-edit #rbtr-edit-fab{display:flex;}
 @media(max-width:600px){.rb-plates{gap:1.4rem;margin:1.6rem auto 2rem;} .rb-plate{flex-basis:100%;max-width:88%;} .rb-plate.wide{max-width:100%;} .rb-plate figcaption{font-size:.98rem;}}
 #bgw .rb-plate figcaption{color:#7a3b52;text-shadow:none;}
 #bgw .rb-plate img{filter:saturate(.95) drop-shadow(0 6px 14px rgba(60,30,20,.25));}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ✦ THE GRIMOIRE SYSTEM — shared design language (2026-11-28)
+   Dark celestial violet folios are the foundation; parchment and torn paper are
+   secondary materials, used only where the content is a preserved document,
+   a source, a quotation, or something she added by hand.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root{
+  --gx-night:#0d0818; --gx-plum:#1b1030; --gx-violet:#2b1849; --gx-dusk:#3a2160;
+  --gx-gold:#c9a45a; --gx-gold-l:#ecd9a4; --gx-gold-b:#f3dfa0; --gx-bone:#efe5cc; --gx-cream:#e8dcc2; --gx-cream-dim:rgba(232,220,194,.74);
+  --gx-sage:#9db38a; --gx-rose:#d4a29e; --gx-rose-d:#b98a86; --gx-wine:#7a1626; --gx-oxblood:#5a1624;
+  --gx-parch:#d8c69b; --gx-parch-l:#e9dcb8; --gx-parch-d:#bfa873; --gx-ink:#2a1b0d; --gx-ink-soft:#54402a;
+  --gx-title:linear-gradient(180deg,#fff2c4,#e6c06e 45%,#a87628);
+  --gx-corners:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform=''%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") top 10px left 10px/40px 40px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform='translate%2846 0%29 scale%28-1 1%29'%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") top 10px right 10px/40px 40px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform='translate%280 46%29 scale%281 -1%29'%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") bottom 10px left 10px/40px 40px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform='translate%2846 46%29 scale%28-1 -1%29'%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") bottom 10px right 10px/40px 40px no-repeat;
+  --gx-corners-top:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform=''%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") top 10px left 10px/40px 40px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform='translate%2846 0%29 scale%28-1 1%29'%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") top 10px right 10px/40px 40px no-repeat;
+  --gx-corners-bot:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform='translate%280 46%29 scale%281 -1%29'%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") bottom 10px left 10px/40px 40px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform='translate%2846 46%29 scale%28-1 -1%29'%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") bottom 10px right 10px/40px 40px no-repeat;
+  --gx-corners-s:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform=''%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") top 7px left 7px/30px 30px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform='translate%2846 0%29 scale%28-1 1%29'%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") top 7px right 7px/30px 30px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform='translate%280 46%29 scale%281 -1%29'%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") bottom 7px left 7px/30px 30px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' fill='none' stroke='%23c9a45a' stroke-width='1.1' stroke-linecap='round'%3E%3Cg transform='translate%2846 46%29 scale%28-1 -1%29'%3E%3Cpath d='M3 44V16Q3 3 16 3h28'/%3E%3Cpath d='M8.5 44V19Q8.5 8.5 19 8.5h25' stroke-opacity='.45'/%3E%3Cpath d='M3 16q9 0 10 7.5t7.5 7.5' stroke-opacity='.65'/%3E%3Cpath d='M16 3q0 9 7.5 10t7.5 7.5' stroke-opacity='.65'/%3E%3Ccircle cx='15' cy='15' r='2.3' fill='%23c9a45a' stroke='none'/%3E%3Cpath d='M26 15l2-2 2 2-2 2z' fill='%23c9a45a' stroke='none' opacity='.7'/%3E%3C/g%3E%3C/svg%3E") bottom 7px right 7px/30px 30px no-repeat;
+}
+/* grain + candle-dark edges over everything (from the Grimoire) */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.11;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .85 0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");}
+
+/* ── type roles ── */
+.gx-label{display:block;font-family:'IM Fell English SC',serif;letter-spacing:.3em;font-size:.74rem;color:var(--gx-gold);text-transform:lowercase;opacity:.9}
+.gx-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;line-height:1;letter-spacing:.005em;
+  background:var(--gx-title);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 0 rgba(0,0,0,.55)) drop-shadow(0 0 20px rgba(236,217,164,.22))}
+.gx-hand{font-family:'La Belle Aurore',cursive;font-style:normal;color:var(--gx-rose);line-height:1.3;transform:rotate(-1.2deg);display:inline-block}
+.gx-orn{display:block;text-align:center;color:var(--gx-gold);opacity:.55;letter-spacing:.6em;font-size:.8rem;margin:1.4rem 0}
+
+/* ── 1. the dark celestial folio (default page) ── */
+.gx-folio{position:relative;margin:0 0 2.6rem;padding:3rem 2.1rem 2.6rem;color:var(--gx-cream);
+  background:var(--gx-corners),
+    radial-gradient(ellipse 55% 35% at 88% 6%,rgba(122,60,140,.30),transparent 70%),
+    radial-gradient(ellipse 50% 30% at 6% 96%,rgba(90,22,60,.28),transparent 70%),
+    radial-gradient(ellipse 70% 50% at 50% 40%,rgba(70,44,120,.22),transparent 75%),
+    linear-gradient(172deg,rgba(38,22,64,.86),rgba(16,9,30,.92));
+  box-shadow:0 26px 44px -18px rgba(0,0,0,.85),inset 0 0 70px rgba(0,0,0,.55);
+  -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.gx-folio::before{content:"";position:absolute;inset:14px;border:1px solid rgba(201,164,90,.42);pointer-events:none}
+.gx-folio::after{content:"";position:absolute;inset:19px;border:1px dashed rgba(201,164,90,.17);pointer-events:none}
+.gx-folio > *{position:relative;z-index:1}
+.gx-folio .gx-fno{display:block;font-family:'IM Fell English SC',serif;letter-spacing:.28em;font-size:.72rem;color:var(--gx-gold);opacity:.85;margin:0 0 .35rem}
+.gx-folio:nth-of-type(even){transform:rotate(.12deg)}
+.gx-folio:nth-of-type(3n){transform:rotate(-.15deg)}
+
+/* ── 2. parchment — preserved documents, sources, transcriptions ── */
+.gx-doc{position:relative;color:var(--gx-ink)!important;padding:1.5rem 1.4rem 1.35rem 1.5rem!important;margin:1.6rem .2rem!important;
+  background:
+    radial-gradient(ellipse 40% 30% at 10% 12%,rgba(120,70,20,.22),transparent 70%),
+    radial-gradient(ellipse 36% 26% at 90% 86%,rgba(110,60,18,.26),transparent 70%),
+    radial-gradient(ellipse at 50% 40%,var(--gx-parch-l),var(--gx-parch) 62%,var(--gx-parch-d));
+  box-shadow:0 14px 22px -8px rgba(0,0,0,.7),inset 0 0 40px rgba(95,60,18,.45);transform:rotate(-.45deg);
+  clip-path:polygon(0 1%,6% 0,14% .8%,23% .2%,34% 1%,46% .1%,58% .9%,70% .2%,82% 1%,92% .3%,100% 1%,99.6% 18%,100% 37%,99.4% 56%,100% 74%,99.5% 99%,88% 99.6%,76% 99%,63% 100%,50% 99.3%,37% 99.9%,24% 99.2%,12% 100%,0 99.4%,.5% 80%,0 61%,.6% 42%,0 23%)}
+.gx-doc:nth-child(even){transform:rotate(.4deg)}
+.gx-doc::before{content:none!important}
+.gx-doc *{color:var(--gx-ink)!important}
+.gx-doc strong{color:var(--gx-oxblood)!important;font-weight:600}
+.gx-doc em{color:var(--gx-ink-soft)!important}
+.gx-doc .tag,.gx-doc .gx-stamp{background:none!important;color:var(--gx-wine)!important;border:1px solid rgba(122,22,38,.55)!important;transform:rotate(-2deg)}
+.gx-doc::after{content:"";position:absolute;inset:7px;border:1px solid rgba(90,22,36,.22);pointer-events:none}
+.gx-doc.gx-label-card{font-style:italic;font-size:.98rem;line-height:1.6;max-width:36rem;margin:-.4rem auto 1.8rem!important;text-align:left}
+
+/* ── 3. torn paper fragments — her own hand: reflections, captions, margin notes ── */
+.gx-slip{position:relative;display:block;max-width:30rem;margin:1.8rem auto!important;padding:1.4rem 1.5rem 1.3rem!important;
+  font-family:'La Belle Aurore',cursive!important;font-size:1.32rem!important;line-height:1.32!important;color:var(--gx-wine)!important;
+  background:radial-gradient(ellipse at 30% 20%,#f1e7cb,#dcc999);box-shadow:0 10px 18px rgba(0,0,0,.5);transform:rotate(-1.3deg);
+  clip-path:polygon(0 3%,5% 1%,11% 3%,18% .5%,26% 2.5%,33% 0,41% 2%,49% .5%,57% 3%,65% 1%,73% 2.6%,81% .4%,89% 2.2%,95% .6%,100% 2.5%,99.2% 50%,100% 97%,93% 99%,85% 97.4%,76% 99.6%,67% 97.6%,58% 99.4%,49% 97.2%,40% 99.6%,31% 97.8%,22% 99.4%,13% 97.4%,5% 99.5%,0 97.5%,.8% 50%)}
+.gx-slip:nth-of-type(even){transform:rotate(1.1deg)}
+.gx-slip *{color:inherit!important;font:inherit!important}
+.gx-slip.gx-long{font-family:'IM Fell English',Georgia,serif!important;font-style:italic!important;font-size:1.05rem!important;line-height:1.6!important;color:var(--gx-ink)!important}
+.gx-tape{position:absolute;top:-9px;left:50%;width:84px;height:22px;transform:translateX(-50%) rotate(-3deg);opacity:.85;z-index:2;
+  background:repeating-linear-gradient(90deg,rgba(157,179,138,.85) 0 7px,rgba(186,204,162,.85) 7px 11px)}
+.gx-slip-wrap{position:relative;padding-top:6px}
+.gx-slip-wrap:nth-of-type(odd) .gx-tape{background:repeating-linear-gradient(135deg,rgba(201,154,150,.88) 0 6px,rgba(222,186,180,.88) 6px 10px);transform:translateX(-50%) rotate(4deg)}
+/* marginal note: provenance / cross-references, quieter than body text */
+.gx-margin{position:relative;margin:.4rem 0 1.4rem 1.2rem!important;padding:.2rem 0 .2rem .9rem!important;border-left:1px solid rgba(212,162,158,.45);
+  font-family:'Special Elite',monospace!important;font-size:.78rem!important;line-height:1.55!important;letter-spacing:.01em;color:rgba(232,220,194,.62)!important;transform:rotate(-.3deg)}
+.gx-margin *{color:inherit!important;font-style:normal!important;font-family:inherit!important}
+.gx-margin::before{content:"✎";position:absolute;left:-1.15rem;top:.15rem;color:var(--gx-rose);font-size:.85rem;opacity:.8}
+
+/* ── 4. evidence stamps (the existing .tag spans) ── */
+.r-body .tag{font-family:'IM Fell English SC',serif!important;font-size:.66rem!important;letter-spacing:.16em!important;text-transform:lowercase!important;
+  padding:.1rem .45rem!important;border-radius:0!important;background:none!important;color:var(--gx-gold)!important;border:1px solid rgba(201,164,90,.55)!important;margin-right:.2rem}
+.r-body li.gx-k-seal{border-left:2px solid rgba(201,164,90,.55);padding-left:1.1rem!important}
+.r-body li.gx-k-seal::before{content:"✦"!important;left:-.55rem!important;top:.1rem;font-size:.7rem!important;opacity:1!important;background:var(--gx-plum);line-height:1}
+.r-body li.gx-k-self .tag{color:var(--gx-rose)!important;border-color:rgba(212,162,158,.6)!important}
+.r-body li.gx-k-self{border-left:2px solid rgba(212,162,158,.45);padding-left:1.1rem!important}
+.r-body li.gx-k-self::before{content:"❦"!important;left:-.6rem!important;color:var(--gx-rose)!important;opacity:1!important;background:var(--gx-plum);font-size:.8rem!important}
+.r-body li.gx-k-open .tag{color:var(--gx-sage)!important;border-style:dashed!important;border-color:rgba(157,179,138,.7)!important}
+.r-body li.gx-k-open{border-left:1px dashed rgba(157,179,138,.6);padding-left:1.1rem!important}
+.r-body li.gx-k-open::before{content:"?"!important;left:-.35rem!important;color:var(--gx-sage)!important;opacity:1!important;background:var(--gx-plum);font-size:.8rem!important;font-style:italic}
+.r-body li.gx-doc::before{content:none!important}
+.r-body li.gx-doc{list-style:none}
+
+/* ═══ COVER ═══ */
+#gate{padding:1.4rem .8rem 2.4rem}
+.gate-inner.cover{width:min(100%,46rem);padding:4.2rem 1.6rem 3.6rem;overflow:hidden;
+  background:var(--gx-corners),
+    radial-gradient(ellipse 60% 40% at 50% 34%,rgba(120,76,190,.28),transparent 72%),
+    radial-gradient(ellipse 50% 30% at 90% 8%,rgba(122,22,60,.25),transparent 70%),
+    linear-gradient(180deg,rgba(20,11,38,.72),rgba(10,6,20,.86));
+  box-shadow:0 34px 70px -22px rgba(0,0,0,.95),inset 0 0 110px rgba(0,0,0,.65),inset 8px 0 0 rgba(0,0,0,.35)}
+.gate-inner.cover::before{content:"";position:absolute;inset:16px;border:1px solid rgba(201,164,90,.6);outline:1px solid rgba(201,164,90,.25);outline-offset:-7px;pointer-events:none;z-index:2}
+.gate-inner.cover .rays{width:min(140%,880px);max-width:none;opacity:.5}
+.gate-inner.cover > :not(.rays):not(.gate-frame){position:relative;z-index:3}
+.gate-frame{display:none}
+#gate .gx-cover-label{margin:0 0 1.1rem}
+#gate h1.title{background:var(--gx-title);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 0 rgba(0,0,0,.6)) drop-shadow(0 0 24px rgba(236,217,164,.3));font-size:clamp(2.7rem,12.5vw,5.6rem)!important;line-height:.95}
+.gate-inner .tableau{width:100%;max-width:440px}
+.gx-seal{display:block;width:84px;height:84px;margin:1.1rem auto .4rem;transform:rotate(-8deg);filter:drop-shadow(0 8px 8px rgba(0,0,0,.6))}
+.gx-ribbon{position:absolute!important;left:calc(50% + 30px);top:auto;width:26px;height:86px;margin-top:-58px;z-index:2!important;transform:rotate(4deg);
+  background:linear-gradient(90deg,#3a0f2b,#7a1f4a 45%,#3a0f2b);clip-path:polygon(0 0,100% 0,100% 100%,50% 84%,0 100%)}
+.gx-seal-wrap{position:relative;height:96px;margin:1rem 0 .4rem}
+.gx-seal-wrap .gx-seal{position:absolute;left:50%;top:0;margin:0;transform:translateX(-50%) rotate(-8deg);z-index:3}
+.gx-seal-wrap .gx-ribbon{left:calc(50% + 14px);top:40px;margin:0}
+/* the passphrase is written on a slip of paper */
+.gx-key{position:relative;max-width:22rem;margin:1.2rem auto 0;padding:1.5rem 1.3rem 1.3rem;transform:rotate(-1deg);
+  background:radial-gradient(ellipse at 30% 20%,#f1e7cb,#d9c795);box-shadow:0 12px 22px rgba(0,0,0,.6);
+  clip-path:polygon(0 4%,8% 1%,17% 3.5%,27% .5%,38% 3%,49% 1%,60% 3.6%,71% .6%,82% 3%,91% 1%,100% 3.4%,99.3% 50%,100% 96%,91% 99%,80% 96.6%,69% 99.4%,58% 96.8%,47% 99.5%,36% 97%,25% 99.3%,14% 96.8%,4% 99%,0 96.6%,.7% 50%)}
+.gx-key .gx-hand{display:block;color:var(--gx-wine);font-size:1.2rem;margin:0 0 .6rem;transform:rotate(-1.5deg)}
+.gx-key .gate-field{gap:.7rem}
+.gx-key .gate-field input{background:transparent!important;color:var(--gx-ink)!important;border:0!important;border-bottom:1px solid rgba(90,22,36,.55)!important;
+  font-family:'Special Elite',monospace;width:100%!important;max-width:16.5rem}
+.gx-key .gate-field input::placeholder{color:rgba(84,64,42,.65)}
+.gx-key .gate-field button{background:linear-gradient(90deg,#4a0f1b,#7a1626)!important;color:var(--gx-gold-l)!important;border:0!important;
+  font-family:'IM Fell English SC',serif;letter-spacing:.16em;box-shadow:0 4px 10px rgba(0,0,0,.35)}
+.gx-key .msg{color:var(--gx-wine)!important}
+#gate .blessing,#gate .gate-inscription,#gate .epigraph{position:relative;z-index:3}
+
+/* ═══ LIBRARY — the contents page ═══ */
+#library{max-width:52rem;padding:3rem .9rem 6rem}
+#library .lib-head{padding:3.2rem 1.6rem 1rem;margin:0;text-align:center;
+  background:var(--gx-corners-top),radial-gradient(ellipse 60% 50% at 50% 30%,rgba(110,70,170,.26),transparent 72%),linear-gradient(180deg,rgba(32,18,56,.85),rgba(18,10,32,.6));
+  position:relative}
+#library .lib-head::before{content:"";position:absolute;inset:14px 14px 0;border:1px solid rgba(201,164,90,.45);border-bottom:0;pointer-events:none}
+#library .lib-head .eyebrow{font-family:'IM Fell English SC',serif!important;letter-spacing:.32em!important;font-size:.76rem!important;text-transform:lowercase!important;color:var(--gx-gold)!important}
+#library .lib-head h1{background:var(--gx-title);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:'Cormorant Garamond',serif;font-weight:500;
+  font-size:clamp(2.4rem,9vw,4.2rem)!important;line-height:1!important;margin:.7rem 0 1.2rem!important;filter:drop-shadow(0 0 20px rgba(236,217,164,.22))}
+#library .lib-head p{font-family:'La Belle Aurore',cursive!important;font-style:normal!important;font-size:1.22rem!important;line-height:1.35;color:var(--gx-wine)!important;
+  max-width:21rem!important;margin:.4rem auto 1rem!important;padding:1.1rem 1.2rem;transform:rotate(-1.4deg);
+  background:radial-gradient(ellipse at 30% 20%,#f1e7cb,#d9c795);box-shadow:0 10px 18px rgba(0,0,0,.5);
+  clip-path:polygon(0 5%,9% 1%,19% 4%,30% .5%,42% 3.5%,54% 1%,66% 4%,78% .8%,89% 3.4%,100% 1%,99% 50%,100% 95%,89% 99%,77% 95.6%,64% 99.4%,51% 96%,38% 99.6%,25% 96.4%,12% 99.2%,0 96%,.9% 50%)}
+#library .lib-logout{font-family:'IM Fell English SC',serif!important;letter-spacing:.2em;font-style:normal!important;text-transform:lowercase;font-size:.78rem!important}
+#library .rooms{counter-reset:room;display:block!important;padding:1.2rem 1.6rem 2.6rem!important;margin:0;position:relative;
+  background:var(--gx-corners-bot),radial-gradient(ellipse 50% 30% at 10% 90%,rgba(90,22,60,.22),transparent 70%),linear-gradient(180deg,rgba(18,10,32,.6),rgba(14,8,26,.88));
+  box-shadow:0 30px 50px -20px rgba(0,0,0,.85)}
+#library .rooms::before{content:"";position:absolute;inset:0 14px 14px;border:1px solid rgba(201,164,90,.45);border-top:0;pointer-events:none}
+@media(min-width:760px){#library .rooms{display:grid!important;grid-template-columns:1fr 1fr;column-gap:2.6rem}}
+#library .room{counter-increment:room;transform:none!important;text-align:left;padding:1.15rem .2rem 1.1rem 3.1rem!important;border-radius:0;
+  border-bottom:1px solid rgba(201,164,90,.14)!important;background:none!important}
+#library .room::before{content:counter(room,upper-roman)!important;position:absolute;left:.2rem;top:1.25rem;width:2.4rem;height:auto;border-radius:0;transform:none;
+  background:none!important;box-shadow:none!important;opacity:.8;font-family:'IM Fell English SC',serif;font-size:.8rem;letter-spacing:.08em;color:var(--gx-gold);text-align:left}
+#library .room::after{content:"";position:absolute;left:.25rem;top:2.65rem;width:7px;height:7px;border-radius:50%;background:var(--room-c,#7c5ab8);box-shadow:0 0 10px var(--room-c,#7c5ab8)}
+#library .room .r-eyebrow{text-align:left!important;font-family:'IM Fell English SC',serif!important;font-size:.7rem!important;letter-spacing:.2em!important;text-transform:lowercase!important;color:var(--gx-gold)!important;opacity:.75!important}
+#library .room .r-name{text-align:left!important;font-family:'Cormorant Garamond',serif!important;font-size:1.5rem!important;line-height:1.15!important;color:var(--gx-gold-b)!important;margin:.15rem 0 .3rem}
+#library .room .r-atmo{text-align:left!important;font-family:'IM Fell English',Georgia,serif!important;font-size:.95rem!important;line-height:1.55!important;color:var(--gx-cream-dim)!important;max-height:none!important;opacity:1!important}
+#library .room:hover .r-name,#library .room:focus .r-name{text-shadow:0 0 18px rgba(236,217,164,.45)}
+#library .room:nth-child(1){--room-c:#9b6fd6}#library .room:nth-child(2){--room-c:#b07ae0}#library .room:nth-child(3){--room-c:#4f6fc4}
+#library .room:nth-child(4){--room-c:#8a5a9c}#library .room:nth-child(5){--room-c:#3f61b0}#library .room:nth-child(6){--room-c:#3fa6a0}
+#library .room:nth-child(7){--room-c:#a8865a}#library .room:nth-child(8){--room-c:#c08a45}#library .room:nth-child(9){--room-c:#4f8a52}
+#library .room:nth-child(10){--room-c:#d8c69b}#library .room:nth-child(11){--room-c:#7f9a6a}#library .room:nth-child(12){--room-c:#c98aa0}#library .room:nth-child(13){--room-c:#e0b866}
+
+/* ═══ THE DOORWAYS (chapter list) ═══ */
+#contents{max-width:46rem;padding:3rem .9rem 6rem}
+#contents .contents-head,#contents .toc{position:relative}
+#contents .contents-head{padding:3.4rem 1.6rem 1.4rem;margin:0;background:var(--gx-corners-top),radial-gradient(ellipse 60% 50% at 50% 30%,rgba(110,70,170,.24),transparent 72%),linear-gradient(180deg,rgba(32,18,56,.85),rgba(18,10,32,.65))}
+#contents .contents-head::before{content:"";position:absolute;inset:14px 14px 0;border:1px solid rgba(201,164,90,.45);border-bottom:0;pointer-events:none}
+#contents .contents-head .eyebrow{font-family:'IM Fell English SC',serif!important;letter-spacing:.32em!important;font-size:.76rem!important;text-transform:lowercase!important}
+#contents .contents-head h1{background:var(--gx-title);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.2rem,8.5vw,3.8rem)!important;line-height:1.02!important}
+#contents .contents-head p{color:var(--gx-cream-dim)!important;font-size:1rem}
+#contents .toc{max-width:none;padding:.6rem 1.6rem 2.4rem;background:var(--gx-corners-bot),linear-gradient(180deg,rgba(18,10,32,.65),rgba(14,8,26,.9));box-shadow:0 30px 50px -20px rgba(0,0,0,.85)}
+#contents .toc::before{content:"";position:absolute;inset:0 14px 14px;border:1px solid rgba(201,164,90,.45);border-top:0;pointer-events:none}
+#contents .toc li{border-bottom:1px solid rgba(201,164,90,.12)}
+#contents .toc .num{font-family:'IM Fell English SC',serif!important;font-size:.8rem!important}
+#contents .toc .ttl{font-size:1.24rem!important;line-height:1.3}
+.contents-exit{z-index:5}
+
+/* ═══ THE READER — chapters composed from their content ═══ */
+#reader{max-width:47rem;padding:2.6rem .8rem 6rem}
+#reader .r-top{padding:0 .4rem}
+.gx-opener{position:relative;text-align:center;padding:3.6rem 1.6rem 2.2rem;margin:0 0 2.4rem;
+  background:var(--gx-corners),radial-gradient(ellipse 60% 55% at 50% 40%,rgba(120,76,190,.3),transparent 72%),linear-gradient(180deg,rgba(34,19,60,.88),rgba(14,8,26,.9));
+  box-shadow:0 28px 48px -20px rgba(0,0,0,.9),inset 0 0 80px rgba(0,0,0,.5)}
+.gx-opener::before{content:"";position:absolute;inset:14px;border:1px solid rgba(201,164,90,.5);outline:1px solid rgba(201,164,90,.2);outline-offset:-6px;pointer-events:none}
+.gx-opener > *{position:relative;z-index:1}
+#reader h2.r-title{background:var(--gx-title);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:'Cormorant Garamond',serif!important;font-weight:500!important;
+  font-size:clamp(2.1rem,8.4vw,3.4rem)!important;line-height:1.04!important;margin:.6rem 0 .9rem!important;padding:0!important;filter:drop-shadow(0 0 18px rgba(236,217,164,.22))}
+#reader h2.r-title::after{display:none!important}
+#reader .chap-blessing{font-family:'La Belle Aurore',cursive!important;font-style:normal!important;font-size:1.12rem!important;color:var(--gx-rose)!important;transform:rotate(-1deg);margin:0 auto!important;max-width:28rem}
+.r-body{font-size:1.06rem;line-height:1.78;color:var(--gx-cream)}
+.r-body p:first-of-type::first-letter{all:unset}
+.r-body p.gx-initial::first-letter{font-family:'UnifrakturMaguntia',serif;font-size:3.6rem;float:left;line-height:.82;padding:.3rem .5rem 0 0;color:var(--gx-gold);
+  text-shadow:0 0 18px rgba(201,164,90,.45)}
+.r-body p{color:var(--gx-cream)!important}
+.r-body li{color:var(--gx-cream-dim)}
+.r-body strong{color:var(--gx-gold-b)}
+.r-body em{color:var(--gx-rose)}
+.r-body h3,.r-body .gx-h{font-family:'Cormorant Garamond',serif!important;font-style:italic;font-weight:500!important;font-size:clamp(1.55rem,6vw,2.1rem)!important;line-height:1.1!important;
+  color:var(--gx-gold-l)!important;margin:0 0 1.1rem!important;text-shadow:0 0 22px rgba(201,164,90,.3)}
+.r-body h4{font-family:'IM Fell English SC',serif;letter-spacing:.18em;font-size:.86rem;color:var(--gx-gold);margin:1.4rem 0 .5rem;font-weight:400}
+.r-body .gx-folio ul{margin:.8rem 0 1rem}
+.r-body .gx-folio li{margin-bottom:.95rem}
+.r-tile{width:min(240px,62%)!important;margin:1.6rem auto 2rem!important;transform:rotate(-1.5deg)}
+.r-nav{border-top:0!important;margin-top:1rem!important}
+.r-nav button{font-family:'IM Fell English SC',serif!important;letter-spacing:.12em;text-transform:lowercase;max-width:48%}
+/* reflection chapters (her own entries) lean rose-dusk */
+.r-body.gx-reflect .gx-folio{background:var(--gx-corners),radial-gradient(ellipse 55% 35% at 88% 6%,rgba(160,80,110,.26),transparent 70%),radial-gradient(ellipse 60% 45% at 30% 60%,rgba(90,50,120,.22),transparent 75%),linear-gradient(172deg,rgba(44,22,56,.88),rgba(18,9,28,.93))}
+.r-body .gx-date{font-family:'La Belle Aurore',cursive!important;font-size:1.3rem!important;color:var(--gx-gold-l)!important;margin:2rem 0 .3rem!important;transform:rotate(-1deg)}
+.r-body .gx-date *{color:inherit!important;font:inherit!important}
+
+/* ═══ phone composition ═══ */
+@media(max-width:600px){
+  .gx-folio{padding:2.6rem 1.25rem 2.2rem;background-size:auto}
+  .gx-folio{--gx-corners:var(--gx-corners-s)}
+  .gx-folio,.gx-opener,.gate-inner.cover,#library .lib-head,#library .rooms,#contents .contents-head{background-image:none}
+  .gx-folio{background:var(--gx-corners-s),radial-gradient(ellipse 60% 35% at 88% 6%,rgba(122,60,140,.30),transparent 70%),linear-gradient(172deg,rgba(38,22,64,.88),rgba(16,9,30,.93))}
+  .r-body.gx-reflect .gx-folio{background:var(--gx-corners-s),radial-gradient(ellipse 55% 35% at 88% 6%,rgba(160,80,110,.26),transparent 70%),linear-gradient(172deg,rgba(44,22,56,.9),rgba(18,9,28,.94))}
+  .gx-opener{padding:3rem 1.2rem 1.9rem;background:var(--gx-corners-s),radial-gradient(ellipse 70% 55% at 50% 40%,rgba(120,76,190,.3),transparent 72%),linear-gradient(180deg,rgba(34,19,60,.9),rgba(14,8,26,.92))}
+  .gate-inner.cover{padding:3.4rem 1.1rem 2.8rem;background:var(--gx-corners-s),radial-gradient(ellipse 80% 40% at 50% 34%,rgba(120,76,190,.3),transparent 72%),linear-gradient(180deg,rgba(20,11,38,.78),rgba(10,6,20,.9))}
+  #library .lib-head{padding:2.8rem 1.1rem .8rem;background:var(--gx-corners-top),linear-gradient(180deg,rgba(32,18,56,.88),rgba(18,10,32,.62))}
+  #library .rooms{padding:.8rem 1.1rem 2.2rem!important;background:var(--gx-corners-bot),linear-gradient(180deg,rgba(18,10,32,.62),rgba(14,8,26,.9))}
+  #contents .contents-head{padding:3rem 1.1rem 1.1rem;background:var(--gx-corners-top),linear-gradient(180deg,rgba(32,18,56,.88),rgba(18,10,32,.65))}
+  #contents .toc{padding:.4rem 1.1rem 2rem}
+  .gx-folio::before,.gx-opener::before,.gate-inner.cover::before{inset:10px}
+  .gx-folio::after{inset:14px}
+  .gx-doc{padding:1.25rem 1.05rem 1.1rem!important;margin:1.3rem 0!important}
+  .gx-slip{font-size:1.18rem!important;padding:1.2rem 1.1rem 1.1rem!important}
+  .gx-margin{margin-left:.9rem!important}
+  .r-body p.gx-initial::first-letter{font-size:3rem}
+  #library .room{padding-left:2.6rem!important}
+  .gx-folio:nth-of-type(n){transform:none}
+}
+.r-body p.gx-entry-head{font-size:.92rem;color:var(--gx-cream-dim)!important;font-style:italic}
+.r-body p.gx-slip{color:var(--gx-wine)!important}
+.r-body p.gx-slip.gx-long{color:var(--gx-ink)!important}
+.r-body p.gx-doc,.r-body li.gx-doc{color:var(--gx-ink)!important}
+img,svg,video{max-width:100%}
+html{overflow-x:hidden}
+.r-body,.gx-folio,.gx-opener{overflow-wrap:anywhere;word-break:normal}
+#reader .r-top{gap:.6rem;flex-wrap:wrap;font-size:.6rem!important}
 </style>
 </head>
 <body class="rbtr-threshold">
@@ -1153,14 +1395,25 @@ body.rbtr-can-edit #rbtr-edit-fab{display:flex;}
 <path d="M99 80H125V86H99Z" fill="#e8dcc0" opacity=".9"/><text x="112" y="85" font-size="4.6" text-anchor="middle" fill="#1b140c" font-family="serif" letter-spacing=".4">VIGILATE</text></g>
 <rect width="150" height="100" fill="url(#shade)" style="mix-blend-mode:overlay"/></svg><figcaption>Tortola · British Virgin Islands</figcaption></figure>
       </div>
+    <div class="gx-seal-wrap" aria-hidden="true"><span class="gx-ribbon"></span>
+      <svg class="gx-seal" viewBox="0 0 100 100"><defs><radialGradient id="gxwax" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#9a2f55"/><stop offset=".6" stop-color="#5e1634"/><stop offset="1" stop-color="#2e0818"/></radialGradient></defs>
+        <path d="M50 4c8 0 10 6 17 8s14-1 18 6-1 12 2 19 9 10 7 18-9 8-11 15 3 13-3 18-12 1-18 4-9 9-17 8-9-7-16-9-13 3-18-3 0-12-4-18-10-9-8-17 9-9 10-16-4-13 2-18 13 1 19-3 6-11 14-11z" fill="url(#gxwax)"/>
+        <circle cx="50" cy="50" r="27" fill="none" stroke="rgba(236,217,164,.45)" stroke-width="1.2"/>
+        <circle cx="50" cy="50" r="23" fill="none" stroke="rgba(0,0,0,.35)" stroke-width="1"/>
+        <path d="M50 30c-6 7-6 14 0 20 6-6 6-13 0-20zM50 50v18M43 62c4-1 6 1 7 4M57 62c-4-1-6 1-7 4M40 56c3 0 6 2 6 5M60 56c-3 0-6 2-6 5" fill="none" stroke="rgba(236,217,164,.75)" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M33 36a3 3 0 1 0 4 4 4 4 0 1 1-4-4z" fill="rgba(236,217,164,.7)"/>
+      </svg></div>
     <p class="epigraph">A record is not a download. A download is not a record.<br>Both are real — and the door knows the difference.</p>
     <p class="gate-inscription">Enter where the roots drink deep and the old ones linger.</p>
     <p class="blessing" id="gbless"></p>
-    <div class="gate-field">
-      <input type="password" id="pw" placeholder="speak the word that opens it" aria-label="Passphrase" autocomplete="off">
-      <button onclick="unlock()">Cross the Threshold</button>
+    <div class="gx-key">
+      <span class="gx-hand">the word that opens it —</span>
+      <div class="gate-field">
+        <input type="password" id="pw" placeholder="speak it here" aria-label="Passphrase" autocomplete="off">
+        <button onclick="unlock()">Cross the Threshold</button>
+      </div>
+      <div class="msg" id="gmsg"></div>
     </div>
-    <div class="msg" id="gmsg"></div>
     <div class="gate-frame"><span class="gate-side l"></span><span class="gate-side r"></span></div>
   </div>
 </section>
@@ -1182,8 +1435,11 @@ body.rbtr-can-edit #rbtr-edit-fab{display:flex;}
     <button class="r-back" onclick="toContents()">❦ Back to the Doorways</button>
     <span class="r-count" id="rcount"></span>
   </div>
-  <h2 class="r-title" id="rtitle"></h2>
-  <p class="chap-blessing" id="rbless"></p>
+  <header class="gx-opener">
+    <span class="gx-label" id="rfolio"></span>
+    <h2 class="r-title" id="rtitle"></h2>
+    <p class="chap-blessing" id="rbless"></p>
+  </header>
   <div class="r-body" id="rbody"></div>
   <div class="r-nav">
     <button class="pv" id="prevBtn" onclick="go(-1)"></button>
@@ -1513,6 +1769,62 @@ function buildTOC(){
   });
 }
 
+// ✦ Grimoire system — compose a chapter's pages from its content (2026-11-28).
+// Runs on the already-decrypted chapter HTML in the page; never changes stored content.
+const GX_SEAL=/^(DOCUMENTED|CHECKED|CONFIRMED|CORRECTED|HISTORICAL IMAGE|CONTEXT|STATUS)/;
+const GX_DOC=/^(FAMILY TESTIMONY|FAMILY ACCOUNT|HER WORDS|HISTORICAL EVIDENCE|TRANSCRIPTION|SOURCE EXCERPT|QUOTED)/;
+const GX_SELF=/^(PERSONAL|HER MEMORY|HER EXPERIENCE|MY CONNECTION|MY READING|MEMORY|ENCOUNTER|INTERPRETATION)/;
+const GX_OPEN=/^(UNRESOLVED|NEEDS DIGGING|QUESTIONS|WAY IN|LEAD|NOT FOUND|NOT VERIFIED|POSSIBILITY|CAUTION|LIMIT|HELD)/;
+const GX_REFLECT=/(Wrote Down|Signs &|Dark Hours|Close My Eyes|Seen With My Own Eyes|Both Kinds of Finding|Tears Are a Language)/i;
+const GX_MONTH=/^(January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.? \d/;
+function gxText(el){return (el.textContent||'').replace(/\s+/g,' ').trim();}
+function gxCompose(body,i,title){
+  body.classList.toggle('gx-reflect',GX_REFLECT.test(title));
+  // 1. sort the list items by the kind of evidence they carry
+  body.querySelectorAll('li').forEach(li=>{
+    const t=li.querySelector('.tag'); if(!t) return;
+    const k=gxText(t).toUpperCase();
+    if(GX_DOC.test(k)) li.classList.add('gx-doc');
+    else if(GX_SEAL.test(k)) li.classList.add('gx-k-seal');
+    else if(GX_SELF.test(k)) li.classList.add('gx-k-self');
+    else if(GX_OPEN.test(k)) li.classList.add('gx-k-open');
+  });
+  // 2. paragraphs: captions, provenance notes, dated entries, her quoted words
+  body.querySelectorAll(':scope > p').forEach(p=>{
+    const s=gxText(p); if(!s) return;
+    const prev=p.previousElementSibling;
+    const onlyEm=p.children.length===1&&p.firstElementChild.tagName==='EM'&&gxText(p.firstElementChild).length>=s.length-2;
+    if(prev&&prev.classList.contains('rb-plates')&&onlyEm){p.classList.add('gx-doc','gx-label-card');return;}
+    const lead=p.firstElementChild&&p.firstChild===p.firstElementChild?gxText(p.firstElementChild):'';
+    if((onlyEm&&/^(PROVENANCE|Cross-references|Source|Sources|Note:)/i.test(s))||/^(Cross-references|PROVENANCE)/i.test(lead)){p.classList.add('gx-margin');return;}
+    if(/^\[[A-Z /&-]+\]/.test(s)){p.classList.add('gx-entry-head');return;}
+    const after=prev&&prev.classList.contains('gx-entry-head');
+    const onlyStrong=p.children.length===1&&p.firstElementChild.tagName==='STRONG'&&gxText(p.firstElementChild).length>=s.length-2;
+    if(onlyStrong&&GX_MONTH.test(s)){p.classList.add('gx-date');return;}
+    if((/^[“"]/.test(s)||after)&&s.length<520){
+      const w=document.createElement('div');w.className='gx-slip-wrap';
+      p.replaceWith(w);w.appendChild(p);const tp=document.createElement('span');tp.className='gx-tape';w.prepend(tp);
+      p.classList.add('gx-slip'); if(s.length>200) p.classList.add('gx-long');
+    }
+  });
+  // 3. each h3 begins its own folio page
+  const kids=[...body.childNodes]; const pages=[]; let cur=null;
+  const start=()=>{cur=document.createElement('section');cur.className='gx-folio';pages.push(cur);};
+  kids.forEach(n=>{
+    if(n.nodeType===1&&n.tagName==='H3'){start();}
+    else if(!cur){if(n.nodeType===3&&!n.textContent.trim())return;start();}
+    cur.appendChild(n);
+  });
+  body.innerHTML='';
+  pages.forEach((pg,k)=>{
+    const lab=document.createElement('span');lab.className='gx-fno';
+    lab.textContent='folio '+roman(i+1).toLowerCase()+' · '+(k+1);
+    pg.prepend(lab); body.appendChild(pg);
+  });
+  const firstP=[...body.querySelectorAll('.gx-folio > p:not(.gx-doc):not(.gx-margin):not(.gx-date)')].find(p=>!(p.children.length===1&&p.firstElementChild.tagName==='EM'&&gxText(p.firstElementChild).length>=gxText(p).length-2));
+  if(firstP&&/^[A-Za-z]/.test(gxText(firstP)))firstP.classList.add('gx-initial');
+}
+
 let cur=0;
 function openCh(i){
   cur=i;const c=CH[i];
@@ -1529,6 +1841,8 @@ function openCh(i){
     const img=document.createElement('img');img.className='r-tile';img.src=tile;img.alt='';
     firstP.insertAdjacentElement('afterend',img);
   }
+  gxCompose(bodyEl,i,c.title);
+  document.getElementById('rfolio').textContent='folio '+roman(i+1).toLowerCase()+' · the main archive';
   document.getElementById('rcount').textContent=`the ${ordinal(i+1)} door`;
   const pv=document.getElementById('prevBtn'),nx=document.getElementById('nextBtn');
   pv.disabled=i===0;nx.disabled=i===CH.length-1;
