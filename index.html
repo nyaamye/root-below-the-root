@@ -6,7 +6,7 @@
 <title>The Root Below the Root</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Big+Shoulders+Display:wght@600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Cardo:ital@0;1&family=Forum&family=Fraunces:ital,wght@0,500;0,600;1,400&family=Urbanist:wght@400;500;700&display=swap&family=Zilla+Slab:wght@400;600&family=Nunito+Sans:wght@400;600;700&family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus+SC&family=Castoro:ital@0;1&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&family=La+Belle+Aurore&family=Special+Elite&family=Rye&family=UnifrakturMaguntia" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Big+Shoulders+Display:wght@600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Cardo:ital@0;1&family=Forum&family=Fraunces:ital,wght@0,500;0,600;1,400&family=Urbanist:wght@400;500;700&display=swap&family=Zilla+Slab:wght@400;600&family=Nunito+Sans:wght@400;600;700&family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus+SC&family=Castoro:ital@0;1&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&family=La+Belle+Aurore&family=Special+Elite&family=Rye&family=UnifrakturMaguntia&family=Cinzel+Decorative:wght@400;700" rel="stylesheet">
 <style>
 :root{
   --void:#0a0616;
@@ -1268,6 +1268,31 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;op
 .r-body .tag::before{content:"✦ ";opacity:.7}
 .r-body li.gx-k-open .tag{border:0!important}
 .r-back,.contents-exit,.r-nav button{border:0!important;background:none!important;box-shadow:none!important}
+/* ✦ titles: Cinzel Decorative, moonlight shimmering across them like light on water ✦ */
+#gate h1.title,#library .lib-head h1,#contents .contents-head h1,#reader h2.r-title,.r-body h3,.r-body .gx-h,#library .room .r-name,#grimoire h1,#grimoire h2{font-family:'Cinzel Decorative','Cinzel',serif!important;font-style:normal!important;font-weight:700!important;letter-spacing:.02em!important;
+  background:linear-gradient(105deg,#e9d39a 0%,#fff6dc 12%,#d9b45e 24%,#cdb8ff 36%,#fff9ec 46%,#e2b45a 58%,#f7c7dc 70%,#fff4d6 82%,#d9b45e 100%)!important;
+  background-size:260% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent;
+  text-shadow:none!important;filter:drop-shadow(0 2px 1px rgba(0,0,0,.9)) drop-shadow(0 0 14px rgba(10,4,26,.95)) drop-shadow(0 0 22px rgba(205,184,255,.28))!important;
+  animation:gxShimmer 9s linear infinite!important}
+@keyframes gxShimmer{from{background-position:0% 0}to{background-position:-260% 0}}
+#gate h1.title{font-size:clamp(2.1rem,10vw,4.6rem)!important;line-height:1.08!important}
+#library .lib-head h1,#contents .contents-head h1{font-size:clamp(1.8rem,7.4vw,3.3rem)!important;line-height:1.12!important}
+#reader h2.r-title{font-size:clamp(1.55rem,6.6vw,2.7rem)!important;line-height:1.18!important}
+.r-body h3,.r-body .gx-h{font-size:clamp(1.2rem,5vw,1.65rem)!important;line-height:1.25!important;font-weight:400!important}
+#library .room .r-name{font-size:1.18rem!important;line-height:1.3!important;font-weight:400!important}
+/* the pool: big titles reflect below them, faint and rippled */
+#gate h1.title,#library .lib-head h1,#contents .contents-head h1,#reader h2.r-title,#grimoire h1{-webkit-box-reflect:below -.12em linear-gradient(to bottom,transparent 52%,rgba(255,255,255,.26) 100%);margin-bottom:1.1em!important;position:relative}
+/* a few stars catching on the big titles */
+#gate h1.title::before,#library .lib-head h1::before,#reader h2.r-title::before{content:"✦";position:absolute;top:-.15em;right:8%;font-size:.32em;color:#fff6dc;-webkit-text-fill-color:#fff6dc;
+  text-shadow:0 0 8px #fff,0 0 16px #cdb8ff;animation:gxTwinkle 3.2s ease-in-out infinite;pointer-events:none}
+#gate h1.title::after,#library .lib-head h1::after{content:"✧";position:absolute;bottom:.25em;left:6%;font-size:.24em;color:#fff6dc;-webkit-text-fill-color:#fff6dc;
+  text-shadow:0 0 8px #fff,0 0 14px #f7c7dc;animation:gxTwinkle 4.1s ease-in-out 1.3s infinite;pointer-events:none}
+@keyframes gxTwinkle{0%,100%{opacity:.15;transform:scale(.6) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(20deg)}}
+@media (prefers-reduced-motion:reduce){#gate h1.title,#library .lib-head h1,#contents .contents-head h1,#reader h2.r-title,.r-body h3,.r-body .gx-h,#library .room .r-name,#grimoire h1,#grimoire h2{animation:none!important}}
+/* readable text on the night: soft dark halo behind every line */
+#gate p,#gate figcaption,#library p,#library .r-atmo,#library .r-eyebrow,#contents p,#contents .ttl,#contents .num,#reader p,#reader li,#reader .gx-fno,#reader .gx-label,#reader .r-top,#grimoire p,#grimoire li,.gx-label,.gx-fno,.gx-margin{
+  text-shadow:0 1px 2px rgba(0,0,0,.95),0 0 10px rgba(8,3,22,.95),0 0 22px rgba(8,3,22,.7)!important}
+.gx-doc,.gx-doc *,.gx-slip,.gx-slip *,.gx-key,.gx-key *,#library .lib-head p{text-shadow:none!important}
 img,svg,video{max-width:100%}
 html{overflow-x:hidden}
 .r-body,.gx-folio,.gx-opener{overflow-wrap:anywhere;word-break:normal}
